@@ -13,13 +13,18 @@ export default function Navbar() {
 
   return (
     <nav className="bg-neutral-primary fixed w-full z-20 top-0 start-0 border-default">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="https://flowbite.com/docs/images/logo.svg" className="h-7" alt="Flowbite Logo" />
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+            <a href="https://flowbite.com/" className="flex items-center rtl:space-x-reverse">
+                <img
+                    src="/images/icons/mainLogo.png"
+                    alt="Roberta Matera Logo"
+                    width={100}
+                    height={100}
+                />
                   
                 <div>
                     <div className="self-center text-xl text-heading font-semibold whitespace-nowrap">Roberta Matera</div>
-                    <div className="self-center text-xl text-heading font-semibold whitespace-nowrap">FULL STACK DEVELOPER</div>
+                    <div className="self-center text-md text-heading font-semibold whitespace-nowrap">FULL STACK DEVELOPER</div>
                 </div>
                 
                 
