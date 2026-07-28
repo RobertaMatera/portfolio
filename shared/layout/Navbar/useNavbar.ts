@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { LanguageCode, NavbarItem } from "./navbar.types";
-import { LANGUAGE_LABEL } from "./navbar.constants";
+import { LANGUAGE_LABEL } from "./constNavbar";
 
 
 export function useNavbar() {
@@ -13,6 +13,10 @@ export function useNavbar() {
         {
           label: "About",
           href: "/about",
+        },
+        {
+          label: "Tech Stack",
+          href: "/tech-stack",
         },
         {
           label: "CV",
