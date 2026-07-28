@@ -16,7 +16,7 @@ export default function Navbar() {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
             <a href="https://flowbite.com/" className="flex items-center rtl:space-x-reverse">
                 <img
-                    src="/images/icons/mainLogo.png"
+                    src="/images/icons/logoBg.png"
                     alt="Roberta Matera Logo"
                     width={100}
                     height={100}
