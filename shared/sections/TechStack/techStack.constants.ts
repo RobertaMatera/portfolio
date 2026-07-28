@@ -1,0 +1,72 @@
+import { HeroSkillCategory } from "./techStack.types";
+
+export const HERO_SKILLS: HeroSkillCategory[] = [
+  {
+    category: "Core Skills",
+    items: [
+      "Angular",
+      "React",
+      "Next.js",
+      "RxJS",
+      "Redux",
+      "TypeScript",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Sass",
+      "Angular Material",
+      "Material UI",
+      "Ant Design",
+      "PrimeNG",
+      "Bootstrap",
+      "Tailwind CSS",
+      "Flowbite",
+      "Storybook",
+      "Responsive Design",
+      "Cross-browser Compatibility",
+      "REST APIs",
+      "Git",
+      "VS Code",
+      "IntelliJ IDEA",
+      "Scrum",
+      "Agile",
+      "Figma",
+    ],
+  },
+  {
+    category: "Testing",
+    items: ["Vitest", "Jasmine", "Karma"],
+  },
+  {
+    category: "Backend & Additional Technologies",
+    items: [
+      "Java",
+      "Spring Boot",
+      "Python",
+      "PHP",
+      "Laravel",
+      "C",
+      "C++",
+      "Vue.js",
+    ],
+  },
+  {
+    category: "AI-Assisted Development",
+    items: [
+      "GitHub Copilot",
+      "Claude",
+      "Prompt Engineering",
+      "AI-Assisted Coding",
+      "Debugging",
+      "Technical Brainstorming",
+    ],
+  },
+  {
+    category: "Languages",
+    items: [
+      "Italian (Native)",
+      "English (C1 – IELTS)",
+      "German (A1 – Currently Studying)",
+    ],
+  },
+];
