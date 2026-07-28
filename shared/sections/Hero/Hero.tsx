@@ -23,18 +23,25 @@ export default function Hero() {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-4">
-            {/*  <Link
+          <div className="flex flex-wrap items-center gap-3">
+            <Link
               href={HERO_ACTIONS.primary.href}
               className="rounded-md bg-neutral-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-neutral-700"
             >
               {HERO_ACTIONS.primary.label}
-            </Link> */}
+            </Link>
             <a
               href={HERO_ACTIONS.secondary.href}
               className="rounded-md border border-neutral-300 px-6 py-3 text-sm font-semibold text-neutral-900 transition hover:bg-neutral-100"
             >
               {HERO_ACTIONS.secondary.label}
+            </a>
+            <a
+              href={HERO_ACTIONS.tertiary.href}
+              download
+              className="rounded-md border border-neutral-900 px-6 py-3 text-sm font-semibold text-neutral-900 transition hover:bg-neutral-900 hover:text-white"
+            >
+              {HERO_ACTIONS.tertiary.label}
             </a>
           </div>
         </div>

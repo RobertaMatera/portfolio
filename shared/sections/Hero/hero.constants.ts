@@ -21,6 +21,10 @@ export const HERO_ACTIONS: HeroActions = {
     label: "Get in touch",
     href: "mailto:materaroberta11@gmail.com",
   },
+  tertiary: {
+    label: "Download CV",
+    href: "/files/CV_%20R_Matera.pdf",
+  },
 };
 
 export const HERO_PRIMARY_STACK: HeroPrimaryStackItem[] = [

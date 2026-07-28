@@ -13,6 +13,7 @@ export type HeroContent = {
 export type HeroActions = {
   primary: HeroAction;
   secondary: HeroAction;
+  tertiary: HeroAction;
 };
 
 export type HeroPrimaryStackItem = {
