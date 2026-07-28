@@ -1,0 +1,57 @@
+:root {
+  --background: #f9fbf9;
+  --background-secondary: #f3f6f2;
+
+  --surface: #ffffff;
+  --surface-hover: #f6f8f6;
+
+  --primary: #2d5a27;
+  --primary-hover: #22471d;
+  --primary-light: #e2efd8;
+
+  --secondary: #a8e063;
+  --secondary-hover: #95cd55;
+  --secondary-light: #eef8dd;
+
+  --accent: #a8e063;
+
+  --text-primary: #1a1c1a;
+  --text-secondary: #555b55;
+  --text-muted: #7a837a;
+
+  --border: #dce2d8;
+  --border-light: #e9eee6;
+
+  --success: #5b8f50;
+  --warning: #d9a441;
+  --error: #d06a5f;
+
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+  --glass-surface: rgba(255, 255, 255, 0.6);
+
+  --hero-blob: linear-gradient(135deg, #f8faf5 0%, #f1f7ec 40%, #edf4ea 100%);
+  --decorative-gradient: linear-gradient(135deg, #2d5a27, #5f8f4f, #a8e063);
+
+  --tech-badge-background: #f5f5f2;
+  --tech-badge-text: #2d5a27;
+  --tech-badge-border: #dce5d5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #171816;
+    --surface: #20221f;
+    --primary: #8eb97d;
+    --accent: #a7c957;
+    --text-primary: #f5f5f3;
+    --text-secondary: #bfbfb8;
+    --border: #353732;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--text-primary);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-body);
+}

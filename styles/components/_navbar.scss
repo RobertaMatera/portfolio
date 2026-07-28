@@ -1,0 +1,129 @@
+.navbar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 30;
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  border-bottom: 1px solid var(--border-light);
+  backdrop-filter: blur(10px);
+}
+
+.navbar__inner {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  max-width: 1280px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.navbar__logo {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.navbar__title {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar__name {
+  color: var(--text-primary);
+  font-size: 1.05rem;
+  font-family: var(--font-heading), Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.navbar__role {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.navbar__link {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 0.45rem 0.85rem;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.navbar__link:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.navbar__lang {
+  position: relative;
+}
+
+.navbar__lang-toggle {
+  min-width: 3rem;
+}
+
+.navbar__dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.35rem);
+  display: flex;
+  flex-direction: column;
+  min-width: 10rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 0.25rem;
+}
+
+.navbar__dropdown-button {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  border-radius: 8px;
+  padding: 0.5rem 0.65rem;
+  text-align: left;
+}
+
+.navbar__dropdown-button:hover {
+  background: var(--surface-hover);
+}
+
+@media (max-width: 960px) {
+  .navbar__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__menu,
+  .navbar__list {
+    flex-wrap: wrap;
+  }
+}

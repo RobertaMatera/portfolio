@@ -1,0 +1,10 @@
+@use "../styles/tokens/tokens";
+@use "../styles/base/base";
+@use "../styles/base/typography";
+@use "../styles/layout/layout";
+@use "../styles/components/buttons";
+@use "../styles/components/navbar";
+@use "../styles/components/hero";
+@use "../styles/components/tech-stack";
+
+@import "tailwindcss";

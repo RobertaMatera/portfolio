@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { LanguageCode, NavbarItem } from "./navbar.types";
+import { Language, LanguageCode, NavbarItem } from "./navbar.types";
 import { LANGUAGE_LABEL } from "./constNavbar";
 
 

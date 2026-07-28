@@ -1,0 +1,33 @@
+.tech-stack-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tech-stack-page__intro {
+  max-width: 68ch;
+}
+
+.tech-stack-page__grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.tech-stack-page__category {
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.tech-stack-page__list {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.tech-stack-page__item {
+  margin-bottom: 0.4rem;
+}
+
+.tech-stack-page__placeholder {
+  color: var(--primary);
+  font-weight: 600;
+}
