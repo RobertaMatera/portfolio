@@ -17,12 +17,12 @@ export default function Hero() {
           </div>
 
           <div className="hero__actions">
-            <Link
+            {/* <Link
               href={HERO_ACTIONS.primary.href}
               className="btn btn--cta"
             >
               {HERO_ACTIONS.primary.label}
-            </Link>
+            </Link> */}
             <a
               href={HERO_ACTIONS.secondary.href}
               className="btn btn--surface"

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import "./globals.scss";
+import Navbar from "../shared/layout/Navbar/Navbar";
 
 const headingFont = Montserrat({
   variable: "--font-heading",
@@ -34,7 +35,12 @@ export default function RootLayout({
       lang="en"
       className={`${headingFont.variable} ${bodyFont.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+          <Navbar />
+          <main>
+            {children}
+          </main>
+      </body>
     </html>
   );
 }
