@@ -21,13 +21,13 @@ export default function Navbar() {
                     width={100}
                     height={100}
                 />
-                  
+
                 <div>
                     <div className="self-center text-xl text-heading font-semibold whitespace-nowrap">Roberta Matera</div>
                     <div className="self-center text-md text-heading font-semibold whitespace-nowrap">FULL STACK DEVELOPER</div>
                 </div>
-                
-                
+
+
             </a>
             <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary" aria-controls="navbar-default" aria-expanded="false">
                 <span className="sr-only">Open main menu</span>
