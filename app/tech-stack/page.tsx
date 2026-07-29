@@ -6,11 +6,9 @@ import { HERO_SKILLS } from "@/shared/sections/TechStack/techStack.constants";
 export default function TechStackPage() {
   return (
     <main className="page-main tech-stack-page">
-      <div>
-        <Link href="/" className="tech-stack-page__back">
-          ← Back to home
-        </Link>
-      </div>
+      <Link href="/" className="btn btn--outline tech-stack-page__back">
+        ← Back to home
+      </Link>
 
       <div className="tech-stack-page__header">
         <Image
@@ -22,14 +20,14 @@ export default function TechStackPage() {
           className="tech-stack-page__header-ornament"
         />
         <p className="tech-stack-page__eyebrow flex gap-1">
-            <Image
-              src="/images/icons/leaf_icon.png"
-              alt="leaf icon"
-              width={30}
-              height={10}
-              aria-hidden
-            />
-            Tech Stack
+          <Image
+            src="/images/icons/leaf_icon.png"
+            alt="leaf icon"
+            width={30}
+            height={10}
+            aria-hidden
+          />
+          Tech Stack
         </p>
         <h1>Tech Stack</h1>
         <p className="tech-stack-page__intro">
