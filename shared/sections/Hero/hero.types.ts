@@ -7,7 +7,8 @@ export type HeroContent = {
   eyebrow: string;
   title: string;
   description: string;
-  placeholderLabel: string;
+  altLabel: string;
+  src: string;
 };
 
 export type HeroActions = {

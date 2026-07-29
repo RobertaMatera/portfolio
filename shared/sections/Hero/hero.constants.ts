@@ -9,7 +9,8 @@ export const HERO_CONTENT: HeroContent = {
   title: "Front-End & Full-Stack Developer building modern web experiences.",
   description:
     "I bring your needs to life, line by line. I design and develop fast, accessible, and scalable web applications, transforming ideas into intuitive digital products. From responsive front-end interfaces to robust backend APIs, I create reliable solutions focused on performance, usability, and clean code.",
-  placeholderLabel: "Roberta Matera portrait",
+  altLabel: "Roberta Matera portrait",
+  src:"/images/hero_pic.png",
 };
 
 export const HERO_ACTIONS: HeroActions = {
