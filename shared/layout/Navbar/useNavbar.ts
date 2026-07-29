@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Language, LanguageCode, NavbarItem } from "./navbar.types";
 import { LANGUAGE_LABEL } from "./constNavbar";
 
+
 export function useNavbar() {
   const items: NavbarItem[] = [
     {
@@ -14,12 +15,16 @@ export function useNavbar() {
       // href: "/#projects",
     // },
     {
+        label: "About",
+         href: "/about",
+    },
+    {
       label: "Tech Stack",
       href: "/tech-stack",
     },
     {
-      label: "CV",
-      href: "/CV",
+      label: "Resume",
+      href: "/resume",
     },
   ];
 
