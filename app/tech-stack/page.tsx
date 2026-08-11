@@ -29,7 +29,7 @@ export default function TechStackPage() {
           />
           Tech Stack
         </p>
-        <h1>Tech Stack</h1>
+        <h1>Technological Stack</h1>
         <p className="tech-stack-page__intro">
           Comprehensive collection of skills and technologies organized by expertise area.
         </p>
