@@ -1,0 +1,262 @@
+.section-block {
+  padding-block: clamp(2.2rem, 6vw, 4.25rem);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.section-block__header {
+  margin-bottom: 1.25rem;
+
+  h2 {
+    max-width: 32ch;
+  }
+}
+
+.section-block__eyebrow {
+  margin: 0 0 0.65rem;
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.section-block__content {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.section-block__content--narrow {
+  max-width: 72ch;
+}
+
+.skills-grid,
+.projects-grid,
+.education-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.skills-card,
+.project-card,
+.education-card,
+.timeline__item,
+.contact-card,
+.resume-page__card,
+.education-certifications {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--surface) 90%, var(--background-secondary) 10%);
+  box-shadow: 0 12px 28px rgba(18, 24, 16, 0.05);
+}
+
+.skills-card,
+.project-card,
+.education-card,
+.timeline__item,
+.contact-card,
+.resume-page__card,
+.education-certifications {
+  padding: 1.2rem;
+}
+
+.skills-card h3,
+.project-card h3,
+.education-card h3,
+.timeline__item h3,
+.education-certifications h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.08rem;
+}
+
+.skills-card ul,
+.project-card ul,
+.timeline__item ul {
+  margin: 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.timeline__meta,
+.timeline__period,
+.project-card__context,
+.education-card__meta {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.timeline__period {
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-top: 0.35rem;
+}
+
+.project-card__summary {
+  margin: 0.65rem 0;
+}
+
+.project-card__stack {
+  margin-top: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.65rem;
+    border: 1px solid var(--tech-badge-border);
+    border-radius: 999px;
+    background: var(--tech-badge-background);
+    color: var(--tech-badge-text);
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+}
+
+.project-card__footer {
+  margin-top: 0.95rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.project-card__confidential {
+  margin: 0;
+  font-size: 0.86rem;
+  color: var(--text-muted);
+}
+
+.project-card__link {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 0.18rem;
+}
+
+.education-card__status {
+  display: inline-flex;
+  margin: 0.6rem 0;
+  border-radius: 999px;
+  background: var(--primary-light);
+  color: var(--primary);
+  padding: 0.28rem 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.education-certifications {
+  margin-top: 1rem;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.45rem;
+    border-bottom: 1px dashed var(--border);
+    padding-bottom: 0.45rem;
+  }
+
+  strong {
+    color: var(--text-primary);
+    font-size: 0.85rem;
+  }
+}
+
+.education-certifications__languages {
+  margin: 1rem 0 0;
+  font-size: 0.92rem;
+}
+
+.section-block--contact {
+  border-bottom: 0;
+  padding-bottom: 1rem;
+}
+
+.contact-card {
+  max-width: 64ch;
+
+  p {
+    margin-top: 0;
+  }
+}
+
+.contact-card__actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.contact-card__socials {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+
+  a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 0.18rem;
+    font-size: 0.9rem;
+  }
+}
+
+.resume-page {
+  padding-top: 8.5rem;
+}
+
+.resume-page__eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--primary);
+}
+
+.resume-page__card {
+  max-width: 56ch;
+}
+
+.resume-page__actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+@media (max-width: 640px) {
+  .section-block {
+    padding-block: 2rem;
+  }
+
+  .skills-card,
+  .project-card,
+  .education-card,
+  .timeline__item,
+  .contact-card,
+  .resume-page__card,
+  .education-certifications {
+    padding: 1rem;
+  }
+}
