@@ -1,16 +1,13 @@
 import Link from "next/link";
+import { headers } from "next/headers";
 
-import { DEFAULT_LOCALE, Locale, isLocale } from "@/shared/i18n/config";
+import { DEFAULT_LOCALE, isLocale } from "@/shared/i18n/config";
 import { getDictionary } from "@/shared/i18n/getDictionary";
 import { localizedPath } from "@/shared/i18n/routing";
 
-type LocaleNotFoundProps = {
-  params: Promise<{ locale: string }>;
-};
-
-export default async function LocaleNotFound({ params }: LocaleNotFoundProps) {
-  const { locale } = await params;
-  const resolvedLocale = isLocale(locale) ? (locale as Locale) : DEFAULT_LOCALE;
+export default async function LocaleNotFound() {
+  const localeHeader = (await headers()).get("x-locale");
+  const resolvedLocale = localeHeader && isLocale(localeHeader) ? localeHeader : DEFAULT_LOCALE;
   const dict = await getDictionary(resolvedLocale);
 
   return (
