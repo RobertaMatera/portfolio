@@ -49,12 +49,10 @@ export default function ThemeToggle({ labels }: { labels: ThemeToggleLabels }) {
       onClick={handleToggle}
       aria-label={theme === "dark" ? labels.switchToLight : labels.switchToDark}
       aria-pressed={theme === "dark"}
+      title={theme === "dark" ? labels.switchToLight : labels.switchToDark}
     >
       <span className="theme-toggle__icon" aria-hidden suppressHydrationWarning>
         {theme === "dark" ? "☀" : "☾"}
-      </span>
-      <span className="theme-toggle__text" suppressHydrationWarning>
-        {theme === "dark" ? labels.light : labels.dark}
       </span>
     </button>
   );
