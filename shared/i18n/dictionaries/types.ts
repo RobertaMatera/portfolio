@@ -81,6 +81,8 @@ export type Dictionary = {
     items: { label: string; section: SectionId }[];
     resumeLabel: string;
     languageLabel: string;
+    openMenuLabel: string;
+    closeMenuLabel: string;
   };
   languageSwitcher: {
     current: string;

@@ -47,6 +47,8 @@ export const itDictionary: Dictionary = {
     ],
     resumeLabel: "Curriculum",
     languageLabel: "Lingua",
+    openMenuLabel: "Apri menu",
+    closeMenuLabel: "Chiudi menu",
   },
   languageSwitcher: {
     current: "Italiano",

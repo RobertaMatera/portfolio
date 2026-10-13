@@ -53,6 +53,8 @@ export const deDictionary: Dictionary = {
     ],
     resumeLabel: "Lebenslauf",
     languageLabel: "Sprache",
+    openMenuLabel: "Menü öffnen",
+    closeMenuLabel: "Menü schließen",
   },
   languageSwitcher: {
     current: "Deutsch",

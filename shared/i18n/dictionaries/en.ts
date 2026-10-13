@@ -51,6 +51,8 @@ export const enDictionary: Dictionary = {
     ],
     resumeLabel: "Resume",
     languageLabel: "Language",
+    openMenuLabel: "Open menu",
+    closeMenuLabel: "Close menu",
   },
   languageSwitcher: {
     current: "English",
