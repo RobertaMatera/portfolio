@@ -1,49 +1,73 @@
 import Image from "next/image";
+import Link from "next/link";
 
-import { HERO_ACTIONS, HERO_CONTENT } from "./hero.constants";
+import { CV_DOWNLOAD_PATH } from "@/shared/content/portfolioData";
+import { Locale } from "@/shared/i18n/config";
+import { Dictionary } from "@/shared/i18n/dictionaries/types";
+import { localizedPath } from "@/shared/i18n/routing";
 
-export default function Hero() {
+type HeroProps = {
+  locale: Locale;
+  dict: Dictionary;
+};
+
+const SOCIAL_LINKS = [
+  { label: "GitHub", href: "https://github.com/RobertaMatera" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/roberta-matera/" },
+  { label: "Email", href: "mailto:materaroberta11@gmail.com" },
+];
+
+export default function Hero({ locale, dict }: HeroProps) {
   return (
     <section aria-labelledby="hero-title" className="hero">
       <div className="hero__grid">
 
-        <p className="hero__eyebrow">{HERO_CONTENT.eyebrow}</p>
+        <p className="hero__eyebrow">{dict.hero.eyebrow}</p>
 
         <h1 id="hero-title" className="hero__title">
-          {HERO_CONTENT.title}
+          {dict.hero.title}
         </h1>
 
         <div className="hero__visual">
           <Image
-            src={HERO_CONTENT.src}
-            alt={HERO_CONTENT.altLabel}
+            src="/images/hero_pic.png"
+            alt="Roberta Matera portrait"
             width={420}
             height={560}
-            aria-hidden
             className="hero__portrait"
             priority
           />
         </div>
 
-        <p className="hero__description">{HERO_CONTENT.description}</p>
+        <p className="hero__description">{dict.hero.description}</p>
 
         <div className="hero__actions">
-          {/* View projects CTA intentionally disabled for now */}
+          <Link href={localizedPath(locale, "projects")} className="btn btn--cta">
+            {dict.hero.actions.primary}
+          </Link>
           <a
-            href={HERO_ACTIONS.secondary.href}
+            href="mailto:materaroberta11@gmail.com"
             className="btn btn--surface"
           >
-            {HERO_ACTIONS.secondary.label}
+            {dict.hero.actions.secondary}
           </a>
           <a
-            href={HERO_ACTIONS.tertiary.href}
+            href={CV_DOWNLOAD_PATH}
             download
             className="btn btn--outline"
           >
-            {HERO_ACTIONS.tertiary.label}
+            {dict.hero.actions.tertiary}
           </a>
         </div>
-
+        <ul className="hero__socials" aria-label={dict.a11y.socialLinks}>
+          {SOCIAL_LINKS.map((link) => (
+            <li key={link.label}>
+              <a href={link.href} target="_blank" rel="noopener noreferrer">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

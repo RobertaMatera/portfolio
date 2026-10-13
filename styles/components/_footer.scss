@@ -55,8 +55,7 @@
   letter-spacing: -0.02em;
 }
 
-/* ── CTA button (pill, outlined) ── */
-.btn {
+.footer .btn {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -67,26 +66,17 @@
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-.btn--outline {
+.footer .btn--outline {
   padding: 0.65rem 1.35rem;
   border: 1px solid var(--border-light);
   background: transparent;
   color: var(--text-primary);
 }
 
-.btn--outline:hover {
+.footer .btn--outline:hover {
   background: var(--primary);
   border-color: var(--primary);
   color: var(--background);
-}
-
-.footer__cta-button span {
-  display: inline-block;
-  transition: transform 0.2s ease;
-}
-
-.footer__cta-button:hover span {
-  transform: translateX(2px);
 }
 
 /* ── Nav columns ── */

@@ -1,11 +1,5 @@
-import Hero from "../shared/sections/Hero/Hero";
-// import Projects from "../shared/sections/Projects/Projects";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <main className="page-main">
-      <Hero />
-      {/* <Projects /> */}
-    </main>
-  );
+  redirect("/it");
 }

@@ -1,8 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { FOOTER_COLUMNS, FOOTER_CTA, FOOTER_DECOR } from "./constFooter";
-import { FooterColumnData } from "./footer.types";
+import { Locale } from "@/shared/i18n/config";
+import { Dictionary } from "@/shared/i18n/dictionaries/types";
+import { localizedPath } from "@/shared/i18n/routing";
+import { CV_DOWNLOAD_PATH } from "@/shared/content/portfolioData";
+
+type FooterProps = {
+  locale: Locale;
+  dict: Dictionary;
+};
+
+type FooterColumnData = {
+  title: string;
+  links: { label: string; href: string; external?: boolean }[];
+};
 
 function FooterColumn({ title, links }: FooterColumnData) {
   return (
@@ -11,9 +23,20 @@ function FooterColumn({ title, links }: FooterColumnData) {
       <ul className="footer__list">
         {links.map((link) => (
           <li key={link.label}>
-            <Link href={link.href} className="footer__list-link">
-              {link.label}
-            </Link>
+            {link.external ? (
+              <a
+                href={link.href}
+                className="footer__list-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link href={link.href} className="footer__list-link">
+                {link.label}
+              </Link>
+            )}
           </li>
         ))}
       </ul>
@@ -21,47 +44,63 @@ function FooterColumn({ title, links }: FooterColumnData) {
   );
 }
 
-export default function Footer() {
+export default function Footer({ locale, dict }: FooterProps) {
   const currentYear = new Date().getFullYear();
+  const footerColumns: FooterColumnData[] = [
+    {
+      title: dict.footer.siteColumn.title,
+      links: dict.footer.siteColumn.links.map((link) => ({
+        label: link.label,
+        href: localizedPath(locale, link.route),
+      })),
+    },
+    {
+      title: dict.footer.socialColumn.title,
+      links: dict.footer.socialColumn.links,
+    },
+    {
+      title: dict.footer.resourcesColumn.title,
+      links: dict.footer.resourcesColumn.links.map((link) => ({
+        label: link.label,
+        href: link.route === "resume" ? CV_DOWNLOAD_PATH : localizedPath(locale, link.route),
+        external: link.route === "resume",
+      })),
+    },
+  ];
 
   return (
     <footer className="footer">
       <div className="footer__inner">
-        {/* ── CTA ── */}
         <section className="footer__cta" aria-labelledby="footer-cta-title">
           <Image
-            src={FOOTER_CTA.iconSrc}
-            alt=""
+            src="/images/icons/logo.png"
+            alt="Roberta Matera logo"
             width={80}
             height={80}
-            aria-hidden
             className="footer__cta-icon"
           />
           <div className="footer__cta-content">
-              <p id="footer-cta-title" className="footer__cta-text">
-                {FOOTER_CTA.text}
-              </p>
-              <a href={FOOTER_CTA.button.href} className="btn btn--outline footer__cta-button">
-                {FOOTER_CTA.button.label}
-              </a>
+            <p id="footer-cta-title" className="footer__cta-text">
+              {dict.footer.cta.text}
+            </p>
+            <a href="mailto:materaroberta11@gmail.com" className="btn btn--outline footer__cta-button">
+              {dict.footer.cta.button}
+            </a>
           </div>
         </section>
 
-        {/* ── Nav columns ── */}
         <div className="footer__columns">
-          {FOOTER_COLUMNS.map((col) => (
+          {footerColumns.map((col) => (
             <FooterColumn key={col.title} {...col} />
           ))}
         </div>
       </div>
 
-      {/* ── Copyright bar ── */}
       <div className="footer__meta">
         <p className="footer__copyright">
-          © {currentYear} Roberta Matera. All rights reserved.
+          © {currentYear} Roberta Matera. {dict.footer.copyrightSuffix}
         </p>
       </div>
     </footer>
   );
 }
-

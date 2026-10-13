@@ -1,18 +1,22 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 
-import { useNavbar } from "./useNavbar";
-import { LanguageCode } from "./navbar.types";
+import { Dictionary } from "@/shared/i18n/dictionaries/types";
+import { Locale } from "@/shared/i18n/config";
+import { localizedPath, localizedSectionPath } from "@/shared/i18n/routing";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
+import LocaleSwitcher from "./LocaleSwitcher";
 
-export default function Navbar() {
-  const { items: navItems, languages, isLangOpen, setIsLangOpen } = useNavbar();
+type NavbarProps = {
+  locale: Locale;
+  dict: Dictionary;
+};
 
+export default function Navbar({ locale, dict }: NavbarProps) {
   return (
-    <nav className="navbar">
+    <nav className="navbar" aria-label={dict.a11y.primaryNavigation}>
       <div className="navbar__inner">
-        <Link href="/" className="navbar__brand">
+        <Link href={localizedPath(locale, "home")} className="navbar__brand">
           <Image
             src="/images/icons/logoBg.png"
             alt="Roberta Matera Logo"
@@ -21,50 +25,33 @@ export default function Navbar() {
             className="navbar__logo"
           />
           <div className="navbar__title">
-            <span className="navbar__name">Roberta Matera</span>
-            <span className="navbar__role">Full Stack Developer</span>
+            <span className="navbar__name">{dict.nav.name}</span>
+            <span className="navbar__role">{dict.nav.role}</span>
           </div>
         </Link>
 
-        <div className="navbar__menu">
+        <div className="navbar__controls">
           <ul className="navbar__list">
-            {navItems.map((item) => (
-              <li key={item.label}>
-                <Link href={item.href ?? "/"} className="navbar__link">
+            {dict.nav.items.map((item) => (
+              <li key={item.section}>
+                <Link href={localizedSectionPath(locale, item.section)} className="navbar__link">
                   {item.label}
                 </Link>
               </li>
             ))}
+            <li>
+              <Link href={localizedPath(locale, "resume")} className="navbar__link">
+                {dict.nav.resumeLabel}
+              </Link>
+            </li>
           </ul>
-
-          <div className="navbar__lang">
-            <button
-              type="button"
-              className="btn btn--surface navbar__lang-toggle"
-              onClick={() => setIsLangOpen((lang) => !lang)}
-            >
-              {LanguageCode.EN.toUpperCase()}
-            </button>
-
-            {isLangOpen && (
-              <ul className="navbar__dropdown">
-                {languages.map((lang) => (
-                  <li key={lang.code}>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        console.log("selected:", lang.code);
-                        setIsLangOpen(false);
-                      }}
-                      className="navbar__dropdown-button"
-                    >
-                      {lang.label}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
+          <LocaleSwitcher
+            locale={locale}
+            label={dict.nav.languageLabel}
+            chooseLanguageLabel={dict.languageSwitcher.chooseLanguage}
+            localeLabels={dict.languageSwitcher.locales}
+          />
+          <ThemeToggle labels={dict.theme} />
         </div>
       </div>
     </nav>

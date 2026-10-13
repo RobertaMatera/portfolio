@@ -1,39 +1,50 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  color: var(--text-primary);
-  font-family: var(--font-heading), Arial, Helvetica, sans-serif;
-  letter-spacing: -0.02em;
-}
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    color: var(--text-primary);
+    font-family: var(--font-heading), Arial, Helvetica, sans-serif;
+    letter-spacing: -0.02em;
+    line-height: var(--line-height-tight);
+    text-wrap: balance;
+  }
 
-h1 {
-  font-size: clamp(1.5rem, 4.4vw, 3rem);
-  font-weight: 700;
-}
+  h1 {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+  }
 
-h2 {
-  font-size: clamp(1.25rem, 3vw, 2rem);
-  font-weight: 700;
-}
+  h2 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+  }
 
-h3 {
-  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
-  font-weight: 500;
-}
+  h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+  }
 
-p,
-li,
-span,
-label,
-input,
-textarea,
-button {
-  color: var(--text-secondary);
-  font-family: var(--font-body), Arial, Helvetica, sans-serif;
-  font-size: clamp(1rem, 1.6vw, 1.125rem);
-  font-weight: 400;
+  p,
+  li,
+  span,
+  label,
+  input,
+  textarea,
+  button {
+    color: var(--text-secondary);
+    font-family: var(--font-body), Arial, Helvetica, sans-serif;
+    font-size: var(--font-size-md);
+    font-weight: 400;
+  }
+
+  p,
+  li {
+    line-height: var(--line-height-regular);
+    text-wrap: pretty;
+    max-inline-size: 75ch;
+  }
 }

@@ -1,14 +1,5 @@
-export default function CVPage() {
-  return (
-    <main>
-      <h1>Curriculum Vitae</h1>
-      <a href="/cv/roberta-matera-cv.pdf" download>
-          Download CV (PDF)
-        </a>
+import { redirect } from "next/navigation";
 
-        <a href="/cv/roberta-matera-cv.pdf" target="_blank" rel="noopener noreferrer">
-          View CV
-        </a>
-    </main>
-  );
+export default function CVPage() {
+  redirect("/it/curriculum");
 }
