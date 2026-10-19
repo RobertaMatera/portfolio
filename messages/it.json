@@ -17,6 +17,23 @@
     "skipToContent": "Vai al contenuto",
     "role": "Full-stack · Frontend · UX/UI"
   },
+  "Nav": {
+    "label": "Sezioni",
+    "top": "Home",
+    "about": "Chi sono",
+    "what": "Cosa faccio",
+    "experience": "Esperienza",
+    "work": "Lavori",
+    "contact": "Contatti"
+  },
+  "LanguageMenu": {
+    "label": "Lingua",
+    "names": {
+      "en": "English",
+      "it": "Italiano",
+      "de": "Deutsch"
+    }
+  },
   "Hero": {
     "eyebrow": "Full-stack developer · Berna",
     "title": "Sviluppatrice full-stack specializzata in frontend e design, <em>con lo sguardo di un’architetta</em>."

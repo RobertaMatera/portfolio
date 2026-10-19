@@ -86,7 +86,9 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
   const t = await getTranslations({ locale, namespace: "Common" });
 
   return (
-    <html lang={locale} className={`${manrope.variable} ${fraunces.variable}`}>
+    // data-scroll-behavior: Next.js turns smooth scrolling off during route
+    // changes (e.g. switching language) and keeps it for in-page anchors.
+    <html lang={locale} className={`${manrope.variable} ${fraunces.variable}`} data-scroll-behavior="smooth">
       <body>
         {/* Gives client components (e.g. the locale-aware Link) the current
             locale. messages={null} keeps translations out of the client

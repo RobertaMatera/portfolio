@@ -17,6 +17,23 @@
     "skipToContent": "Zum Inhalt springen",
     "role": "Full-Stack · Frontend · UX/UI"
   },
+  "Nav": {
+    "label": "Abschnitte",
+    "top": "Start",
+    "about": "Über mich",
+    "what": "Leistungen",
+    "experience": "Erfahrung",
+    "work": "Projekte",
+    "contact": "Kontakt"
+  },
+  "LanguageMenu": {
+    "label": "Sprache",
+    "names": {
+      "en": "English",
+      "it": "Italiano",
+      "de": "Deutsch"
+    }
+  },
   "Hero": {
     "eyebrow": "Full-Stack-Entwicklerin · Bern",
     "title": "Full-Stack-Entwicklerin mit Fokus auf Frontend und Design, <em>geprägt von der Architektur</em>."

@@ -1,0 +1,83 @@
+@use "breakpoints" as bp;
+@use "mixins";
+
+.top-bar {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 40;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1560px;
+  margin-inline: auto;
+  padding: calc(16px + env(safe-area-inset-top, 0px)) clamp(20px, 3.5vw, 56px) 0;
+  // The bar spans the full width; only its pieces should catch clicks.
+  pointer-events: none;
+
+  > * {
+    pointer-events: auto;
+  }
+
+  @include bp.down("sm") {
+    padding: calc(12px + env(safe-area-inset-top, 0px)) 14px 0;
+  }
+}
+
+.top-bar__brand {
+  @include mixins.glass;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 54px;
+  padding: 0 22px 0 8px;
+  border-radius: var(--r-pill);
+  font-size: 0.875rem; // 14px
+  font-weight: 800;
+  line-height: 1.3;
+
+  @include bp.down("brand") {
+    justify-content: center;
+    width: 54px;
+    padding: 0;
+  }
+
+  @include bp.down("sm") {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.top-bar__logo {
+  flex: none;
+  width: auto;
+  height: 40px;
+
+  @include bp.down("brand") {
+    height: 38px;
+  }
+
+  @include bp.down("sm") {
+    height: 34px;
+  }
+}
+
+.top-bar__brand-text {
+  small {
+    display: block;
+    color: var(--tm);
+    font-size: 0.6875rem; // 11px
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  // Hidden visually but kept as the link's accessible name.
+  @include bp.down("brand") {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}

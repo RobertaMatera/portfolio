@@ -1,0 +1,15 @@
+// Frosted glass surface used by the logo pill, language menu and dock veil.
+@mixin glass {
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--sh-glass);
+}
+
+// Removes list styling while keeping list semantics.
+@mixin plain-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

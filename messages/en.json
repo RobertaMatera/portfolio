@@ -17,6 +17,23 @@
     "skipToContent": "Skip to content",
     "role": "Full-stack · Frontend · UX/UI"
   },
+  "Nav": {
+    "label": "Sections",
+    "top": "Home",
+    "about": "About",
+    "what": "What I do",
+    "experience": "Experience",
+    "work": "Work",
+    "contact": "Contact"
+  },
+  "LanguageMenu": {
+    "label": "Language",
+    "names": {
+      "en": "English",
+      "it": "Italiano",
+      "de": "Deutsch"
+    }
+  },
   "Hero": {
     "eyebrow": "Full-stack developer · Bern",
     "title": "Full-stack developer focused on frontend and design, <em>shaped by architecture</em>."

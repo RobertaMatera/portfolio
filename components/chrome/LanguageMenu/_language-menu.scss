@@ -1,0 +1,98 @@
+@use "mixins";
+
+.language-menu {
+  @include mixins.glass;
+  position: relative;
+  border-radius: var(--r-pill);
+}
+
+.language-menu__toggle {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  // 42px + the pill's 1px borders = a 44px touch target (mockup: 42px).
+  min-height: 42px;
+  padding: 11px 14px;
+  border: 0;
+  border-radius: var(--r-pill);
+  background: none;
+  color: var(--g7);
+  font-size: 0.8125rem; // 13px
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.language-menu__chevron {
+  transition: rotate var(--dur-base);
+
+  // Overrides the 16px above: the mockup's chevron is slightly smaller.
+  .language-menu__toggle & {
+    width: 14px;
+    height: 14px;
+  }
+
+  .is-open & {
+    rotate: 180deg;
+  }
+}
+
+.language-menu__list {
+  @include mixins.plain-list;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 150px;
+  padding: 6px;
+  border-radius: var(--r-lg);
+  background: rgb(255 255 255 / 97%);
+  box-shadow: var(--sh-pop);
+  opacity: 0;
+  translate: 0 -6px;
+  // `visibility` (not just opacity) keeps the hidden links out of the tab
+  // order and the accessibility tree; it switches after the fade-out.
+  visibility: hidden;
+  transition:
+    opacity var(--dur-fast),
+    translate var(--dur-fast),
+    visibility 0s var(--dur-fast);
+
+  .is-open & {
+    opacity: 1;
+    translate: 0 0;
+    visibility: visible;
+    transition:
+      opacity var(--dur-fast),
+      translate var(--dur-fast),
+      visibility 0s;
+  }
+}
+
+.language-menu__link {
+  display: block;
+  // 44px touch target; the mockup's items are 39px.
+  padding: 11px 14px;
+  border-radius: var(--r-sm);
+  color: var(--t2);
+  font-size: 0.875rem; // 14px
+  font-weight: 600;
+
+  &:hover {
+    background: var(--pl);
+  }
+
+  &:focus-visible {
+    outline-offset: -3px;
+  }
+
+  &[aria-current="page"] {
+    background: var(--sl);
+    color: var(--g6);
+    font-weight: 800;
+  }
+}

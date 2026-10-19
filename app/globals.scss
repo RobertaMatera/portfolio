@@ -1,5 +1,17 @@
-// Global stylesheet: tokens and base first, then one partial per component
-// (added here as each component is built).
+// Global stylesheet: tokens and base first, then one partial per component.
 @use "../styles/tokens";
 @use "../styles/base";
 @use "../styles/typography";
+
+// UI primitives
+@use "../components/ui/Icon/icon";
+@use "../components/ui/Button/button";
+@use "../components/ui/Eyebrow/eyebrow";
+
+// Page chrome
+@use "../components/chrome/TopBar/top-bar";
+@use "../components/chrome/Dock/dock";
+@use "../components/chrome/LanguageMenu/language-menu";
+
+// Pages
+@use "../components/pages/NotFound/not-found";
