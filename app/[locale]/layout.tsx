@@ -4,7 +4,9 @@ import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
+import { profile } from "@/content/profile";
 import { routing } from "@/i18n/routing";
+import { languageAlternates, localeUrl, ogLocales, siteUrl } from "@/lib/site";
 
 import "../globals.scss";
 
@@ -36,10 +38,42 @@ export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Pr
   if (!hasLocale(routing.locales, locale)) return {};
 
   const t = await getTranslations({ locale, namespace: "Metadata" });
+  const title = t("title");
+  const description = t("description");
+  const url = localeUrl(locale);
 
   return {
-    title: t("title"),
-    description: t("description"),
+    metadataBase: new URL(siteUrl),
+    // Child pages (e.g. the 404) get "<page> | Roberta Matera".
+    title: { default: title, template: `%s | ${profile.name}` },
+    description,
+    applicationName: profile.name,
+    authors: [{ name: profile.name, url }],
+    creator: profile.name,
+    alternates: {
+      canonical: url,
+      languages: languageAlternates(),
+    },
+    openGraph: {
+      type: "profile",
+      firstName: profile.givenName,
+      lastName: profile.familyName,
+      siteName: profile.name,
+      url,
+      title,
+      description,
+      locale: ogLocales[locale],
+      alternateLocale: routing.locales.filter((l) => l !== locale).map((l) => ogLocales[l]),
+      // og:image comes from the colocated opengraph-image.tsx.
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+    // A phone number in the copy should not become a tap-to-call link
+    // unless it is marked up as one.
+    formatDetection: { telephone: false },
   };
 }
 

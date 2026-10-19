@@ -5,7 +5,8 @@ import { Link } from "@/i18n/navigation";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("NotFound");
-  return { title: t("title") };
+  // Don't inherit the home page's canonical/hreflang: this URL is not the home page.
+  return { title: t("title"), alternates: null };
 }
 
 // Styled in step 3 together with the shared Button component.

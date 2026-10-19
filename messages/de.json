@@ -1,10 +1,25 @@
 {
   "Metadata": {
     "title": "Roberta Matera | Full-Stack-Entwicklerin · Frontend & UX/UI-Design · Bern",
-    "description": "Full-Stack-Entwicklerin mit Fokus auf Frontend und UX/UI-Design und einem Master in Architektur. Angular, React, TypeScript, Java und Spring Boot. Mit Sitz in Bern."
+    "description": "Full-Stack-Entwicklerin mit Fokus auf Frontend und UX/UI-Design und einem Master in Architektur. Angular, React, TypeScript, Java und Spring Boot. Mit Sitz in Bern.",
+    "ogImageAlt": "Roberta Matera, Full-Stack-Entwicklerin mit Fokus auf Frontend und UX/UI-Design, mit Porträt und RM-Logo"
+  },
+  "Person": {
+    "jobTitle": "Full-Stack-Entwicklerin (Frontend und UX/UI)",
+    "topics": {
+      "frontend": "Frontend-Entwicklung",
+      "uxui": "UX/UI-Design",
+      "designSystems": "Designsysteme",
+      "architecture": "Architektur"
+    }
   },
   "Common": {
-    "skipToContent": "Zum Inhalt springen"
+    "skipToContent": "Zum Inhalt springen",
+    "role": "Full-Stack · Frontend · UX/UI"
+  },
+  "Hero": {
+    "eyebrow": "Full-Stack-Entwicklerin · Bern",
+    "title": "Full-Stack-Entwicklerin mit Fokus auf Frontend und Design, <em>geprägt von der Architektur</em>."
   },
   "NotFound": {
     "title": "Seite nicht gefunden",
