@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import TopBar from "@/components/chrome/TopBar/TopBar";
 import About from "@/components/sections/About/About";
+import Experience from "@/components/sections/Experience/Experience";
 import Hero from "@/components/sections/Hero/Hero";
 import Services from "@/components/sections/Services/Services";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
@@ -36,6 +37,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         <Hero locale={locale} />
         <About locale={locale} />
         <Services locale={locale} />
+        <Experience locale={locale} />
       </main>
     </>
   );

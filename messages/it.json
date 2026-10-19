@@ -119,6 +119,34 @@
       }
     }
   },
+  "Experience": {
+    "eyebrow": "Esperienza",
+    "title": "Il mio percorso.",
+    "education": "Formazione",
+    "entries": {
+      "f1": {
+        "title": "Frontend Engineer & UX/UI Owner",
+        "note": "progetti enterprise in ambito assicurativo, retail, food ed energia",
+        "body": "Unica sviluppatrice frontend e responsabile UI/UX di una piattaforma per assicurazioni auto. I prototipi Figma per una piattaforma retail hanno ridotto del 30% i cicli di revisione."
+      },
+      "pegaso": {
+        "title": "Laurea triennale in Informatica per le Aziende Digitali",
+        "body": "Basi full-stack in Java, Spring Boot, Angular e UML, applicate nel mio progetto Health Bridge Clinic."
+      },
+      "almaviva": {
+        "title": "Frontend Engineer",
+        "body": "Ho progettato ARTEA, una libreria React di 27 componenti usata in tre applicazioni, e GENIO, una piattaforma che ha ridotto del 60% i tempi di pianificazione."
+      },
+      "nexum": {
+        "title": "Frontend Engineer",
+        "body": "Componenti React/SCSS fedeli al pixel per e-commerce di lusso e moda; refactoring in Angular di un’applicazione bancaria con Storybook e Material UI."
+      },
+      "architecture": {
+        "title": "Laurea magistrale in Architettura",
+        "body": "Dove ho imparato a pensare per sistemi, persone e spazi."
+      }
+    }
+  },
   "NotFound": {
     "title": "Pagina non trovata",
     "body": "La pagina che cerchi non esiste o è stata spostata.",

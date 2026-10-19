@@ -119,6 +119,34 @@
       }
     }
   },
+  "Experience": {
+    "eyebrow": "Experience",
+    "title": "My journey so far.",
+    "education": "Education",
+    "entries": {
+      "f1": {
+        "title": "Frontend Engineer & UX/UI Owner",
+        "note": "enterprise projects in insurance, retail, food and energy",
+        "body": "Sole frontend developer and UI/UX owner of a car-insurance platform. Figma prototypes for a retail platform cut revision cycles by 30%."
+      },
+      "pegaso": {
+        "title": "BSc in IT for Digital Enterprises",
+        "body": "Full-stack foundations in Java, Spring Boot, Angular and UML, applied in my Health Bridge Clinic project."
+      },
+      "almaviva": {
+        "title": "Frontend Engineer",
+        "body": "Designed ARTEA, a 27-component React library used in three apps, and GENIO, a platform that cut planning time by 60%."
+      },
+      "nexum": {
+        "title": "Frontend Engineer",
+        "body": "Pixel-accurate React/SCSS components for luxury and fashion e-commerce; Angular banking refactor with Storybook and Material UI."
+      },
+      "architecture": {
+        "title": "MSc in Architecture",
+        "body": "Where I learned to think in systems, people and space."
+      }
+    }
+  },
   "NotFound": {
     "title": "Page not found",
     "body": "The page you are looking for doesn’t exist or has moved.",
