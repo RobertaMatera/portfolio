@@ -36,7 +36,13 @@
   },
   "Hero": {
     "eyebrow": "Full-stack developer · Berna",
-    "title": "Sviluppatrice full-stack specializzata in frontend e design, <em>con lo sguardo di un’architetta</em>."
+    "title": "Sviluppatrice full-stack specializzata in frontend e design, <em>con lo sguardo di un’architetta</em>.",
+    "intro": "Sono Roberta, sviluppatrice full-stack con 4,5 anni di esperienza in ambito bancario, assicurativo, retail e sanitario. Mi occupo di frontend e UX/UI design e porto in ogni interfaccia il pensiero di un’architetta: prima la struttura, sempre i dettagli, al centro le persone.",
+    "viewProjects": "Vedi i progetti",
+    "downloadCv": "Scarica il CV",
+    "cvFileInfo": "PDF, {language}, {size} KB",
+    "stackLabel": "Tecnologie con cui lavoro",
+    "portraitAlt": "Roberta Matera, sviluppatrice full-stack, ritratto con il suo logo RM"
   },
   "NotFound": {
     "title": "Pagina non trovata",

@@ -13,5 +13,8 @@
 @use "../components/chrome/Dock/dock";
 @use "../components/chrome/LanguageMenu/language-menu";
 
+// Home sections, in page order
+@use "../components/sections/Hero/hero";
+
 // Pages
 @use "../components/pages/NotFound/not-found";

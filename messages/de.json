@@ -36,7 +36,13 @@
   },
   "Hero": {
     "eyebrow": "Full-Stack-Entwicklerin · Bern",
-    "title": "Full-Stack-Entwicklerin mit Fokus auf Frontend und Design, <em>geprägt von der Architektur</em>."
+    "title": "Full-Stack-Entwicklerin mit Fokus auf Frontend und Design, <em>geprägt von der Architektur</em>.",
+    "intro": "Ich bin Roberta, Full-Stack-Entwicklerin mit 4,5 Jahren Erfahrung in Banking, Versicherung, Retail und Gesundheitswesen. Mein Schwerpunkt sind Frontend und UX/UI-Design, und in jede Oberfläche bringe ich das Denken einer Architektin ein: erst die Struktur, immer die Details, der Mensch im Mittelpunkt.",
+    "viewProjects": "Projekte ansehen",
+    "downloadCv": "Lebenslauf laden",
+    "cvFileInfo": "PDF, {language}, {size} KB",
+    "stackLabel": "Technologien, mit denen ich arbeite",
+    "portraitAlt": "Roberta Matera, Full-Stack-Entwicklerin, Porträt mit ihrem RM-Logo"
   },
   "NotFound": {
     "title": "Seite nicht gefunden",

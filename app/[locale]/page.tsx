@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import TopBar from "@/components/chrome/TopBar/TopBar";
+import Hero from "@/components/sections/Hero/Hero";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import type { Locale } from "@/i18n/routing";
 import { buildSiteGraph } from "@/lib/structured-data";
@@ -24,12 +25,14 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
     ],
   });
 
-  // Sections are added to <main> in mockup order from step 4 onwards.
+  // Sections in mockup order.
   return (
     <>
       <JsonLd data={siteGraph} />
       <TopBar locale={locale} />
-      <main id="content" tabIndex={-1} />
+      <main id="content" tabIndex={-1}>
+        <Hero locale={locale} />
+      </main>
     </>
   );
 }

@@ -15,6 +15,12 @@
     background-color var(--dur-fast),
     color var(--dur-fast);
 
+  // The mockup sets the arrow one space after the label, closer than the
+  // 8px gap meant for icons.
+  &__glyph {
+    margin-inline-start: -4px;
+  }
+
   &--primary {
     background: var(--g6);
     color: #fff;

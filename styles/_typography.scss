@@ -26,3 +26,9 @@ h2 {
 p {
   margin: 0;
 }
+
+// Introductory paragraph under a section heading.
+.lead {
+  max-width: 560px;
+  color: var(--t2);
+}

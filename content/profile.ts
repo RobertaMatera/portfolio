@@ -27,9 +27,13 @@ export const profile = {
   languages: ["it", "en", "de"],
   portrait: { src: "/images/hero/portrait.webp", width: 560, height: 693 },
   logo: { src: "/images/brand/logo.webp", width: 220, height: 216 },
-  cv: "/files/roberta-matera-cv.pdf",
-  /** Technologies are proper nouns and stay in English in every locale. */
-  technologies: ["Angular", "React", "Next.js", "TypeScript", "Java", "Spring Boot", "Sass", "Figma"],
+  /** One CV for now, written in Italian; add per-locale files here later. */
+  cv: {
+    href: "/files/roberta-matera-cv.pdf",
+    fileName: "Roberta-Matera-CV.pdf",
+    language: "it",
+    sizeKb: 105,
+  },
   alumniOf: [
     { name: "Politecnico di Bari", url: "https://www.poliba.it/en/" },
     { name: "Università Telematica Pegaso", url: "https://www.unipegaso.it/" },

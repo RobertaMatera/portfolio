@@ -1,4 +1,5 @@
 import { profile, socialLinks } from "@/content/profile";
+import { technologies } from "@/content/technologies";
 import type { Locale } from "@/i18n/routing";
 
 import { localeUrl, siteUrl } from "./site";
@@ -48,7 +49,7 @@ export function buildSiteGraph(locale: Locale, copy: PersonCopy): JsonLdDocument
       addressCountry: profile.location.countryCode,
     },
     knowsLanguage: [...profile.languages],
-    knowsAbout: [...copy.topics, ...profile.technologies],
+    knowsAbout: [...copy.topics, ...technologies.map((tech) => tech.name)],
     alumniOf: profile.alumniOf.map((school) => ({
       "@type": "CollegeOrUniversity",
       name: school.name,

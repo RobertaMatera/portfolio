@@ -36,7 +36,13 @@
   },
   "Hero": {
     "eyebrow": "Full-stack developer · Bern",
-    "title": "Full-stack developer focused on frontend and design, <em>shaped by architecture</em>."
+    "title": "Full-stack developer focused on frontend and design, <em>shaped by architecture</em>.",
+    "intro": "I’m Roberta, a full-stack developer with 4.5 years of experience in banking, insurance, retail and healthcare. I specialise in frontend and UX/UI design, and I bring an architect’s way of thinking to every interface: structure first, details always, people at the centre.",
+    "viewProjects": "View projects",
+    "downloadCv": "Download CV",
+    "cvFileInfo": "PDF, {language}, {size} KB",
+    "stackLabel": "Technologies I work with",
+    "portraitAlt": "Roberta Matera, full-stack developer, portrait with her RM logo"
   },
   "NotFound": {
     "title": "Page not found",
