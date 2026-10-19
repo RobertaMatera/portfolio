@@ -15,7 +15,8 @@
   },
   "Common": {
     "skipToContent": "Skip to content",
-    "role": "Full-stack · Frontend · UX/UI"
+    "role": "Full-stack · Frontend · UX/UI",
+    "newTab": "opens in a new tab"
   },
   "Nav": {
     "label": "Sections",
@@ -43,6 +44,80 @@
     "cvFileInfo": "PDF, {language}, {size} KB",
     "stackLabel": "Technologies I work with",
     "portraitAlt": "Roberta Matera, full-stack developer, portrait with her RM logo"
+  },
+  "About": {
+    "eyebrow": "About me",
+    "title": "From architecture to code: building with structure and empathy.",
+    "story": "I trained as an architect, with a master’s degree from the <poliba>Polytechnic of Bari</poliba>, and I learned to turn a brief, a site and a long list of constraints into spaces people enjoy using. Between 2020 and 2022 I moved into web development through two bootcamps, because I realised that screens are the new spaces: people move through them, get lost in them, or feel at home.",
+    "today": "Since then I have worked on banking, insurance, retail and healthcare products as a frontend engineer who owns the UX/UI, and I added Java and Spring Boot to deliver full-stack products end to end. Today I work between designers, developers and business teams, and I’m growing towards product design. I also earned a bachelor’s degree in <pegaso>IT for Digital Enterprises</pegaso> at Pegaso Digital University.",
+    "tagsLabel": "At a glance",
+    "tags": {
+      "location": "Based in Bern",
+      "architecture": "Architecture",
+      "designSystems": "Design systems",
+      "fullStack": "Full-stack",
+      "languages": "IT · EN · DE"
+    },
+    "factsLabel": "Key figures",
+    "facts": {
+      "years": {
+        "value": "4.5+",
+        "label": "Years in frontend"
+      },
+      "errors": {
+        "value": "−40%",
+        "label": "Fewer claims-reporting errors on an insurance platform"
+      },
+      "languages": {
+        "value": "3",
+        "label": "Languages spoken"
+      },
+      "profile": {
+        "value": "FE + BA",
+        "label": "Full-stack & analysis"
+      }
+    },
+    "principlesTitle": "How architecture makes me a better developer",
+    "principles": {
+      "systems": {
+        "title": "Systems thinking",
+        "body": "A building is a system of structure, flows and use. I apply the same logic to design systems and component libraries, like ARTEA: 27 components reused in three applications."
+      },
+      "movement": {
+        "title": "Designing movement",
+        "body": "Architects design how people move through a space. I design how users move through a product: clear navigation, sensible flows and fewer errors (−40% errors on an insurance platform)."
+      },
+      "constraints": {
+        "title": "Precision within constraints",
+        "body": "Every project has budgets, regulations and physics. I’m used to finding elegant solutions inside technical, legal and business limits, and to documenting them (UML, specifications)."
+      },
+      "collaboration": {
+        "title": "Collaboration across disciplines",
+        "body": "Architects coordinate engineers, clients and builders. I bring the same habit to stakeholders, designers and developers: gather requirements, prototype in Figma, validate early."
+      }
+    }
+  },
+  "Services": {
+    "eyebrow": "What I do",
+    "title": "From research to production.",
+    "items": {
+      "design": {
+        "title": "UI/UX Design",
+        "body": "Research, wireframes, prototypes and design systems in Figma."
+      },
+      "frontend": {
+        "title": "Frontend",
+        "body": "React, Next.js, TypeScript, accessible and responsive by default."
+      },
+      "fullStack": {
+        "title": "Full-stack",
+        "body": "APIs, databases and integrations to deliver features end to end."
+      },
+      "analysis": {
+        "title": "Business analysis",
+        "body": "Turning requirements into clear user stories and measurable goals."
+      }
+    }
   },
   "NotFound": {
     "title": "Page not found",

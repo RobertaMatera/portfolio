@@ -1,7 +1,9 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import TopBar from "@/components/chrome/TopBar/TopBar";
+import About from "@/components/sections/About/About";
 import Hero from "@/components/sections/Hero/Hero";
+import Services from "@/components/sections/Services/Services";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import type { Locale } from "@/i18n/routing";
 import { buildSiteGraph } from "@/lib/structured-data";
@@ -32,6 +34,8 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <TopBar locale={locale} />
       <main id="content" tabIndex={-1}>
         <Hero locale={locale} />
+        <About locale={locale} />
+        <Services locale={locale} />
       </main>
     </>
   );

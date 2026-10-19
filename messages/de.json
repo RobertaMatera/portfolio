@@ -15,7 +15,8 @@
   },
   "Common": {
     "skipToContent": "Zum Inhalt springen",
-    "role": "Full-Stack · Frontend · UX/UI"
+    "role": "Full-Stack · Frontend · UX/UI",
+    "newTab": "öffnet in einem neuen Tab"
   },
   "Nav": {
     "label": "Abschnitte",
@@ -43,6 +44,80 @@
     "cvFileInfo": "PDF, {language}, {size} KB",
     "stackLabel": "Technologien, mit denen ich arbeite",
     "portraitAlt": "Roberta Matera, Full-Stack-Entwicklerin, Porträt mit ihrem RM-Logo"
+  },
+  "About": {
+    "eyebrow": "Über mich",
+    "title": "Von der Architektur zum Code: Bauen mit Struktur und Empathie.",
+    "story": "Ich habe Architektur studiert (Master am <poliba>Polytechnikum Bari</poliba>) und gelernt, aus einem Briefing, einem Ort und vielen Rahmenbedingungen Räume zu schaffen, in denen Menschen gern sind. Zwischen 2020 und 2022 bin ich über zwei Bootcamps ins Web gewechselt, denn Bildschirme sind die neuen Räume: Man bewegt sich darin, verirrt sich oder fühlt sich zu Hause.",
+    "today": "Seitdem habe ich an Produkten aus Banking, Versicherung, Retail und Gesundheitswesen als Frontend-Entwicklerin mit UX/UI-Verantwortung gearbeitet und Java und Spring Boot ergänzt, um Produkte durchgängig als Full-Stack zu liefern. Heute arbeite ich zwischen Design, Entwicklung und Business und wachse in Richtung Produktdesign. Ausserdem habe ich einen Bachelor in <pegaso>Informatik für digitale Unternehmen</pegaso> (Pegaso Digital University).",
+    "tagsLabel": "Auf einen Blick",
+    "tags": {
+      "location": "Wohnhaft in Bern",
+      "architecture": "Architektur",
+      "designSystems": "Designsysteme",
+      "fullStack": "Full-Stack",
+      "languages": "IT · EN · DE"
+    },
+    "factsLabel": "In Zahlen",
+    "facts": {
+      "years": {
+        "value": "4,5+",
+        "label": "Jahre im Frontend"
+      },
+      "errors": {
+        "value": "−40 %",
+        "label": "Weniger Fehler bei Schadenmeldungen auf einer Versicherungsplattform"
+      },
+      "languages": {
+        "value": "3",
+        "label": "Gesprochene Sprachen"
+      },
+      "profile": {
+        "value": "FE + BA",
+        "label": "Full-Stack & Analyse"
+      }
+    },
+    "principlesTitle": "Wie die Architektur mich zu einer besseren Entwicklerin macht",
+    "principles": {
+      "systems": {
+        "title": "Systemdenken",
+        "body": "Ein Gebäude ist ein System aus Struktur, Wegen und Nutzung. Dieselbe Logik wende ich auf Designsysteme und Komponentenbibliotheken an, etwa ARTEA: 27 Komponenten in drei Anwendungen."
+      },
+      "movement": {
+        "title": "Bewegung gestalten",
+        "body": "Architekten gestalten, wie sich Menschen durch einen Raum bewegen. Ich gestalte, wie sich Nutzer durch ein Produkt bewegen: klare Navigation, sinnvolle Abläufe, weniger Fehler (−40 % Fehler auf einer Versicherungsplattform)."
+      },
+      "constraints": {
+        "title": "Präzision im Rahmen",
+        "body": "Jedes Projekt hat Budget, Vorschriften und Physik. Ich bin es gewohnt, elegante Lösungen innerhalb technischer, rechtlicher und geschäftlicher Grenzen zu finden und sie zu dokumentieren (UML, Spezifikationen)."
+      },
+      "collaboration": {
+        "title": "Zusammenarbeit über Disziplinen",
+        "body": "Architekten koordinieren Ingenieure, Kunden und Bauleute. Dieselbe Gewohnheit bringe ich mit Stakeholdern, Designern und Entwicklern ein: Anforderungen erheben, in Figma prototypen und früh validieren."
+      }
+    }
+  },
+  "Services": {
+    "eyebrow": "Was ich mache",
+    "title": "Von der Recherche bis zur Produktion.",
+    "items": {
+      "design": {
+        "title": "UI/UX-Design",
+        "body": "Recherche, Wireframes, Prototypen und Designsysteme in Figma."
+      },
+      "frontend": {
+        "title": "Frontend",
+        "body": "React, Next.js, TypeScript, standardmässig barrierefrei und responsiv."
+      },
+      "fullStack": {
+        "title": "Full-Stack",
+        "body": "APIs, Datenbanken und Integrationen für Features von A bis Z."
+      },
+      "analysis": {
+        "title": "Business-Analyse",
+        "body": "Aus Anforderungen werden klare User Stories und messbare Ziele."
+      }
+    }
   },
   "NotFound": {
     "title": "Seite nicht gefunden",

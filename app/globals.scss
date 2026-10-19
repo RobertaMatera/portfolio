@@ -7,6 +7,8 @@
 @use "../components/ui/Icon/icon";
 @use "../components/ui/Button/button";
 @use "../components/ui/Eyebrow/eyebrow";
+@use "../components/ui/ExternalLink/external-link";
+@use "../components/ui/Section/section";
 
 // Page chrome
 @use "../components/chrome/TopBar/top-bar";
@@ -15,6 +17,8 @@
 
 // Home sections, in page order
 @use "../components/sections/Hero/hero";
+@use "../components/sections/About/about";
+@use "../components/sections/Services/services";
 
 // Pages
 @use "../components/pages/NotFound/not-found";

@@ -15,7 +15,8 @@
   },
   "Common": {
     "skipToContent": "Vai al contenuto",
-    "role": "Full-stack · Frontend · UX/UI"
+    "role": "Full-stack · Frontend · UX/UI",
+    "newTab": "si apre in una nuova scheda"
   },
   "Nav": {
     "label": "Sezioni",
@@ -43,6 +44,80 @@
     "cvFileInfo": "PDF, {language}, {size} KB",
     "stackLabel": "Tecnologie con cui lavoro",
     "portraitAlt": "Roberta Matera, sviluppatrice full-stack, ritratto con il suo logo RM"
+  },
+  "About": {
+    "eyebrow": "Chi sono",
+    "title": "Dall’architettura al codice: costruire con struttura ed empatia.",
+    "story": "Mi sono formata come architetta (laurea magistrale al <poliba>Politecnico di Bari</poliba>) e ho imparato a trasformare un brief, un luogo e molti vincoli in spazi che le persone vivono volentieri. Tra il 2020 e il 2022 sono passata al web grazie a due bootcamp, perché ho capito che gli schermi sono i nuovi spazi: ci si muove, ci si perde o ci si sente a casa.",
+    "today": "Da allora ho lavorato su prodotti bancari, assicurativi, retail e sanitari come frontend engineer con responsabilità su UX/UI, e ho aggiunto Java e Spring Boot per consegnare prodotti full-stack end to end. Oggi lavoro tra designer, sviluppatori e team di business e cresco verso il product design. Ho inoltre una laurea triennale in <pegaso>Informatica per le Aziende Digitali</pegaso> (Università Pegaso).",
+    "tagsLabel": "In breve",
+    "tags": {
+      "location": "Con base a Berna",
+      "architecture": "Architettura",
+      "designSystems": "Design system",
+      "fullStack": "Full-stack",
+      "languages": "IT · EN · DE"
+    },
+    "factsLabel": "In cifre",
+    "facts": {
+      "years": {
+        "value": "4,5+",
+        "label": "Anni nel frontend"
+      },
+      "errors": {
+        "value": "−40%",
+        "label": "Errori in meno nelle denunce di sinistro su una piattaforma assicurativa"
+      },
+      "languages": {
+        "value": "3",
+        "label": "Lingue parlate"
+      },
+      "profile": {
+        "value": "FE + BA",
+        "label": "Full-stack e analisi"
+      }
+    },
+    "principlesTitle": "Come l’architettura mi rende una sviluppatrice migliore",
+    "principles": {
+      "systems": {
+        "title": "Pensiero sistemico",
+        "body": "Un edificio è un sistema di struttura, flussi e usi. Applico la stessa logica a design system e librerie di componenti, come ARTEA: 27 componenti riusati in tre applicazioni."
+      },
+      "movement": {
+        "title": "Progettare il movimento",
+        "body": "Gli architetti progettano come le persone si muovono in uno spazio. Io progetto come gli utenti si muovono in un prodotto: navigazione chiara, flussi sensati, meno errori (−40% di errori su una piattaforma assicurativa)."
+      },
+      "constraints": {
+        "title": "Precisione nei vincoli",
+        "body": "Ogni progetto ha budget, norme e fisica. Sono abituata a trovare soluzioni eleganti dentro vincoli tecnici, normativi e di business, e a documentarle (UML, specifiche)."
+      },
+      "collaboration": {
+        "title": "Collaborazione tra discipline",
+        "body": "Gli architetti coordinano ingegneri, clienti e imprese. Porto la stessa abitudine con stakeholder, designer e sviluppatori: raccolgo requisiti, prototipo in Figma e valido presto."
+      }
+    }
+  },
+  "Services": {
+    "eyebrow": "Cosa faccio",
+    "title": "Dalla ricerca alla produzione.",
+    "items": {
+      "design": {
+        "title": "UI/UX Design",
+        "body": "Ricerca, wireframe, prototipi e design system in Figma."
+      },
+      "frontend": {
+        "title": "Frontend",
+        "body": "React, Next.js, TypeScript, accessibili e responsive di default."
+      },
+      "fullStack": {
+        "title": "Full-stack",
+        "body": "API, database e integrazioni per consegnare funzionalità end to end."
+      },
+      "analysis": {
+        "title": "Business analysis",
+        "body": "Dai requisiti a user story chiare e obiettivi misurabili."
+      }
+    }
   },
   "NotFound": {
     "title": "Pagina non trovata",
