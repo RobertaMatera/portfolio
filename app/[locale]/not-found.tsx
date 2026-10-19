@@ -1,25 +1,22 @@
-import Link from "next/link";
-import { headers } from "next/headers";
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
-import { DEFAULT_LOCALE, isLocale } from "@/shared/i18n/config";
-import { getDictionary } from "@/shared/i18n/getDictionary";
-import { localizedPath } from "@/shared/i18n/routing";
+import { Link } from "@/i18n/navigation";
 
-export default async function LocaleNotFound() {
-  const localeHeader = (await headers()).get("x-locale");
-  const resolvedLocale = localeHeader && isLocale(localeHeader) ? localeHeader : DEFAULT_LOCALE;
-  const dict = await getDictionary(resolvedLocale);
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("NotFound");
+  return { title: t("title") };
+}
+
+// Styled in step 3 together with the shared Button component.
+export default async function NotFound() {
+  const t = await getTranslations("NotFound");
 
   return (
-    <main id="main-content" className="page-main">
-      <section className="resume-page__card" aria-labelledby="not-found-title">
-        <p className="resume-page__eyebrow">404</p>
-        <h1 id="not-found-title">{dict.pages.notFound.heading}</h1>
-        <p>{dict.pages.notFound.body}</p>
-        <Link href={localizedPath(resolvedLocale, "home")} className="btn btn--cta">
-          {dict.pages.notFound.backHome}
-        </Link>
-      </section>
+    <main id="content" tabIndex={-1} className="wrap not-found">
+      <h1>{t("title")}</h1>
+      <p>{t("body")}</p>
+      <Link href="/">{t("backHome")}</Link>
     </main>
   );
 }

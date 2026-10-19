@@ -1,0 +1,94 @@
+// Design tokens, taken from docs/mockup.html.
+// Short names (--g7, --lime, …) match the mockup so sections can be
+// compared side by side. The site is light-only, like the approved design.
+
+:root {
+  color-scheme: light;
+
+  // Brand greens, darkest to lightest
+  --g7: #22471d;
+  --g6: #2d5a27;
+  --g5: #3f6e36;
+  --lime: #a8e063;
+
+  // Accents
+  --pop: #ff7a59;
+  --sun: #ffd54a;
+
+  // Surfaces
+  --bg: #f9fbf9; // page
+  --bg2: #f3f6f2; // alternate sections
+  --sf: #fff; // cards
+  --pl: #e2efd8; // pale green fill
+  --sl: #eef8dd; // pale lime fill
+  --glass: rgb(255 255 255 / 72%);
+  --glass-border: rgb(255 255 255 / 85%);
+
+  // Text
+  --t1: #1a1c1a; // primary
+  --t2: #4d554d; // secondary
+  --tm: #5f675f; // muted
+
+  // Lines
+  --bd: #dce2d8;
+
+  // Service card icon tints (cards 2–4; card 1 uses --pl)
+  --tint-sun: #ffe9b8;
+  --tint-coral: #ffd9cf;
+  --tint-sky: #d6ecef;
+
+  // Contact section: warm palette
+  --peach: #fff4ea;
+  --peach-1: #ffd9c2;
+  --peach-2: #ffe2a6;
+  --peach-3: #ffcdb8;
+  --peach-ring: #ffd0b8;
+  --coral-soft: #f4a07f;
+  --coral: #d9532b;
+  --coral-text: #8a5c49;
+  --coral-ink: #5a2f1f;
+  // Darker than the mockup's #f57a52 → #dc4f28 (2.7:1 with white) so the
+  // white button text reaches WCAG AA across the whole gradient (4.6–5.9:1).
+  --coral-btn-from: #cc4a24;
+  --coral-btn-to: #b23d1c;
+
+  // Footer
+  --footer-text: #dfeed3;
+  --footer-muted: #bcd7a8;
+
+  // Project illustrations
+  --ill-paper: #f1f5e6;
+  --ill-sun: #f7dc8a;
+  --ill-coral: #f29a82;
+  --ill-leaf: #7fa57a;
+  --ill-leaf-soft: #b8d4a8;
+  --ill-copper: #d98a5b;
+
+  // Elevation
+  --sh: 0 12px 28px rgb(18 24 16 / 10%);
+  --sh-glass: 0 8px 24px rgb(18 24 16 / 8%);
+  --sh-dock: 0 12px 32px rgb(18 24 16 / 12%);
+  --sh-pop: 0 16px 40px rgb(18 24 16 / 16%);
+
+  // Radii
+  --r-sm: 12px;
+  --r-md: 14px;
+  --r-lg: 18px;
+  --r-xl: 20px;
+  --r-2xl: 24px;
+  --r-pill: 99px;
+
+  // Typography
+  --font-sans: var(--font-manrope), Arial, sans-serif;
+  --font-serif: var(--font-fraunces), Georgia, serif;
+
+  // Layout
+  --wrap: 1120px;
+  --gutter: 24px;
+
+  // Motion
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1); // reveals, image zoom
+  --ease-spring: cubic-bezier(0.3, 1.6, 0.5, 1); // dock bubble
+  --dur-fast: 0.2s;
+  --dur-base: 0.25s;
+}

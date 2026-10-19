@@ -1,13 +1,5 @@
-@use "../styles/tokens/tokens";
-@use "../styles/base/base";
-@use "../styles/base/typography";
-@use "../styles/layout/layout";
-@use "../styles/components/buttons";
-@use "../styles/components/navbar";
-@use "../styles/components/footer";
-@use "../styles/components/hero";
-@use "../styles/components/tech-stack";
-@use "../styles/components/home-sections";
-@use "../styles/components/ui-primitives";
-
-@use "tailwindcss";
+// Global stylesheet: tokens and base first, then one partial per component
+// (added here as each component is built).
+@use "../styles/tokens";
+@use "../styles/base";
+@use "../styles/typography";

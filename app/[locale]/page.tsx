@@ -1,52 +1,12 @@
-import { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { setRequestLocale } from "next-intl/server";
 
-import HomeSections from "@/shared/sections/HomeSections/HomeSections";
-import Hero from "@/shared/sections/Hero/Hero";
-import { DEFAULT_LOCALE, LOCALES, Locale, isLocale } from "@/shared/i18n/config";
-import { getDictionary } from "@/shared/i18n/getDictionary";
-import { buildLocalizedMetadata } from "@/shared/i18n/metadata";
+import type { Locale } from "@/i18n/routing";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim() || "http://localhost:3000";
+export default async function HomePage({ params }: PageProps<"/[locale]">) {
+  // The layout has already rejected unknown locales.
+  const locale = (await params).locale as Locale;
+  setRequestLocale(locale);
 
-type HomePageProps = {
-  params: Promise<{ locale: string }>;
-};
-
-export async function generateStaticParams() {
-  return LOCALES.map((locale) => ({ locale }));
-}
-
-export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {
-  const { locale } = await params;
-  if (!isLocale(locale)) {
-    return {};
-  }
-
-  const dict = await getDictionary(locale);
-  return buildLocalizedMetadata({
-    locale,
-    siteUrl,
-    route: "home",
-    title: dict.meta.homeTitle,
-    description: dict.meta.siteDescription,
-  });
-}
-
-export default async function Home({ params }: HomePageProps) {
-  const { locale } = await params;
-  const resolvedLocale = isLocale(locale) ? (locale as Locale) : DEFAULT_LOCALE;
-
-  if (!isLocale(locale)) {
-    notFound();
-  }
-
-  const dict = await getDictionary(resolvedLocale);
-
-  return (
-    <main id="main-content" className="page-main">
-      <Hero locale={resolvedLocale} dict={dict} />
-      <HomeSections locale={resolvedLocale} dict={dict} />
-    </main>
-  );
+  // Sections are added here, in mockup order, from step 3 onwards.
+  return <main id="content" tabIndex={-1} />;
 }

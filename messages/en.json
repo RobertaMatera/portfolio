@@ -1,0 +1,14 @@
+{
+  "Metadata": {
+    "title": "Roberta Matera | Full-Stack Developer · Frontend & UX/UI Design · Bern",
+    "description": "Full-stack developer focused on frontend and UX/UI design, with a master’s degree in architecture. Angular, React, TypeScript, Java and Spring Boot. Based in Bern."
+  },
+  "Common": {
+    "skipToContent": "Skip to content"
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "body": "The page you are looking for doesn’t exist or has moved.",
+    "backHome": "Back to the homepage"
+  }
+}

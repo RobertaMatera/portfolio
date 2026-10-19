@@ -1,61 +1,69 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { Fraunces, Manrope } from "next/font/google";
 import { notFound } from "next/navigation";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
-import Footer from "@/shared/layout/Footer/Footer";
-import Navbar from "@/shared/layout/Navbar/Navbar";
-import { LOCALES, isLocale } from "@/shared/i18n/config";
-import { getDictionary } from "@/shared/i18n/getDictionary";
-import { buildLocalizedMetadata } from "@/shared/i18n/metadata";
+import { routing } from "@/i18n/routing";
 
-type LocaleLayoutProps = {
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+import "../globals.scss";
+
+// Self-hosted at build time: no request to Google and no layout shift.
+// Both are variable fonts, so every weight the design uses ships in one file.
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+  display: "swap",
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  display: "swap",
+});
+
+export const viewport: Viewport = {
+  themeColor: "#2d5a27",
+  viewportFit: "cover",
 };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim() || "http://localhost:3000";
-
-export async function generateStaticParams() {
-  return LOCALES.map((locale) => ({ locale }));
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params }: LocaleLayoutProps): Promise<Metadata> {
+export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Promise<Metadata> {
   const { locale } = await params;
-  if (!isLocale(locale)) {
-    return {};
-  }
+  if (!hasLocale(routing.locales, locale)) return {};
 
-  const dict = await getDictionary(locale);
-  const localized = buildLocalizedMetadata({
-    locale,
-    siteUrl,
-    route: "home",
-    title: dict.meta.siteTitle,
-    description: dict.meta.siteDescription,
-  });
+  const t = await getTranslations({ locale, namespace: "Metadata" });
 
   return {
-    ...localized,
-    keywords: dict.meta.siteKeywords,
+    title: t("title"),
+    description: t("description"),
   };
 }
 
-export default async function LocaleLayout({ children, params }: LocaleLayoutProps) {
+export default async function LocaleLayout({ children, params }: LayoutProps<"/[locale]">) {
   const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) notFound();
 
-  if (!isLocale(locale)) {
-    notFound();
-  }
-
-  const dict = await getDictionary(locale);
+  // Enables static rendering for every page under this layout.
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "Common" });
 
   return (
-    <div className="page-shell">
-      <a className="skip-link" href="#main-content">
-        {dict.a11y.skipToMain}
-      </a>
-      <Navbar locale={locale} dict={dict} />
-      {children}
-      <Footer locale={locale} dict={dict} />
-    </div>
+    <html lang={locale} className={`${manrope.variable} ${fraunces.variable}`}>
+      <body>
+        {/* Gives client components (e.g. the locale-aware Link) the current
+            locale. messages={null} keeps translations out of the client
+            bundle: client components receive their text as props instead. */}
+        <NextIntlClientProvider messages={null}>
+          <a className="skip-link" href="#content">
+            {t("skipToContent")}
+          </a>
+          {children}
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }
