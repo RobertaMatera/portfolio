@@ -3,7 +3,7 @@
 
 .about__intro {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 56px;
   align-items: center;
 
@@ -43,7 +43,7 @@
 .about__facts {
   @include mixins.plain-list;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -66,6 +66,9 @@
 .about__fact-label {
   color: var(--tm);
   font-size: 0.8125rem; // 13px
+  // Long German compounds ("Versicherungsplattform") must fit half-width cards.
+  hyphens: auto;
+  overflow-wrap: break-word;
 }
 
 .about__principles-title {
