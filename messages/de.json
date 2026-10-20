@@ -147,6 +147,11 @@
       }
     }
   },
+  "Footer": {
+    "linksLabel": "Kontakt und Profile",
+    "email": "E-Mail",
+    "madeIn": "Mit Sorgfalt in Bern gestaltet und gebaut."
+  },
   "NotFound": {
     "title": "Seite nicht gefunden",
     "body": "Diese Seite gibt es nicht oder sie wurde verschoben.",

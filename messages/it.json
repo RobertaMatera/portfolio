@@ -147,6 +147,11 @@
       }
     }
   },
+  "Footer": {
+    "linksLabel": "Contatti e profili",
+    "email": "Email",
+    "madeIn": "Progettato e costruito con cura a Berna."
+  },
   "NotFound": {
     "title": "Pagina non trovata",
     "body": "La pagina che cerchi non esiste o è stata spostata.",

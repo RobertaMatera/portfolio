@@ -13,3 +13,21 @@
   margin: 0;
   padding: 0;
 }
+
+// Wave outlines (1200×80, stretched to full width) for section transitions.
+$wave-solid: "M0 46C160 4 320 4 520 40S900 84 1200 30V80H0Z";
+$wave-frost: "M0 30C200 72 420 76 640 38S1000 -8 1200 42V80H0Z";
+
+// An 80px-tall decorative band shaped by a wave path, for ::before/::after.
+@mixin wave($path) {
+  $svg: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 80' preserveAspectRatio='none'%3E%3Cpath d='#{$path}'/%3E%3C/svg%3E";
+
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 80px;
+  pointer-events: none;
+  -webkit-mask: url("data:image/svg+xml;utf8,#{$svg}") 0 0 / 100% 100% no-repeat;
+  mask: url("data:image/svg+xml;utf8,#{$svg}") 0 0 / 100% 100% no-repeat;
+}

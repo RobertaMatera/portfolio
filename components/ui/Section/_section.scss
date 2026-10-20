@@ -1,15 +1,37 @@
 @use "breakpoints" as bp;
+@use "mixins";
 
 .section {
+  // The wave above a section is painted in that section's own colour.
+  --section-bg: var(--bg);
+
   position: relative;
   padding: 92px 0 120px;
-  background: var(--bg);
+  background: var(--section-bg);
 
   @include bp.down("sm") {
     padding-top: 64px;
   }
 
   &--alt {
-    background: var(--bg2);
+    --section-bg: var(--bg2);
+  }
+
+  // Solid wave: the section's colour rising into the one above.
+  &::before {
+    @include mixins.wave(mixins.$wave-solid);
+    z-index: 2;
+    top: -79px;
+    background: var(--section-bg);
+  }
+
+  // Frosted wave, offset from the solid one, blurring what lies behind it.
+  &::after {
+    @include mixins.wave(mixins.$wave-frost);
+    z-index: 1;
+    top: -92px;
+    background: linear-gradient(rgb(255 255 255 / 0%), rgb(255 255 255 / 50%));
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
   }
 }

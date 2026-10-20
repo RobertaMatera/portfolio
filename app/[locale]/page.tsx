@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
+import Footer from "@/components/chrome/Footer/Footer";
 import TopBar from "@/components/chrome/TopBar/TopBar";
 import About from "@/components/sections/About/About";
 import Experience from "@/components/sections/Experience/Experience";
@@ -39,6 +40,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         <Services locale={locale} />
         <Experience locale={locale} />
       </main>
+      <Footer locale={locale} />
     </>
   );
 }
