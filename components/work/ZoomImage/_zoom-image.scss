@@ -1,0 +1,50 @@
+// A drawing in the project viewer; click to see it full size.
+.zoom-image {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: none;
+  cursor: zoom-in;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background: #fff;
+  }
+
+  // Narrow portrait drawings keep their shape instead of filling the width.
+  &--tall img {
+    width: auto;
+    max-width: 100%;
+    max-height: 78vh;
+    margin: 0 auto;
+  }
+}
+
+.zoom-viewer {
+  padding: 56px 16px 24px;
+  cursor: zoom-out;
+
+  &::backdrop {
+    background: var(--scrim-strong);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .dialog__close {
+    top: 14px;
+    right: 14px;
+  }
+
+  img {
+    width: min(1080px, 100%);
+    height: auto;
+    margin-inline: auto;
+    border-radius: 10px;
+    background: #fff;
+  }
+}

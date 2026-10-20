@@ -1,0 +1,63 @@
+// Full-screen native <dialog>; the content decides its own layout.
+.dialog {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--t1);
+  overflow: auto;
+  overscroll-behavior: contain;
+
+  &::backdrop {
+    background: var(--scrim);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    &[open] {
+      transition: opacity var(--dur-base), translate var(--dur-base) var(--ease-out);
+
+      @starting-style {
+        opacity: 0;
+        translate: 0 16px;
+      }
+    }
+  }
+}
+
+// The page behind an open dialog does not scroll.
+html:has(.dialog[open]) {
+  overflow: hidden;
+}
+
+.dialog__close {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--r-pill);
+  background: rgb(255 255 255 / 90%);
+  color: var(--g7);
+  cursor: pointer;
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  // Lime ring: green would vanish against the dark scrim.
+  &:focus-visible {
+    outline-color: var(--lime);
+  }
+}

@@ -1,0 +1,115 @@
+@use "breakpoints" as bp;
+@use "mixins";
+
+.site-footer {
+  position: relative;
+  padding: 50px 0 30px;
+  background: var(--g7);
+  color: var(--footer-text);
+  font-size: 0.875rem; // 14px, secondary text as in the mockup
+
+  @include bp.down("sm") {
+    // Room for the dock fixed to the bottom of the screen.
+    padding-bottom: 110px;
+  }
+
+  // Dark green wave rising into the last section.
+  &::before {
+    @include mixins.wave(mixins.$wave-solid);
+    top: -79px;
+    background: var(--g7);
+  }
+
+  // The default green ring disappears on dark green.
+  :focus-visible {
+    outline-color: var(--lime);
+  }
+}
+
+.site-footer__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-footer__brand {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+
+  strong {
+    display: block;
+    color: #fff;
+    font-family: var(--font-serif);
+    font-size: 1.375rem; // 22px
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  small {
+    display: block;
+    margin-top: 3px;
+    color: var(--footer-muted);
+    font-size: 0.75rem; // 12px
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+}
+
+// White disc with two soft lime rings and a drop shadow.
+.site-footer__logo {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow:
+    0 0 0 7px rgb(168 224 99 / 24%),
+    0 0 0 15px rgb(168 224 99 / 10%),
+    0 18px 38px rgb(0 0 0 / 30%);
+
+  img {
+    width: 62px;
+    height: 62px;
+    object-fit: contain;
+  }
+
+  @include bp.down("sm") {
+    width: 70px;
+    height: 70px;
+
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
+
+.site-footer__links {
+  @include mixins.plain-list;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  li + li::before {
+    content: "·" / ""; // decorative: not read out
+    padding-inline: 4px;
+  }
+
+  a {
+    // Same look as the mockup's inline links, with a 44px tall hit area.
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    transition: color var(--dur-fast);
+
+    &:hover {
+      color: var(--lime);
+    }
+  }
+}

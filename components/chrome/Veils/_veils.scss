@@ -1,0 +1,38 @@
+@use "breakpoints" as bp;
+
+.veil {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 30;
+  height: 130px;
+  pointer-events: none;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+
+.veil--top {
+  top: 0;
+  // Tall enough to cover the dock, which floats below the top bar.
+  height: 210px;
+  background: linear-gradient(rgb(249 251 249 / 78%), rgb(249 251 249 / 0%));
+  -webkit-mask: linear-gradient(#000 35%, transparent);
+  mask: linear-gradient(#000 35%, transparent);
+
+  @include bp.down("sm") {
+    height: 92px;
+  }
+}
+
+.veil--bottom {
+  bottom: 0;
+  display: none;
+  background: linear-gradient(0deg, rgb(249 251 249 / 80%), rgb(249 251 249 / 0%));
+  -webkit-mask: linear-gradient(0deg, #000 40%, transparent);
+  mask: linear-gradient(0deg, #000 40%, transparent);
+
+  // Phones only, behind the dock at the bottom.
+  @include bp.down("sm") {
+    display: block;
+  }
+}

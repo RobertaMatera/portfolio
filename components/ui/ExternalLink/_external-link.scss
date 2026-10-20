@@ -1,0 +1,16 @@
+// Underlined inline link with the lime highlighter underline from the mockup.
+.text-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--lime);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition:
+    color var(--dur-fast),
+    text-decoration-color var(--dur-fast);
+
+  &:hover {
+    color: var(--g6);
+    text-decoration-color: var(--g6);
+  }
+}

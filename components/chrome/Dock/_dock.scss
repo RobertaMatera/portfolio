@@ -1,0 +1,104 @@
+@use "breakpoints" as bp;
+@use "mixins";
+
+.dock {
+  position: absolute;
+  top: 112px;
+  left: 50%;
+  translate: -50% 0;
+  height: 60px;
+  padding-inline: 10px;
+  border-radius: 28px;
+  background: var(--sf);
+  box-shadow: var(--sh-dock);
+
+  @include bp.down("sm") {
+    position: fixed;
+    top: auto;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    z-index: 41;
+    width: calc(100% - 28px);
+    max-width: 420px;
+    padding-inline: 4px;
+  }
+}
+
+.dock__list {
+  @include mixins.plain-list;
+  display: flex;
+  height: 100%;
+
+  > li {
+    display: flex;
+
+    @include bp.down("sm") {
+      flex: 1;
+    }
+  }
+}
+
+.dock__link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 84px;
+  padding-bottom: 9px;
+  border-radius: 20px;
+  color: var(--tm);
+  font-size: 0.6875rem; // 11px
+  font-weight: 600;
+  white-space: nowrap;
+
+  &:hover {
+    color: var(--g6);
+  }
+
+  &:focus-visible {
+    outline-offset: -3px;
+  }
+
+  @include bp.down("sm") {
+    width: 100%;
+    font-size: 0.625rem; // 10px: six labels must fit a phone-wide bar
+  }
+
+  &.is-active {
+    color: var(--g6);
+    font-weight: 800;
+  }
+}
+
+.dock__bubble {
+  position: absolute;
+  top: 8px;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transition:
+    width 0.45s var(--ease-spring),
+    height 0.45s var(--ease-spring),
+    top 0.45s var(--ease-spring),
+    background-color 0.45s,
+    box-shadow 0.45s;
+
+  .icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  // The icon rises out of the bar into a white bubble, ringed with the page
+  // background so it looks cut out of the dock.
+  .is-active & {
+    top: -24px;
+    width: 52px;
+    height: 52px;
+    background: var(--sf);
+    box-shadow:
+      0 0 0 7px var(--bg),
+      0 10px 20px rgb(45 90 39 / 22%);
+  }
+}

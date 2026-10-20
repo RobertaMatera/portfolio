@@ -1,0 +1,47 @@
+@use "breakpoints" as bp;
+
+// Shown up to large tablets, where the cat tracker is not there to jump with.
+.next-section {
+  position: absolute;
+  bottom: 26px;
+  left: 50%;
+  z-index: 3;
+  display: none;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin-left: -21px;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 40%);
+  color: rgb(45 90 39 / 75%);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  transition:
+    background-color var(--dur-fast),
+    color var(--dur-fast);
+
+  .icon {
+    width: 22px;
+    height: 22px;
+    stroke-width: 2;
+  }
+
+  &:hover {
+    background: rgb(255 255 255 / 60%);
+    color: var(--g6);
+  }
+
+  @include bp.down("lg") {
+    display: grid;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: next-section-bob 2.2s ease-in-out infinite;
+  }
+}
+
+@keyframes next-section-bob {
+  50% {
+    translate: 0 7px;
+  }
+}

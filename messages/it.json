@@ -1,0 +1,413 @@
+{
+  "Metadata": {
+    "title": "Roberta Matera | Sviluppatrice full-stack · Frontend e UX/UI design · Berna",
+    "description": "Sviluppatrice full-stack specializzata in frontend e UX/UI design, con una laurea magistrale in architettura. Angular, React, TypeScript, Java e Spring Boot. Con base a Berna.",
+    "ogImageAlt": "Roberta Matera, sviluppatrice full-stack specializzata in frontend e UX/UI design, con il suo ritratto e il logo RM"
+  },
+  "Person": {
+    "jobTitle": "Sviluppatrice full-stack (frontend e UX/UI)",
+    "topics": {
+      "frontend": "Sviluppo frontend",
+      "uxui": "UX/UI design",
+      "designSystems": "Design system",
+      "architecture": "Architettura"
+    }
+  },
+  "Common": {
+    "skipToContent": "Vai al contenuto",
+    "role": "Full-stack · Frontend · UX/UI",
+    "newTab": "si apre in una nuova scheda",
+    "close": "Chiudi"
+  },
+  "Nav": {
+    "label": "Sezioni",
+    "top": "Home",
+    "about": "Chi sono",
+    "what": "Cosa faccio",
+    "experience": "Esperienza",
+    "work": "Lavori",
+    "contact": "Contatti"
+  },
+  "LanguageMenu": {
+    "label": "Lingua",
+    "names": {
+      "en": "English",
+      "it": "Italiano",
+      "de": "Deutsch"
+    }
+  },
+  "Hero": {
+    "eyebrow": "Full-stack developer · Berna",
+    "title": "Sviluppatrice full-stack specializzata in frontend e design, <em>con lo sguardo di un’architetta</em>.",
+    "intro": "Sono Roberta, sviluppatrice full-stack con 4,5 anni di esperienza in ambito bancario, assicurativo, retail e sanitario. Mi occupo di frontend e UX/UI design e porto in ogni interfaccia il pensiero di un’architetta: prima la struttura, sempre i dettagli, al centro le persone.",
+    "viewProjects": "Vedi i progetti",
+    "downloadCv": "Scarica il CV",
+    "cvFileInfo": "PDF, {language}, {size} KB",
+    "stackLabel": "Tecnologie con cui lavoro",
+    "portraitAlt": "Roberta Matera, sviluppatrice full-stack, ritratto con il suo logo RM"
+  },
+  "About": {
+    "eyebrow": "Chi sono",
+    "title": "Dall’architettura al codice: costruire con struttura ed empatia.",
+    "story": "Mi sono formata come architetta (laurea magistrale al <poliba>Politecnico di Bari</poliba>) e ho imparato a trasformare un brief, un luogo e molti vincoli in spazi che le persone vivono volentieri. Tra il 2020 e il 2022 sono passata al web grazie a due bootcamp, perché ho capito che gli schermi sono i nuovi spazi: ci si muove, ci si perde o ci si sente a casa.",
+    "today": "Da allora ho lavorato su prodotti bancari, assicurativi, retail e sanitari come frontend engineer con responsabilità su UX/UI, e ho aggiunto Java e Spring Boot per consegnare prodotti full-stack end to end. Oggi lavoro tra designer, sviluppatori e team di business e cresco verso il product design. Ho inoltre una laurea triennale in <pegaso>Informatica per le Aziende Digitali</pegaso> (Università Pegaso).",
+    "tagsLabel": "In breve",
+    "tags": {
+      "location": "Con base a Berna",
+      "architecture": "Architettura",
+      "designSystems": "Design system",
+      "fullStack": "Full-stack",
+      "languages": "IT · EN · DE"
+    },
+    "factsLabel": "In cifre",
+    "facts": {
+      "years": {
+        "value": "4,5+",
+        "label": "Anni nel frontend"
+      },
+      "errors": {
+        "value": "−40%",
+        "label": "Errori in meno nelle denunce di sinistro su una piattaforma assicurativa"
+      },
+      "languages": {
+        "value": "3",
+        "label": "Lingue parlate"
+      },
+      "profile": {
+        "value": "FE + BA",
+        "label": "Full-stack e analisi"
+      }
+    },
+    "principlesTitle": "Come l’architettura mi rende una sviluppatrice migliore",
+    "principles": {
+      "systems": {
+        "title": "Pensiero sistemico",
+        "body": "Un edificio è un sistema di struttura, flussi e usi. Applico la stessa logica a design system e librerie di componenti, come ARTEA: 27 componenti riusati in tre applicazioni."
+      },
+      "movement": {
+        "title": "Progettare il movimento",
+        "body": "Gli architetti progettano come le persone si muovono in uno spazio. Io progetto come gli utenti si muovono in un prodotto: navigazione chiara, flussi sensati, meno errori (−40% di errori su una piattaforma assicurativa)."
+      },
+      "constraints": {
+        "title": "Precisione nei vincoli",
+        "body": "Ogni progetto ha budget, norme e fisica. Sono abituata a trovare soluzioni eleganti dentro vincoli tecnici, normativi e di business, e a documentarle (UML, specifiche)."
+      },
+      "collaboration": {
+        "title": "Collaborazione tra discipline",
+        "body": "Gli architetti coordinano ingegneri, clienti e imprese. Porto la stessa abitudine con stakeholder, designer e sviluppatori: raccolgo requisiti, prototipo in Figma e valido presto."
+      }
+    }
+  },
+  "Services": {
+    "eyebrow": "Cosa faccio",
+    "title": "Dalla ricerca alla produzione.",
+    "items": {
+      "design": {
+        "title": "UI/UX Design",
+        "body": "Ricerca, wireframe, prototipi e design system in Figma."
+      },
+      "frontend": {
+        "title": "Frontend",
+        "body": "React, Next.js, TypeScript, accessibili e responsive di default."
+      },
+      "fullStack": {
+        "title": "Full-stack",
+        "body": "API, database e integrazioni per consegnare funzionalità end to end."
+      },
+      "analysis": {
+        "title": "Business analysis",
+        "body": "Dai requisiti a user story chiare e obiettivi misurabili."
+      }
+    }
+  },
+  "Experience": {
+    "eyebrow": "Esperienza",
+    "title": "Il mio percorso.",
+    "education": "Formazione",
+    "entries": {
+      "f1": {
+        "title": "Frontend Engineer & UX/UI Owner",
+        "note": "progetti enterprise in ambito assicurativo, retail, food ed energia",
+        "body": "Unica sviluppatrice frontend e responsabile UI/UX di una piattaforma per assicurazioni auto. I prototipi Figma per una piattaforma retail hanno ridotto del 30% i cicli di revisione."
+      },
+      "pegaso": {
+        "title": "Laurea triennale in Informatica per le Aziende Digitali",
+        "body": "Basi full-stack in Java, Spring Boot, Angular e UML, applicate nel mio progetto Health Bridge Clinic."
+      },
+      "almaviva": {
+        "title": "Frontend Engineer",
+        "body": "Ho progettato ARTEA, una libreria React di 27 componenti usata in tre applicazioni, e GENIO, una piattaforma che ha ridotto del 60% i tempi di pianificazione."
+      },
+      "nexum": {
+        "title": "Frontend Engineer",
+        "body": "Componenti React/SCSS fedeli al pixel per e-commerce di lusso e moda; refactoring in Angular di un’applicazione bancaria con Storybook e Material UI."
+      },
+      "architecture": {
+        "title": "Laurea magistrale in Architettura",
+        "body": "Dove ho imparato a pensare per sistemi, persone e spazi."
+      }
+    }
+  },
+  "Work": {
+    "eyebrow": "Lavori selezionati",
+    "title": "Progetti di cui vado fiera.",
+    "carousel": {
+      "roleDescription": "carosello",
+      "slideRoleDescription": "slide",
+      "label": "Progetti",
+      "previous": "Progetto precedente",
+      "next": "Progetto successivo",
+      "goTo": "Mostra il progetto {number}: {title}",
+      "slide": "{number} di {total}"
+    },
+    "openProject": "Leggi il progetto e i disegni",
+    "viewCode": "Vedi il codice su GitHub",
+    "liveSoon": "Sito live · a breve",
+    "enlarge": "Ingrandisci l’immagine",
+    "tagsLabel": "Temi",
+    "toolsLabel": "Strumenti e competenze",
+    "tools": {
+      "autocad": "AutoCAD",
+      "revit": "Revit",
+      "totalStation": "Rilievo con stazione totale",
+      "photography": "Fotografia",
+      "rendering": "Rendering",
+      "photoshop": "Photoshop",
+      "indesign": "InDesign (impaginazione)",
+      "logoDesign": "Logo design",
+      "brandIdentity": "Identità visiva",
+      "designSystem": "Design system",
+      "signage": "Progettazione di segnaletica",
+      "productDesign": "Product design",
+      "concept": "Sviluppo del concept",
+      "technicalDrawing": "Disegno tecnico",
+      "materials": "Scelta dei materiali"
+    },
+    "projects": {
+      "healthBridge": {
+        "title": "Health Bridge Clinic",
+        "description": "Piattaforma sanitaria full-stack con controllo degli accessi basato sui ruoli, DTO e architettura a livelli, documentata con diagrammi UML. Progetto universitario, 2026.",
+        "art": {
+          "alt": "Illustrazione minimale: un ponte a tre arcate sotto un sole dorato, con sopra una croce sanitaria color corallo",
+          "line1": "cura e codice",
+          "line2": "JAVA · SPRING BOOT · ANGULAR"
+        }
+      },
+      "secli": {
+        "title": "Riuso adattivo di un ex convento francescano, Seclì",
+        "description": "Restauro conservativo e riuso dell’ex convento dei Frati Minori Osservanti a Seclì (Puglia): rilievo, accessibilità e una nuova scuola di cucina (2013).",
+        "tags": [
+          "Restauro",
+          "Rilievo",
+          "Accessibilità"
+        ],
+        "art": {
+          "alt": "Illustrazione minimale della facciata di un convento con campanile a vela e portale sotto un sole dorato, con piante dell’orto ai lati",
+          "line1": "restaurare · riusare",
+          "line2": "RILIEVO · RESTAURO · ACCESSIBILITÀ"
+        },
+        "detail": {
+          "meta": "Laboratorio di Restauro Architettonico · 2013",
+          "heading": "Progetto di riuso e restauro dell’ex convento dei Frati Minori Osservanti, Seclì",
+          "body": [
+            "Progetto di restauro conservativo e riuso funzionale dell’ex convento di S. Antonio da Padova a Seclì (Lecce, Puglia).",
+            "Il rilievo e le linee guida del progetto sono stati sviluppati in gruppo, con la scelta di un intervento di restauro conservativo.",
+            "Mi sono occupata in particolare dei locali di servizio: una volta crollata è stata recuperata per ospitare un ascensore, rendendo accessibile l’intero complesso. Il monastero è stato destinato a scuola di cucina, con la reintroduzione dell’antico orto dei monaci."
+          ],
+          "callout": {
+            "title": "Vincoli tecnici e normativi",
+            "body": "Il progetto ha richiesto un approccio tecnico: ogni scelta è stata sviluppata nel rispetto della normativa italiana e delle norme costruttive, con il supporto di un ingegnere strutturista. La sfida è stata risolvere i vincoli reali senza compromettere la materia storica."
+          },
+          "images": {
+            "plan": "Planimetria a colori del progetto di riuso dell’ex convento di S. Antonio da Padova, Seclì",
+            "ruin": "Fotografia in bianco e nero del rudere del convento prima del restauro"
+          }
+        }
+      },
+      "uggiano": {
+        "title": "Tesi: castello di Uggiano e masseria Lisanti",
+        "description": "Tesi magistrale in Architettura: ricerca storica, analisi stratigrafica delle murature e riuso conservativo della masseria Lisanti, Ferrandina.",
+        "tags": [
+          "Tesi",
+          "Analisi murarie",
+          "Patrimonio"
+        ],
+        "art": {
+          "alt": "Illustrazione minimale: un castello con torre su una collina verde sotto un sole dorato",
+          "line1": "studiare · conservare",
+          "line2": "STORIA · MURATURE · PATRIMONIO"
+        },
+        "detail": {
+          "meta": "Tesi di laurea magistrale in Architettura · Politecnico di Bari",
+          "heading": "Castello di Uggiano e masseria Lisanti: ricerca, analisi e riuso conservativo",
+          "body": [
+            "Le informazioni sul castello erano molto scarse: ho condotto un’ampia ricerca d’archivio per reperire fotografie storiche. Il rilievo e la ricerca bibliografica hanno coinvolto l’intero gruppo di lavoro.",
+            "Mi sono poi occupata in prima persona dello studio delle murature, sia del castello sia della masseria Lisanti: campionamento, redazione delle schede descrittive, mappatura e analisi stratigrafica. Insieme alle fonti storiche, questo lavoro ha permesso di formulare un’ipotesi sulle fasi costruttive del castello e di definire gli interventi di restauro superficiale proposti.",
+            "Nella parte progettuale mi sono dedicata al recupero e alla fruizione degli ambienti della masseria Lisanti, alle pendici del castello. Il progetto nasce dal riconoscimento del suo pregio architettonico come bene culturale e dal contesto socio-economico: sia il nome sia l’edificio sono legati all’attività agricolo-casearia. L’intervento, di tipo conservativo, prevede la rimozione degli elementi incongrui e pericolanti, l’integrazione o sostituzione con materiali di fattura analoga agli originali e l’inserimento di soluzioni che rendano la visita accessibile anche alle persone con disabilità."
+          ],
+          "callout": {
+            "title": "Lavoro di squadra interdisciplinare",
+            "body": "Il lavoro di tesi si è svolto in gruppo e a stretto contatto con diversi professionisti: un geologo, un’archeologa, un fotografo, la pubblica amministrazione e altri ancora. Ho imparato ad ascoltare competenze diverse, a fare da ponte tra le discipline e a mantenere una direzione condivisa. Durante tutto il percorso di studi ho lavorato in gruppi piccoli e grandi: è lo stesso approccio che oggi porto con designer, sviluppatori e stakeholder."
+          },
+          "images": {
+            "sitePlan": "Planimetria generale dell’area del castello di Uggiano, Ferrandina",
+            "masonry": "Scheda di campionamento murario e analisi del degrado del castello",
+            "masseria": "Sezione e pianta della masseria Lisanti"
+          }
+        }
+      },
+      "genoa": {
+        "title": "Logo per le Botteghe storiche di Genova",
+        "description": "Proposta per la call for ideas del Comune di Genova: un logo che identifichi botteghe storiche, locali di tradizione e di interesse culturale (2020).",
+        "tags": [
+          "Logo design",
+          "Identità visiva",
+          "Patrimonio"
+        ],
+        "art": {
+          "alt": "Illustrazione minimale di un portale ad arco a fasce alternate con sopraluce, sotto un sole dorato",
+          "line1": "botteghe storiche",
+          "line2": "LOGO · PATRIMONIO · IDENTITÀ"
+        },
+        "detail": {
+          "meta": "Concorso per un logo · Comune di Genova · 2020",
+          "heading": "Un logo per le Botteghe storiche di Genova: il portale come segno",
+          "body": [
+            "Il Comune di Genova, con la Camera di Commercio e il Ministero dei Beni Culturali, ha bandito una call for ideas per un logo che identificasse le “Botteghe storiche”, i Locali di tradizione e di interesse culturale: attività aperte da almeno 70 anni che conservano architetture, arredi e attrezzature originali. La call ha raccolto 307 elaborati da tutta Italia e dall’estero.",
+            "La mia proposta riconosce una bottega storica dalla soglia. Il segno è il portale ad arco dei carruggi, la porta da cui si entra nella storia della città. Le fasce alternate di ardesia e marmo citano la bicromia dell’architettura genovese, dalla facciata di San Lorenzo ai palazzi del centro storico. Il sopraluce a ventaglio richiama quelli in ferro delle antiche vetrine: un dettaglio artigiano che resta leggibile anche in piccolo.",
+            "Un unico segno per tre categorie, Bottega storica, Locale di tradizione e Locale di interesse culturale, in un sistema chiaro e replicabile, con versioni in positivo e in negativo. La tavolozza è ardesia, marmo e ottone (solo per la targa); il nome è composto in Cormorant Garamond, come le iscrizioni incise sui portali, mentre per la città e i testi si usa Manrope. Sotto i 15 mm di altezza, le fasce e il ventaglio si semplificano nella sagoma piena del portale.",
+            "La targa è incisa in ardesia ligure della Val Fontanabuona, spessore 20 mm, formato 200 × 280 mm. Marchio e testi sono incisi a V, profondi 1,5 mm, e riempiti di pigmento bianco; quattro viti in ottone Ø 8 mm la fissano a lato dell’ingresso, con il bordo inferiore a 140 cm da terra. L’ardesia è la pietra dei portali, delle soglie e dei tetti di Genova: la targa non si appoggia sulla facciata, ne diventa parte."
+          ],
+          "callout": {
+            "title": "Un piccolo design system",
+            "body": "Logo, varianti per categoria, regole di colore e carattere, dimensione minima e una targa fisica: lo stesso modo di pensare che applico ai design system delle interfacce, da un solo segno a molti usi coerenti."
+          },
+          "images": {
+            "logo": "Il logo: un portale ad arco con fasce alternate e sopraluce, sopra il nome “Botteghe Storiche, Genova”",
+            "categories": "Le tre categorie: Bottega storica, Locale di tradizione e Locale di interesse culturale",
+            "versions": "Il logo in versione positiva e in negativo, con il nome",
+            "plaque": "La targa in ardesia con marchio e nome, formato 200 × 280 mm, fissata con quattro viti in ottone"
+          }
+        }
+      },
+      "copper": {
+        "title": "Bespoke BeCreative: una skyline in rame",
+        "description": "Proposta per il contest BESPOKE BeCreative di Samsung (2021): cinque monumenti ritagliati in un’unica lama di rame per il frigorifero BESPOKE RB38A.",
+        "tags": [
+          "Product design",
+          "Rame",
+          "BESPOKE RB38A"
+        ],
+        "art": {
+          "alt": "Illustrazione minimale di un frigorifero combinato ad ante piatte con una lama di rame a forma di skyline: Opera House di Sydney, Torre Eiffel e Statua della Libertà",
+          "line1": "skyline su misura",
+          "line2": "PRODUCT DESIGN · RAME · BESPOKE RB38A"
+        },
+        "detail": {
+          "meta": "Contest di design · Samsung BESPOKE BeCreative · 2021",
+          "heading": "Skyline di Rame: cinque monumenti, un’unica lama",
+          "body": [
+            "Per il contest BESPOKE BeCreative di Samsung ho proposto “Skyline di Rame”: cinque icone ritagliate in un’unica lama di rame. Il pannello superiore del BESPOKE RB38A diventa un orizzonte, con l’Opera House di Sydney, il Colosseo, la Tour Eiffel, la Torre di Pisa e la Statua della Libertà in un solo profilo continuo.",
+            "La lama è una lamina di rame da 1,5 mm, di 520 × 208 mm, tagliata al laser e rifinita a mano. È fissata al vetro con distanziali, staccata di 4 mm dalla superficie, così da proiettare un’ombra che cambia con la luce del giorno. Sul pannello inferiore lo skyline ritorna come un lieve riflesso, come sull’acqua di un porto.",
+            "L’idea ha una firma italiana: il Colosseo e Pisa portano l’Italia dentro lo skyline, e il rame unisce la tradizione artigianale, dai paioli di casa alle botteghe dei ramai, alla precisione del taglio. Il rame inoltre invecchia: il frigorifero matura con chi lo vive, prima lucido, poi brunito e, col tempo, con un velo di verderame.",
+            "Il concept è pensato per il BESPOKE RB38A (390 L, combinato con congelatore inferiore, ante piatte con maniglie incassate, 595 × 2030 × 658 mm), le cui ante personalizzabili offrono una superficie pulita e piana per la lama."
+          ],
+          "callout": {
+            "title": "Disegno tecnico",
+            "body": "Il frigorifero e la lama sono presentati con le dimensioni reali: frigorifero 595 × 2030 mm, lama 520 × 208 mm. Sezione del pannello: vetro, distanziali Ø 8 mm, lamina di rame."
+          },
+          "images": {
+            "refrigerator": "Il frigorifero con la skyline in rame di cinque monumenti e il suo riflesso, con le quote",
+            "blade": "Dettaglio della lama in rame: Opera House di Sydney, Colosseo, Tour Eiffel, Torre di Pisa e Statua della Libertà, larga 520 mm"
+          }
+        }
+      },
+      "upcoming": {
+        "title": "Prossimo caso studio",
+        "description": "Un caso studio UX in preparazione: dalla ricerca ai wireframe, fino al design system e a un’interfaccia funzionante.",
+        "tags": [
+          "Prossimamente"
+        ],
+        "art": {
+          "alt": "Illustrazione minimale di un wireframe in una finestra del browser con un piccolo germoglio, per il prossimo caso studio UX",
+          "line1": "prossimo capitolo",
+          "line2": "CASO STUDIO UX · PROSSIMAMENTE"
+        }
+      }
+    }
+  },
+  "References": {
+    "eyebrow": "Cosa dicono di me",
+    "title": "Le parole di chi ha lavorato con me.",
+    "readMore": "Leggi tutto",
+    "linkedInBadge": "referenza su LinkedIn",
+    "viewOnLinkedIn": "Vedi su LinkedIn",
+    "letterOnRequest": "Lettera firmata completa disponibile su richiesta.",
+    "dialogLabel": "Referenza di {name}",
+    "translatedFrom": "Tradotto {language, select, it {dall’italiano} en {dall’inglese} other {dall’originale}}",
+    "items": {
+      "solotti": {
+        "short": "«Altamente competente e affidabile, con solide capacità tecniche e un’ottima attenzione ai dettagli. Un talento naturale nel confronto con gli stakeholder di business.»",
+        "full": "«Roberta è una frontend developer molto competente e affidabile, con solide capacità tecniche e un’ottima attenzione ai dettagli. Ha un talento naturale nel confronto con gli stakeholder di business: raccoglie i requisiti direttamente dai clienti e li traduce in soluzioni tecniche efficaci, spesso in autonomia. Gestisce bene tempi e priorità e rispetta sempre le scadenze senza compromettere la qualità.»",
+        "role": "Business Unit Manager, Data Reply",
+        "detail": "Business Unit Manager, Data Reply · luglio 2026"
+      },
+      "f1": {
+        "short": "«Solide competenze tecniche, autonomia operativa e una chiara attenzione a risultati di alta qualità. Si è distinta per affidabilità, precisione e spirito di collaborazione.»",
+        "full": "«Roberta ha dimostrato solide competenze tecniche, autonomia operativa e una chiara attenzione a risultati di alta qualità. È l’unico riferimento frontend su diversi progetti per uno dei nostri clienti principali: raccoglie i requisiti, crea prototipi in Figma, sviluppa PWA in Angular e componenti riutilizzabili. Ha sempre affrontato i suoi compiti con professionalità, spirito d’iniziativa e grande attenzione alla qualità del prodotto finale.»",
+        "role": "Milano · Lettera di referenze, ago 2026",
+        "detail": "Milano · agosto 2026"
+      },
+      "casasola": {
+        "short": "«Si è distinta per il desiderio di crescita professionale e per la determinazione con cui ha affrontato ogni nuovo argomento.»",
+        "full": "«Roberta si è distinta per il desiderio di crescita professionale, mostrando una notevole determinazione nell’affrontare ogni nuovo argomento. Giorno dopo giorno ha sviluppato un approccio metodico e preciso, assimilando l’intero programma. Nei progetti di gruppo ha lavorato con grande professionalità e affidabilità. La sua capacità di imparare la programmazione web da zero dimostra non solo il suo talento, ma anche una notevole dedizione allo studio.»",
+        "role": "Founder, Nucleode SRL · suo docente alla Strive School",
+        "detail": "Founder & Software Developer, Nucleode SRL · suo docente alla Strive School (EPICODE) · nov 2024"
+      },
+      "perfido": {
+        "short": "«Una spiccata capacità di lavorare in gruppo e di condividere le conoscenze con i colleghi e, soprattutto, le sue qualità umane.»",
+        "full": "«La sua tesi di ricerca ha ottenuto un ottimo risultato finale sia per l’analisi storica sia per il progetto, e si è distinta per un accurato rilievo critico con metodi diretti, indiretti e fotogrammetrici. È stata sempre pienamente coinvolta in un gruppo di lavoro con altri cinque laureandi, dimostrando una spiccata capacità di lavorare in squadra e di condividere le proprie conoscenze con i colleghi e, soprattutto, le sue qualità umane.»",
+        "role": "<poliba>Politecnico di Bari</poliba> · Relatore della tesi",
+        "detail": "Politecnico di Bari · relatore della tesi · ottobre 2018"
+      }
+    }
+  },
+  "Contact": {
+    "eyebrow": "Contattami",
+    "title": "Costruiamo insieme qualcosa di significativo.",
+    "lead": "Sono aperta a ruoli di product design e frontend. Raccontami il tuo progetto e risponderò entro due giorni lavorativi.",
+    "channelsLabel": "Recapiti",
+    "whatsapp": "su WhatsApp",
+    "form": {
+      "label": "Modulo di contatto",
+      "name": "Nome",
+      "email": "Email",
+      "subject": "Oggetto",
+      "optional": "facoltativo",
+      "message": "Messaggio",
+      "submit": "Invia messaggio",
+      "sending": "Invio in corso…",
+      "trap": "Lascia vuoto questo campo",
+      "success": "Grazie! Il tuo messaggio è stato inviato. Ti risponderò entro due giorni lavorativi.",
+      "invalid": "Controlla i campi evidenziati.",
+      "error": "Purtroppo il messaggio non è stato inviato. Riprova oppure scrivimi a <email></email>.",
+      "errors": {
+        "nameRequired": "Inserisci il tuo nome.",
+        "emailRequired": "Inserisci il tuo indirizzo email.",
+        "emailInvalid": "Inserisci un indirizzo email valido, ad esempio nome@esempio.it.",
+        "messageRequired": "Scrivi un messaggio.",
+        "tooLong": "Il testo è troppo lungo: al massimo {max} caratteri."
+      }
+    }
+  },
+  "Footer": {
+    "linksLabel": "Contatti e profili",
+    "email": "Email",
+    "madeIn": "Progettato e costruito con cura a Berna."
+  },
+  "NotFound": {
+    "title": "Pagina non trovata",
+    "body": "La pagina che cerchi non esiste o è stata spostata.",
+    "backHome": "Torna alla home"
+  }
+}

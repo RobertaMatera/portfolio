@@ -1,0 +1,19 @@
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 14px;
+  color: var(--g5);
+  font-size: 0.75rem; // 12px
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+    flex: none;
+    width: 22px;
+    height: 2px;
+    background: var(--lime);
+  }
+}

@@ -1,0 +1,34 @@
+@use "sass:map";
+
+// Breakpoints from docs/mockup.html, named by what changes there.
+$breakpoints: (
+  "xs": 560px, // about cards: 1 column
+  "sm": 760px, // phone layout: bottom dock, single-column grids
+  "lightbox": 820px, // project lightbox stacks
+  "quotes": 860px, // references: 1 column
+  "md": 960px, // service cards: 2 columns
+  "brand": 1000px, // logo pill collapses to the mark
+  "lg": 1180px, // cat tracker hidden, "next section" buttons shown
+  "xl": 1250px, // wider side gutters below this width
+);
+
+// Viewport is at most $name wide.
+@mixin down($name) {
+  @media (max-width: map.get($breakpoints, $name)) {
+    @content;
+  }
+}
+
+// Viewport is wider than $name.
+@mixin up($name) {
+  @media (min-width: map.get($breakpoints, $name) + 1px) {
+    @content;
+  }
+}
+
+// Between two breakpoints: wider than $from, at most $to.
+@mixin between($from, $to) {
+  @media (min-width: map.get($breakpoints, $from) + 1px) and (max-width: map.get($breakpoints, $to)) {
+    @content;
+  }
+}

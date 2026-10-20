@@ -1,0 +1,146 @@
+@use "breakpoints" as bp;
+@use "mixins";
+
+$dot-top: 26px;
+$mobile-axis: 14px; // distance of the line from the left edge on phones
+
+.timeline {
+  @include mixins.plain-list;
+  position: relative;
+  margin-top: 40px;
+
+  // The vertical line, lime at the top fading to green.
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: linear-gradient(var(--lime), var(--g6));
+    translate: -50% 0;
+
+    @include bp.down("sm") {
+      left: $mobile-axis;
+    }
+  }
+}
+
+.timeline__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 64px;
+  margin-bottom: 34px;
+
+  // The dot on the line, ringed with the section background.
+  &::after {
+    content: "";
+    position: absolute;
+    top: $dot-top;
+    left: 50%;
+    // content-box like the mockup: an 18px dot plus a 4px ring (26px total).
+    box-sizing: content-box;
+    width: 18px;
+    height: 18px;
+    border: 4px solid var(--bg2);
+    border-radius: 50%;
+    background: var(--g6);
+    box-shadow: 0 0 0 2px var(--lime);
+    translate: -50% 0;
+  }
+
+  // Desktop: cards alternate sides; the date sits opposite its card.
+  @include bp.up("sm") {
+    > * {
+      grid-row: 1;
+    }
+
+    &:nth-child(odd) {
+      .timeline__card {
+        grid-column: 1;
+      }
+
+      .timeline__date {
+        grid-column: 2;
+      }
+    }
+
+    &:nth-child(even) {
+      .timeline__card {
+        grid-column: 2;
+      }
+
+      .timeline__date {
+        grid-column: 1;
+        text-align: right;
+      }
+    }
+  }
+
+  // Phones: one column next to a line on the left, date above the card.
+  @include bp.down("sm") {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 6px;
+    padding-left: 40px;
+
+    &::after {
+      left: $mobile-axis;
+    }
+  }
+}
+
+.timeline__date {
+  padding-top: 20px;
+  color: var(--g5);
+  font-size: 0.875rem; // 14px
+  font-weight: 700;
+
+  @include bp.down("sm") {
+    padding-top: 0;
+  }
+}
+
+.timeline__card {
+  padding: 24px;
+  border: 1px solid var(--bd);
+  border-radius: var(--r-xl);
+  background: var(--sf);
+  box-shadow: var(--sh);
+
+  h3 {
+    font-size: 1.125rem; // 18px
+  }
+
+  p:last-child {
+    color: var(--t2);
+  }
+}
+
+.timeline__tag {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 2px 9px;
+  border-radius: var(--r-pill);
+  background: var(--sl);
+  color: var(--g5);
+  font-size: 0.625rem; // 10px
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.timeline__org {
+  margin: 2px 0 8px;
+  color: var(--g5);
+  font-size: 0.875rem; // 14px
+  font-weight: 700;
+}
+
+// Links stacked in the title and organisation lines need 24px targets that
+// don't overlap (WCAG 2.5.8); a little vertical padding gets them there.
+.timeline__card h3 .text-link,
+.timeline__org .text-link {
+  display: inline-block;
+  padding-block: 2px;
+}

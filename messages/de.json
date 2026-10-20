@@ -1,0 +1,413 @@
+{
+  "Metadata": {
+    "title": "Roberta Matera | Full-Stack-Entwicklerin · Frontend & UX/UI-Design · Bern",
+    "description": "Full-Stack-Entwicklerin mit Fokus auf Frontend und UX/UI-Design und einem Master in Architektur. Angular, React, TypeScript, Java und Spring Boot. Mit Sitz in Bern.",
+    "ogImageAlt": "Roberta Matera, Full-Stack-Entwicklerin mit Fokus auf Frontend und UX/UI-Design, mit Porträt und RM-Logo"
+  },
+  "Person": {
+    "jobTitle": "Full-Stack-Entwicklerin (Frontend und UX/UI)",
+    "topics": {
+      "frontend": "Frontend-Entwicklung",
+      "uxui": "UX/UI-Design",
+      "designSystems": "Designsysteme",
+      "architecture": "Architektur"
+    }
+  },
+  "Common": {
+    "skipToContent": "Zum Inhalt springen",
+    "role": "Full-Stack · Frontend · UX/UI",
+    "newTab": "öffnet in einem neuen Tab",
+    "close": "Schliessen"
+  },
+  "Nav": {
+    "label": "Abschnitte",
+    "top": "Start",
+    "about": "Über mich",
+    "what": "Leistungen",
+    "experience": "Erfahrung",
+    "work": "Projekte",
+    "contact": "Kontakt"
+  },
+  "LanguageMenu": {
+    "label": "Sprache",
+    "names": {
+      "en": "English",
+      "it": "Italiano",
+      "de": "Deutsch"
+    }
+  },
+  "Hero": {
+    "eyebrow": "Full-Stack-Entwicklerin · Bern",
+    "title": "Full-Stack-Entwicklerin mit Fokus auf Frontend und Design, <em>geprägt von der Architektur</em>.",
+    "intro": "Ich bin Roberta, Full-Stack-Entwicklerin mit 4,5 Jahren Erfahrung in Banking, Versicherung, Retail und Gesundheitswesen. Mein Schwerpunkt sind Frontend und UX/UI-Design, und in jede Oberfläche bringe ich das Denken einer Architektin ein: erst die Struktur, immer die Details, der Mensch im Mittelpunkt.",
+    "viewProjects": "Projekte ansehen",
+    "downloadCv": "Lebenslauf laden",
+    "cvFileInfo": "PDF, {language}, {size} KB",
+    "stackLabel": "Technologien, mit denen ich arbeite",
+    "portraitAlt": "Roberta Matera, Full-Stack-Entwicklerin, Porträt mit ihrem RM-Logo"
+  },
+  "About": {
+    "eyebrow": "Über mich",
+    "title": "Von der Architektur zum Code: Bauen mit Struktur und Empathie.",
+    "story": "Ich habe Architektur studiert (Master am <poliba>Polytechnikum Bari</poliba>) und gelernt, aus einem Briefing, einem Ort und vielen Rahmenbedingungen Räume zu schaffen, in denen Menschen gern sind. Zwischen 2020 und 2022 bin ich über zwei Bootcamps ins Web gewechselt, denn Bildschirme sind die neuen Räume: Man bewegt sich darin, verirrt sich oder fühlt sich zu Hause.",
+    "today": "Seitdem habe ich an Produkten aus Banking, Versicherung, Retail und Gesundheitswesen als Frontend-Entwicklerin mit UX/UI-Verantwortung gearbeitet und Java und Spring Boot ergänzt, um Produkte durchgängig als Full-Stack zu liefern. Heute arbeite ich zwischen Design, Entwicklung und Business und wachse in Richtung Produktdesign. Ausserdem habe ich einen Bachelor in <pegaso>Informatik für digitale Unternehmen</pegaso> (Pegaso Digital University).",
+    "tagsLabel": "Auf einen Blick",
+    "tags": {
+      "location": "Wohnhaft in Bern",
+      "architecture": "Architektur",
+      "designSystems": "Designsysteme",
+      "fullStack": "Full-Stack",
+      "languages": "IT · EN · DE"
+    },
+    "factsLabel": "In Zahlen",
+    "facts": {
+      "years": {
+        "value": "4,5+",
+        "label": "Jahre im Frontend"
+      },
+      "errors": {
+        "value": "−40 %",
+        "label": "Weniger Fehler bei Schadenmeldungen auf einer Versicherungsplattform"
+      },
+      "languages": {
+        "value": "3",
+        "label": "Gesprochene Sprachen"
+      },
+      "profile": {
+        "value": "FE + BA",
+        "label": "Full-Stack & Analyse"
+      }
+    },
+    "principlesTitle": "Wie die Architektur mich zu einer besseren Entwicklerin macht",
+    "principles": {
+      "systems": {
+        "title": "Systemdenken",
+        "body": "Ein Gebäude ist ein System aus Struktur, Wegen und Nutzung. Dieselbe Logik wende ich auf Designsysteme und Komponentenbibliotheken an, etwa ARTEA: 27 Komponenten in drei Anwendungen."
+      },
+      "movement": {
+        "title": "Bewegung gestalten",
+        "body": "Architekten gestalten, wie sich Menschen durch einen Raum bewegen. Ich gestalte, wie sich Nutzer durch ein Produkt bewegen: klare Navigation, sinnvolle Abläufe, weniger Fehler (−40 % Fehler auf einer Versicherungsplattform)."
+      },
+      "constraints": {
+        "title": "Präzision im Rahmen",
+        "body": "Jedes Projekt hat Budget, Vorschriften und Physik. Ich bin es gewohnt, elegante Lösungen innerhalb technischer, rechtlicher und geschäftlicher Grenzen zu finden und sie zu dokumentieren (UML, Spezifikationen)."
+      },
+      "collaboration": {
+        "title": "Zusammenarbeit über Disziplinen",
+        "body": "Architekten koordinieren Ingenieure, Kunden und Bauleute. Dieselbe Gewohnheit bringe ich mit Stakeholdern, Designern und Entwicklern ein: Anforderungen erheben, in Figma prototypen und früh validieren."
+      }
+    }
+  },
+  "Services": {
+    "eyebrow": "Was ich mache",
+    "title": "Von der Recherche bis zur Produktion.",
+    "items": {
+      "design": {
+        "title": "UI/UX-Design",
+        "body": "Recherche, Wireframes, Prototypen und Designsysteme in Figma."
+      },
+      "frontend": {
+        "title": "Frontend",
+        "body": "React, Next.js, TypeScript, standardmässig barrierefrei und responsiv."
+      },
+      "fullStack": {
+        "title": "Full-Stack",
+        "body": "APIs, Datenbanken und Integrationen für Features von A bis Z."
+      },
+      "analysis": {
+        "title": "Business-Analyse",
+        "body": "Aus Anforderungen werden klare User Stories und messbare Ziele."
+      }
+    }
+  },
+  "Experience": {
+    "eyebrow": "Erfahrung",
+    "title": "Mein bisheriger Weg.",
+    "education": "Ausbildung",
+    "entries": {
+      "f1": {
+        "title": "Frontend Engineer & UX/UI Owner",
+        "note": "Enterprise-Projekte in Versicherung, Retail, Food und Energie",
+        "body": "Einzige Frontend-Entwicklerin und UI/UX-Verantwortliche einer Kfz-Versicherungsplattform. Figma-Prototypen für eine Retail-Plattform verkürzten die Revisionszyklen um 30 %."
+      },
+      "pegaso": {
+        "title": "BSc in Informatik für digitale Unternehmen",
+        "body": "Full-Stack-Grundlagen in Java, Spring Boot, Angular und UML, angewendet in meinem Projekt Health Bridge Clinic."
+      },
+      "almaviva": {
+        "title": "Frontend Engineer",
+        "body": "Entwicklung von ARTEA, einer React-Bibliothek mit 27 Komponenten für drei Anwendungen, und GENIO, einer Plattform, die die Planungszeit um 60 % senkte."
+      },
+      "nexum": {
+        "title": "Frontend Engineer",
+        "body": "Pixelgenaue React/SCSS-Komponenten für Luxus- und Fashion-E-Commerce; Refactoring einer Banking-Anwendung in Angular mit Storybook und Material UI."
+      },
+      "architecture": {
+        "title": "Master in Architektur",
+        "body": "Hier habe ich gelernt, in Systemen, Menschen und Räumen zu denken."
+      }
+    }
+  },
+  "Work": {
+    "eyebrow": "Ausgewählte Projekte",
+    "title": "Projekte, auf die ich stolz bin.",
+    "carousel": {
+      "roleDescription": "Karussell",
+      "slideRoleDescription": "Folie",
+      "label": "Projekte",
+      "previous": "Vorheriges Projekt",
+      "next": "Nächstes Projekt",
+      "goTo": "Projekt {number} zeigen: {title}",
+      "slide": "{number} von {total}"
+    },
+    "openProject": "Projekt und Zeichnungen ansehen",
+    "viewCode": "Code auf GitHub ansehen",
+    "liveSoon": "Live-Version folgt bald",
+    "enlarge": "Bild vergrössern",
+    "tagsLabel": "Themen",
+    "toolsLabel": "Werkzeuge und Kompetenzen",
+    "tools": {
+      "autocad": "AutoCAD",
+      "revit": "Revit",
+      "totalStation": "Vermessung mit Tachymeter",
+      "photography": "Fotografie",
+      "rendering": "Rendering",
+      "photoshop": "Photoshop",
+      "indesign": "InDesign (Layout)",
+      "logoDesign": "Logodesign",
+      "brandIdentity": "Corporate Identity",
+      "designSystem": "Designsystem",
+      "signage": "Beschilderungsdesign",
+      "productDesign": "Produktdesign",
+      "concept": "Konzeptentwicklung",
+      "technicalDrawing": "Technisches Zeichnen",
+      "materials": "Materialwahl"
+    },
+    "projects": {
+      "healthBridge": {
+        "title": "Health Bridge Clinic",
+        "description": "Full-Stack-Plattform für das Gesundheitswesen mit rollenbasierter Zugriffskontrolle, DTOs und Schichtenarchitektur, dokumentiert mit UML-Diagrammen. Hochschulprojekt, 2026.",
+        "art": {
+          "alt": "Minimalistische Illustration: eine Brücke mit drei Bögen unter einer goldenen Sonne, darüber ein korallenrotes Gesundheitskreuz",
+          "line1": "Pflege trifft Code",
+          "line2": "JAVA · SPRING BOOT · ANGULAR"
+        }
+      },
+      "secli": {
+        "title": "Umnutzung eines Franziskanerklosters, Seclì",
+        "description": "Denkmalgerechte Restaurierung und Umnutzung des ehemaligen Franziskanerklosters in Seclì (Apulien): Bauaufnahme, Barrierefreiheit und eine neue Kochschule (2013).",
+        "tags": [
+          "Restaurierung",
+          "Bauaufnahme",
+          "Barrierefreiheit"
+        ],
+        "art": {
+          "alt": "Minimalistische Illustration einer Klosterfassade mit Glockengiebel und Portal unter einer goldenen Sonne, beidseits Pflanzen aus dem Klostergarten",
+          "line1": "bewahren · neu nutzen",
+          "line2": "BAUAUFNAHME · RESTAURIERUNG · BARRIEREFREIHEIT"
+        },
+        "detail": {
+          "meta": "Labor für Architekturrestaurierung · 2013",
+          "heading": "Restaurierung und Umnutzung des ehemaligen Franziskanerklosters in Seclì",
+          "body": [
+            "Denkmalgerechte Restaurierung und Umnutzung des ehemaligen Klosters der Frati Minori Osservanti (S. Antonio da Padova) in Seclì, Apulien.",
+            "Die Bauaufnahme führten wir im Team durch und legten gemeinsam die Entwurfsstrategie fest: eine konservative Restaurierung mit möglichst geringen Eingriffen.",
+            "Mein Schwerpunkt waren die Nebenräume. Ein eingestürztes Gewölbe baute ich zum Schacht eines Aufzugs um und machte so die gesamte Anlage barrierefrei. Das Kloster wird zur Kochschule, mit dem wiederbelebten historischen Klostergarten („orto“) der Mönche."
+          ],
+          "callout": {
+            "title": "Technische Vorgaben",
+            "body": "Der Entwurf musste die italienischen Bauvorschriften und Baunormen erfüllen und entstand mit Unterstützung eines Tragwerksplaners. Die Aufgabe bestand darin, reale technische Zwänge zu lösen, ohne die historische Substanz zu beeinträchtigen."
+          },
+          "images": {
+            "plan": "Farbiger Plan des Umnutzungsprojekts für das Kloster S. Antonio da Padova in Seclì",
+            "ruin": "Schwarz-weiss-Fotografie der Klosterruine vor der Restaurierung"
+          }
+        }
+      },
+      "uggiano": {
+        "title": "Masterarbeit: Schloss Uggiano und Masseria Lisanti",
+        "description": "Masterarbeit in Architektur: historische Recherche, Mauerwerksanalyse und denkmalgerechte Umnutzung der Masseria Lisanti in Ferrandina.",
+        "tags": [
+          "Masterarbeit",
+          "Mauerwerksanalyse",
+          "Kulturerbe"
+        ],
+        "art": {
+          "alt": "Minimalistische Illustration: eine Burg mit Turm auf einem grünen Hügel unter einer goldenen Sonne",
+          "line1": "erforschen · bewahren",
+          "line2": "GESCHICHTE · MAUERWERK · KULTURERBE"
+        },
+        "detail": {
+          "meta": "Masterarbeit in Architektur · Polytechnikum Bari",
+          "heading": "Schloss Uggiano und Masseria Lisanti: Recherche, Analyse und denkmalgerechte Umnutzung",
+          "body": [
+            "Über das Schloss lagen kaum Unterlagen vor, deshalb habe ich umfangreich in Archiven nach historischen Fotografien recherchiert. Bauaufnahme und Literaturrecherche erfolgten gemeinsam im ganzen Team.",
+            "Anschliessend habe ich eigenständig das Mauerwerk von Schloss und Masseria Lisanti untersucht: Probenahme, Beschreibungsblätter, Kartierung und stratigraphische Analyse. Zusammen mit den historischen Quellen ergab sich daraus eine Hypothese zu den Bauphasen des Schlosses sowie die von mir vorgeschlagenen Massnahmen zur Oberflächenrestaurierung.",
+            "Im Entwurf habe ich mich der Instandsetzung und Nutzung der Masseria Lisanti am Fuss des Schlosses gewidmet. Das Projekt geht von ihrem architektonischen Wert als Kulturgut und von ihrem sozioökonomischen Umfeld aus, denn Name und Gebäude sind mit Landwirtschaft und Käseherstellung verbunden. Der konservative Eingriff entfernt störende und einsturzgefährdete Elemente, ergänzt oder ersetzt sie durch Materialien gleicher Machart wie das Original und sieht Lösungen vor, die den Besuch auch für Menschen mit Behinderung ermöglichen."
+          ],
+          "callout": {
+            "title": "Interdisziplinäre Zusammenarbeit",
+            "body": "Die Arbeit entstand im Team und in engem Austausch mit Fachleuten: einem Geologen, einer Archäologin, einem Fotografen, der öffentlichen Verwaltung und weiteren. Ich habe gelernt, unterschiedliche Fachperspektiven zu hören, zwischen den Disziplinen zu vermitteln und eine gemeinsame Richtung zu halten. Im gesamten Studium habe ich in kleinen und grossen Gruppen gearbeitet; so arbeite ich heute mit Designern, Entwicklern und Stakeholdern."
+          },
+          "images": {
+            "sitePlan": "Lageplan des Areals um das Schloss Uggiano, Ferrandina",
+            "masonry": "Probenahmeblatt und Schadensanalyse des Mauerwerks des Schlosses",
+            "masseria": "Schnitt und Grundriss der Masseria Lisanti"
+          }
+        }
+      },
+      "genoa": {
+        "title": "Logo für die historischen Geschäfte Genuas",
+        "description": "Beitrag zum Ideenwettbewerb der Stadt Genua: ein Logo zur Kennzeichnung historischer Geschäfte, Traditionslokale und Orte von kulturellem Interesse (2020).",
+        "tags": [
+          "Logodesign",
+          "Corporate Identity",
+          "Kulturerbe"
+        ],
+        "art": {
+          "alt": "Minimalistische Illustration eines Rundbogenportals mit wechselnden Streifen und Oberlicht unter einer goldenen Sonne",
+          "line1": "historische Geschäfte",
+          "line2": "LOGO · KULTURERBE · IDENTITÄT"
+        },
+        "detail": {
+          "meta": "Logo-Wettbewerb · Stadt Genua · 2020",
+          "heading": "Ein Logo für die historischen Geschäfte Genuas: das Portal als Zeichen",
+          "body": [
+            "Die Stadt Genua hat gemeinsam mit der Handelskammer und dem Kulturministerium einen offenen Ideenwettbewerb für ein Logo ausgeschrieben, das die „Botteghe storiche“, Traditionslokale und Orte von kulturellem Interesse kennzeichnet: Betriebe, die seit mindestens 70 Jahren bestehen und ihre originale Architektur, Einrichtung und Ausstattung bewahrt haben. Es gingen 307 Beiträge aus Italien und dem Ausland ein.",
+            "Mein Entwurf erkennt ein historisches Geschäft an seiner Schwelle. Das Zeichen ist das Rundbogenportal der Carruggi, der Eingang in die Geschichte der Stadt. Die wechselnden Streifen aus Schiefer und Marmor greifen die Zweifarbigkeit der genuesischen Architektur auf, von der Fassade von San Lorenzo bis zu den Palazzi der Altstadt. Das Oberlicht über der Tür erinnert an die eisernen Oberlichter alter Schaufenster, ein handwerkliches Detail, das auch in kleiner Grösse lesbar bleibt.",
+            "Ein Zeichen für drei Kategorien, Bottega storica, Locale di tradizione und Locale di interesse culturale, in einem klaren, wiederholbaren System mit Positiv- und Negativversion. Die Palette besteht aus Schiefer, Marmor und Messing (nur für das Schild); der Name ist in der Cormorant Garamond gesetzt, wie Inschriften an alten Portalen, die Stadt und die Texte in der Manrope. Unter 15 mm Höhe vereinfachen sich Streifen und Oberlicht zur vollen Silhouette des Portals.",
+            "Das Schild ist aus ligurischem Schiefer aus dem Val Fontanabuona graviert, 20 mm stark, 200 × 280 mm gross. Zeichen und Text sind 1,5 mm tief V-förmig eingraviert und mit weissem Pigment gefüllt; vier Messingschrauben Ø 8 mm befestigen es neben dem Eingang, die Unterkante liegt 140 cm über dem Boden. Schiefer ist der Stein der Portale, Schwellen und Dächer Genuas: Das Schild liegt nicht auf der Fassade auf, es wird ein Teil von ihr."
+          ],
+          "callout": {
+            "title": "Ein kleines Designsystem",
+            "body": "Logo, Varianten je Kategorie, Farb- und Schriftregeln, Mindestgrösse und ein physisches Schild: dieselbe Denkweise, die ich bei Designsystemen für Interfaces anwende, von einem Zeichen zu vielen konsistenten Anwendungen."
+          },
+          "images": {
+            "logo": "Das Logo: ein Rundbogenportal mit wechselnden Streifen und Oberlicht, darüber der Name „Botteghe Storiche, Genova“",
+            "categories": "Die drei Kategorien: Bottega storica, Locale di tradizione und Locale di interesse culturale",
+            "versions": "Das Logo in Positiv- und Negativversion, mit Name",
+            "plaque": "Das Schieferschild mit Zeichen und Name, 200 × 280 mm, mit vier Messingschrauben befestigt"
+          }
+        }
+      },
+      "copper": {
+        "title": "Bespoke BeCreative: eine Skyline aus Kupfer",
+        "description": "Beitrag zum Samsung-Wettbewerb BESPOKE BeCreative (2021): fünf Wahrzeichen aus einer einzigen Kupferklinge für den Kühlschrank BESPOKE RB38A.",
+        "tags": [
+          "Produktdesign",
+          "Kupfer",
+          "BESPOKE RB38A"
+        ],
+        "art": {
+          "alt": "Minimalistische Illustration eines Kühlschranks mit Gefrierfach unten und flachen Türen, darauf eine Skyline aus Kupfer mit Opernhaus Sydney, Eiffelturm und Freiheitsstatue",
+          "line1": "Skyline nach Mass",
+          "line2": "PRODUKTDESIGN · KUPFER · BESPOKE RB38A"
+        },
+        "detail": {
+          "meta": "Designwettbewerb · Samsung BESPOKE BeCreative · 2021",
+          "heading": "Copper Skyline: fünf Wahrzeichen, eine durchgehende Klinge",
+          "body": [
+            "Für den Samsung-Wettbewerb BESPOKE BeCreative habe ich „Copper Skyline“ vorgeschlagen: fünf Ikonen, aus einer einzigen Kupferklinge geschnitten. Die obere Tür des BESPOKE RB38A wird zum Horizont, mit dem Opernhaus von Sydney, dem Kolosseum, dem Eiffelturm, dem Schiefen Turm von Pisa und der Freiheitsstatue in einem durchgehenden Profil.",
+            "Die Klinge ist ein 1,5 mm starkes Kupferblech von 520 × 208 mm, lasergeschnitten und von Hand veredelt. Sie wird mit Abstandshaltern 4 mm vor dem Glas montiert und wirft so einen Schatten, der mit dem Tageslicht wandert. Auf der unteren Tür kehrt die Skyline als zarte Spiegelung wieder, wie Wasser in einem Hafen.",
+            "Die Idee trägt eine italienische Handschrift: Kolosseum und Pisa bringen Italien in die Skyline, und Kupfer verbindet die handwerkliche Tradition, von Kupfertöpfen bis zu den Kupferschmieden, mit präzisem Schnitt. Kupfer altert zudem: Der Kühlschrank reift mit den Menschen, die ihn nutzen, erst poliert, dann brüniert und mit der Zeit mit einem Hauch Patina.",
+            "Das Konzept ist auf den BESPOKE RB38A ausgelegt (390 L, Kühl-Gefrier-Kombination mit unten liegendem Gefrierteil, flache Türen mit versenkten Griffen, 595 × 2030 × 658 mm). Seine austauschbaren Türpaneele bieten eine ebene, ruhige Fläche für die Klinge."
+          ],
+          "callout": {
+            "title": "Technische Zeichnung",
+            "body": "Kühlschrank und Klinge sind mit ihren realen Massen dargestellt: Kühlschrank 595 × 2030 mm, Klinge 520 × 208 mm. Paneelaufbau: Glas, Abstandshalter Ø 8 mm, Kupferblech."
+          },
+          "images": {
+            "refrigerator": "Der Kühlschrank mit der Kupfer-Skyline aus fünf Wahrzeichen und ihrer Spiegelung, mit Massen",
+            "blade": "Detail der Kupferklinge: Opernhaus von Sydney, Kolosseum, Eiffelturm, Schiefer Turm von Pisa und Freiheitsstatue, 520 mm breit"
+          }
+        }
+      },
+      "upcoming": {
+        "title": "Nächste Fallstudie",
+        "description": "Eine UX-Fallstudie in Arbeit: von der Recherche über Wireframes bis zum Design-System und zur funktionierenden Oberfläche.",
+        "tags": [
+          "Demnächst"
+        ],
+        "art": {
+          "alt": "Minimalistische Illustration eines Wireframes in einem Browserfenster mit einem kleinen Spross, für die kommende UX-Fallstudie",
+          "line1": "nächstes Kapitel",
+          "line2": "UX-FALLSTUDIE · DEMNÄCHST"
+        }
+      }
+    }
+  },
+  "References": {
+    "eyebrow": "Was sie über mich sagen",
+    "title": "Worte von Menschen, mit denen ich gearbeitet habe.",
+    "readMore": "Weiterlesen",
+    "linkedInBadge": "Empfehlung auf LinkedIn",
+    "viewOnLinkedIn": "Auf LinkedIn ansehen",
+    "letterOnRequest": "Das vollständige unterschriebene Schreiben sende ich auf Anfrage gern zu.",
+    "dialogLabel": "Referenz von {name}",
+    "translatedFrom": "{language, select, it {Aus dem Italienischen} en {Aus dem Englischen} other {Aus dem Original}} übersetzt",
+    "items": {
+      "solotti": {
+        "short": "„Äusserst kompetent und zuverlässig, mit starken technischen Fähigkeiten und einem hervorragenden Blick fürs Detail. Ein natürliches Talent im Umgang mit Stakeholdern aus dem Business.“",
+        "full": "„Roberta ist eine äusserst kompetente und zuverlässige Frontend-Entwicklerin mit starken technischen Fähigkeiten und einem hervorragenden Blick fürs Detail. Sie hat ein natürliches Talent im Umgang mit Stakeholdern aus dem Business: Sie erhebt Anforderungen direkt bei den Kunden und setzt sie, oft selbstständig, in wirksame technische Lösungen um. Zudem plant sie ihre Zeit und Prioritäten gut und hält Termine stets ein, ohne Abstriche bei der Qualität.“",
+        "role": "Business Unit Manager, Data Reply",
+        "detail": "Business Unit Manager, Data Reply · Juli 2026"
+      },
+      "f1": {
+        "short": "„Starke technische Fähigkeiten, Selbstständigkeit und ein klarer Fokus auf hochwertige Ergebnisse. Sie überzeugte durch Zuverlässigkeit, Präzision und Teamgeist.“",
+        "full": "„Roberta hat starke technische Fähigkeiten, grosse Selbstständigkeit und einen klaren Fokus auf hochwertige Ergebnisse bewiesen. Sie ist bei mehreren Projekten für einen unserer wichtigsten Kunden die einzige Ansprechperson für das Frontend: Sie erhebt Anforderungen, erstellt Prototypen in Figma und entwickelt Angular-PWAs sowie wiederverwendbare Komponenten. Ihre Aufgaben ging sie stets mit Professionalität, Eigeninitiative und grosser Sorgfalt für die Qualität des Endprodukts an.“",
+        "role": "Mailand · Referenzschreiben, Aug. 2026",
+        "detail": "Mailand · August 2026"
+      },
+      "casasola": {
+        "short": "„Sie fiel durch ihren Wunsch nach beruflicher Weiterentwicklung auf und durch die Entschlossenheit, mit der sie jedes neue Thema anging.“",
+        "full": "„Roberta fiel durch ihren Wunsch nach beruflicher Weiterentwicklung auf und ging jedes neue Thema mit bemerkenswerter Entschlossenheit an. Tag für Tag entwickelte sie eine methodische und präzise Arbeitsweise und eignete sich das gesamte Programm an. In Gruppenprojekten arbeitete sie äusserst professionell und zuverlässig. Dass sie die Webprogrammierung von Grund auf gelernt hat, zeigt nicht nur ihr Talent, sondern auch ihren bemerkenswerten Lerneifer.“",
+        "role": "Gründer, Nucleode SRL · ihr Dozent an der Strive School",
+        "detail": "Founder & Software Developer, Nucleode SRL · ihr Dozent an der Strive School (EPICODE) · Nov. 2024"
+      },
+      "perfido": {
+        "short": "„Eine ausgeprägte Teamfähigkeit, die Bereitschaft, ihr Wissen mit anderen zu teilen, und vor allem ihre menschlichen Qualitäten.“",
+        "full": "„Ihre Forschungsarbeit erzielte sowohl für die historische Analyse als auch für den Entwurf ein ausgezeichnetes Ergebnis und überzeugte durch eine sorgfältige kritische Bauaufnahme mit direkten, indirekten und photogrammetrischen Methoden. In einer Arbeitsgruppe mit fünf weiteren Absolventinnen und Absolventen war sie stets voll engagiert und bewies eine ausgeprägte Teamfähigkeit, die Bereitschaft, ihr Wissen mit anderen zu teilen, und vor allem ihre menschlichen Qualitäten.“",
+        "role": "<poliba>Polytechnikum Bari</poliba> · Betreuer der Masterarbeit",
+        "detail": "Polytechnikum Bari · Betreuer der Masterarbeit · Oktober 2018"
+      }
+    }
+  },
+  "Contact": {
+    "eyebrow": "Kontakt",
+    "title": "Lass uns gemeinsam etwas Bedeutsames bauen.",
+    "lead": "Ich bin offen für Produktdesign- und Frontend-Rollen. Erzähl mir von deinem Projekt, ich antworte innerhalb von zwei Werktagen.",
+    "channelsLabel": "Kontaktdaten",
+    "whatsapp": "auf WhatsApp",
+    "form": {
+      "label": "Kontaktformular",
+      "name": "Name",
+      "email": "E-Mail",
+      "subject": "Betreff",
+      "optional": "optional",
+      "message": "Nachricht",
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet…",
+      "trap": "Dieses Feld bitte leer lassen",
+      "success": "Danke! Deine Nachricht ist unterwegs. Ich antworte innerhalb von zwei Werktagen.",
+      "invalid": "Bitte prüfe die markierten Felder.",
+      "error": "Leider konnte deine Nachricht nicht gesendet werden. Bitte versuch es noch einmal oder schreib mir an <email></email>.",
+      "errors": {
+        "nameRequired": "Bitte gib deinen Namen ein.",
+        "emailRequired": "Bitte gib deine E-Mail-Adresse ein.",
+        "emailInvalid": "Bitte gib eine gültige E-Mail-Adresse ein, zum Beispiel name@beispiel.ch.",
+        "messageRequired": "Bitte schreib eine Nachricht.",
+        "tooLong": "Das ist zu lang: höchstens {max} Zeichen."
+      }
+    }
+  },
+  "Footer": {
+    "linksLabel": "Kontakt und Profile",
+    "email": "E-Mail",
+    "madeIn": "Mit Sorgfalt in Bern gestaltet und gebaut."
+  },
+  "NotFound": {
+    "title": "Seite nicht gefunden",
+    "body": "Diese Seite gibt es nicht oder sie wurde verschoben.",
+    "backHome": "Zur Startseite"
+  }
+}
