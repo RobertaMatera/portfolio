@@ -13,16 +13,24 @@ export interface Reference {
   accent: ReferenceAccent;
   /** Language the reference was written in. */
   originalLanguage: Locale;
+  /**
+   * The site quotes the author's own words in `originalLanguage`, and the
+   * other languages translate that. Without it, only an English version of
+   * the reference exists, and the other languages translate the English.
+   */
+  verbatim?: true;
   /** Public recommendation, when there is one; otherwise a signed letter. */
   linkedInRecommendation?: string;
 }
 
 /**
- * The quotes were collected in English; the Italian and German pages show
- * translations of that text. So a quote is marked as translated from English
- * on those pages, and from its original language on the English page.
+ * Which language a quote shown in `locale` was translated from, or null when
+ * the page shows the author's own words.
  */
 export function translatedFrom(reference: Reference, locale: Locale): Locale | null {
+  if (reference.verbatim) return locale === reference.originalLanguage ? null : reference.originalLanguage;
+  // Only an English version exists: English is shown as is (noting the
+  // original language), every other language is translated from it.
   if (locale !== "en") return "en";
   return reference.originalLanguage === "en" ? null : reference.originalLanguage;
 }
@@ -34,6 +42,7 @@ export const references = [
     url: "https://www.linkedin.com/in/alice-solotti-4480a6a9/",
     accent: "lime",
     originalLanguage: "en",
+    verbatim: true,
   },
   {
     id: "f1",
@@ -41,6 +50,7 @@ export const references = [
     url: "https://www.linkedin.com/company/f1-consulting-services/",
     accent: "coral",
     originalLanguage: "en",
+    verbatim: true,
   },
   {
     id: "casasola",
@@ -48,6 +58,7 @@ export const references = [
     url: "https://www.linkedin.com/in/stefanocasasola/",
     accent: "sun",
     originalLanguage: "it",
+    verbatim: true,
     linkedInRecommendation: "https://www.linkedin.com/in/roberta-matera/details/recommendations/",
   },
   {
