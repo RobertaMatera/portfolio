@@ -372,6 +372,34 @@
       }
     }
   },
+  "Contact": {
+    "eyebrow": "Contattami",
+    "title": "Costruiamo insieme qualcosa di significativo.",
+    "lead": "Sono aperta a ruoli di product design e frontend. Raccontami il tuo progetto e risponderò entro due giorni lavorativi.",
+    "channelsLabel": "Recapiti",
+    "whatsapp": "su WhatsApp",
+    "form": {
+      "label": "Modulo di contatto",
+      "name": "Nome",
+      "email": "Email",
+      "subject": "Oggetto",
+      "optional": "facoltativo",
+      "message": "Messaggio",
+      "submit": "Invia messaggio",
+      "sending": "Invio in corso…",
+      "trap": "Lascia vuoto questo campo",
+      "success": "Grazie! Il tuo messaggio è stato inviato. Ti risponderò entro due giorni lavorativi.",
+      "invalid": "Controlla i campi evidenziati.",
+      "error": "Purtroppo il messaggio non è stato inviato. Riprova oppure scrivimi a <email></email>.",
+      "errors": {
+        "nameRequired": "Inserisci il tuo nome.",
+        "emailRequired": "Inserisci il tuo indirizzo email.",
+        "emailInvalid": "Inserisci un indirizzo email valido, ad esempio nome@esempio.it.",
+        "messageRequired": "Scrivi un messaggio.",
+        "tooLong": "Il testo è troppo lungo: al massimo {max} caratteri."
+      }
+    }
+  },
   "Footer": {
     "linksLabel": "Contatti e profili",
     "email": "Email",

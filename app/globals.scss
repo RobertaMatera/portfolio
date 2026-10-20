@@ -29,6 +29,8 @@
 @use "../components/work/ZoomImage/zoom-image";
 @use "../components/references/ReferenceCard/reference-card";
 @use "../components/references/ReferenceDialog/reference-dialog";
+@use "../components/sections/Contact/contact";
+@use "../components/contact/ContactForm/contact-form";
 
 // Pages
 @use "../components/pages/NotFound/not-found";

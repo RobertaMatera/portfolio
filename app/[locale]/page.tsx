@@ -5,6 +5,7 @@ import TopBar from "@/components/chrome/TopBar/TopBar";
 import About from "@/components/sections/About/About";
 import Experience from "@/components/sections/Experience/Experience";
 import Hero from "@/components/sections/Hero/Hero";
+import Contact from "@/components/sections/Contact/Contact";
 import References from "@/components/sections/References/References";
 import Services from "@/components/sections/Services/Services";
 import Work from "@/components/sections/Work/Work";
@@ -43,6 +44,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         <Experience locale={locale} />
         <Work locale={locale} />
         <References locale={locale} />
+        <Contact locale={locale} />
       </main>
       <Footer locale={locale} />
     </>

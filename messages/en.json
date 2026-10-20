@@ -372,6 +372,34 @@
       }
     }
   },
+  "Contact": {
+    "eyebrow": "Get in touch",
+    "title": "Let’s build something meaningful together.",
+    "lead": "Open to product design and frontend roles. Tell me about your project and I’ll reply within two working days.",
+    "channelsLabel": "Contact details",
+    "whatsapp": "on WhatsApp",
+    "form": {
+      "label": "Contact form",
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "optional": "optional",
+      "message": "Message",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "trap": "Leave this field empty",
+      "success": "Thank you! Your message is on its way. I’ll reply within two working days.",
+      "invalid": "Please check the highlighted fields.",
+      "error": "Sorry, your message couldn’t be sent. Please try again, or write to me at <email></email>.",
+      "errors": {
+        "nameRequired": "Please enter your name.",
+        "emailRequired": "Please enter your email address.",
+        "emailInvalid": "Please enter a valid email address, like name@example.com.",
+        "messageRequired": "Please write a message.",
+        "tooLong": "This is too long: {max} characters at most."
+      }
+    }
+  },
   "Footer": {
     "linksLabel": "Contact and profiles",
     "email": "Email",

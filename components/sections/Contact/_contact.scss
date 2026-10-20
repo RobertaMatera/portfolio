@@ -1,0 +1,69 @@
+@use "breakpoints" as bp;
+
+// Warm coral variant of a section: peach ground with soft colour blobs.
+.contact {
+  --section-bg: var(--peach);
+
+  background:
+    radial-gradient(55% 45% at 10% 66%, var(--peach-1), transparent 70%),
+    radial-gradient(48% 50% at 94% 46%, var(--peach-2), transparent 70%),
+    radial-gradient(60% 40% at 55% 104%, var(--peach-3), transparent 70%),
+    var(--section-bg);
+
+  h2 {
+    color: var(--coral-ink);
+  }
+
+  .lead {
+    color: var(--coral-text);
+  }
+
+  .eyebrow {
+    color: var(--coral-strong);
+
+    &::before {
+      background: var(--coral-soft);
+    }
+  }
+}
+
+.contact__layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 56px;
+  align-items: center;
+
+  @include bp.down("sm") {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.contact__channels {
+  display: grid;
+  gap: 4px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+
+  a {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    min-height: 44px;
+    color: var(--coral-ink);
+    font-weight: 700;
+    overflow-wrap: anywhere;
+    transition: color var(--dur-fast);
+
+    &:hover {
+      color: var(--coral-strong);
+    }
+  }
+
+  .icon {
+    flex: none;
+    width: 20px;
+    height: 20px;
+    color: var(--coral);
+  }
+}

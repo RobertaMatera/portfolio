@@ -372,6 +372,34 @@
       }
     }
   },
+  "Contact": {
+    "eyebrow": "Kontakt",
+    "title": "Lass uns gemeinsam etwas Bedeutsames bauen.",
+    "lead": "Ich bin offen für Produktdesign- und Frontend-Rollen. Erzähl mir von deinem Projekt, ich antworte innerhalb von zwei Werktagen.",
+    "channelsLabel": "Kontaktdaten",
+    "whatsapp": "auf WhatsApp",
+    "form": {
+      "label": "Kontaktformular",
+      "name": "Name",
+      "email": "E-Mail",
+      "subject": "Betreff",
+      "optional": "optional",
+      "message": "Nachricht",
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet…",
+      "trap": "Dieses Feld bitte leer lassen",
+      "success": "Danke! Deine Nachricht ist unterwegs. Ich antworte innerhalb von zwei Werktagen.",
+      "invalid": "Bitte prüfe die markierten Felder.",
+      "error": "Leider konnte deine Nachricht nicht gesendet werden. Bitte versuch es noch einmal oder schreib mir an <email></email>.",
+      "errors": {
+        "nameRequired": "Bitte gib deinen Namen ein.",
+        "emailRequired": "Bitte gib deine E-Mail-Adresse ein.",
+        "emailInvalid": "Bitte gib eine gültige E-Mail-Adresse ein, zum Beispiel name@beispiel.ch.",
+        "messageRequired": "Bitte schreib eine Nachricht.",
+        "tooLong": "Das ist zu lang: höchstens {max} Zeichen."
+      }
+    }
+  },
   "Footer": {
     "linksLabel": "Kontakt und Profile",
     "email": "E-Mail",

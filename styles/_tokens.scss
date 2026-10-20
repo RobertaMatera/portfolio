@@ -44,8 +44,11 @@
   --peach-3: #ffcdb8;
   --peach-ring: #ffd0b8;
   --coral-soft: #f4a07f;
-  --coral: #d9532b;
-  --coral-text: #8a5c49;
+  --coral: #d9532b; // icons and accents only (3.7:1 on peach)
+  // Text colours are darker than the mockup's #d9532b / #8a5c49 so small text
+  // keeps 4.5:1 over the warm gradient blobs too.
+  --coral-strong: #b23d1c;
+  --coral-text: #7d5242;
   --coral-ink: #5a2f1f;
   // Darker than the mockup's #f57a52 → #dc4f28 (2.7:1 with white) so the
   // white button text reaches WCAG AA across the whole gradient (4.6–5.9:1).
