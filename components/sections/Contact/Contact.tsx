@@ -6,7 +6,7 @@ import Icon from "@/components/ui/Icon/Icon";
 import Section from "@/components/ui/Section/Section";
 import { profile, socialLinks } from "@/content/profile";
 import type { Locale } from "@/i18n/routing";
-import { contactLimits } from "@/lib/contact/validation";
+import { contactRules, type ContactField } from "@/lib/contact/validation";
 
 interface ContactProps {
   locale: Locale;
@@ -18,7 +18,13 @@ export default async function Contact({ locale }: ContactProps) {
   const tCommon = await getTranslations({ locale, namespace: "Common" });
   const whatsapp = socialLinks.find((link) => link.network === "whatsapp");
 
-  const tooLong = (field: keyof typeof contactLimits) => t("form.errors.tooLong", { max: contactLimits[field] });
+  // Every field gets the full set of messages; "invalid" only ever applies to email.
+  const fieldErrors = (field: ContactField, required: string) => ({
+    required,
+    invalid: t("form.errors.emailInvalid"),
+    tooShort: t("form.errors.tooShort", { min: contactRules[field].min }),
+    tooLong: t("form.errors.tooLong", { max: contactRules[field].max }),
+  });
   const copy: ContactFormCopy = {
     formLabel: t("form.label"),
     labels: {
@@ -27,7 +33,6 @@ export default async function Contact({ locale }: ContactProps) {
       subject: t("form.subject"),
       message: t("form.message"),
     },
-    optional: t("form.optional"),
     submit: t("form.submit"),
     sending: t("form.sending"),
     trap: t("form.trap"),
@@ -37,15 +42,12 @@ export default async function Contact({ locale }: ContactProps) {
       email: () => <a href={`mailto:${profile.email}`}>{profile.email}</a>,
     }),
     errors: {
-      name: { required: t("form.errors.nameRequired"), tooLong: tooLong("name") },
-      email: {
-        required: t("form.errors.emailRequired"),
-        invalid: t("form.errors.emailInvalid"),
-        tooLong: tooLong("email"),
-      },
-      subject: { tooLong: tooLong("subject") },
-      message: { required: t("form.errors.messageRequired"), tooLong: tooLong("message") },
+      name: fieldErrors("name", t("form.errors.nameRequired")),
+      email: fieldErrors("email", t("form.errors.emailRequired")),
+      subject: fieldErrors("subject", t("form.errors.subjectRequired")),
+      message: fieldErrors("message", t("form.errors.messageRequired")),
     },
+    messageHint: t("form.messageHint", { min: contactRules.message.min }),
   };
 
   return (

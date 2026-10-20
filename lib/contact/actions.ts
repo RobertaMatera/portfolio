@@ -3,7 +3,7 @@
 import { profile } from "@/content/profile";
 import { routing } from "@/i18n/routing";
 
-import { readContactValues, validateContact, type ContactErrors, type ContactValues } from "./validation";
+import { readContactValues, TRAP_FIELD, validateContact, type ContactErrors, type ContactValues } from "./validation";
 
 export interface ContactState {
   status: "idle" | "invalid" | "success" | "error";
@@ -12,32 +12,28 @@ export interface ContactState {
   values?: ContactValues;
 }
 
-// A person needs a few seconds to fill in a valid message; bots post at once.
-const MIN_FILL_MS = 2000;
-
 /**
  * Validates the contact form and emails it to Roberta through Resend's API.
  * The API key stays on the server (RESEND_API_KEY, no NEXT_PUBLIC_ prefix).
+ * Every outcome other than success is logged, so the reason for a missing
+ * email shows up in the server logs (Vercel → Logs).
  */
 export async function sendContactMessage(_previous: ContactState, formData: FormData): Promise<ContactState> {
-  // Spam traps get a normal success so bots have nothing to adapt to.
-  // 1. A hidden field people never see.
-  const trap = formData.get("website");
-  if (typeof trap === "string" && trap !== "") return { status: "success" };
+  // A hidden field people never see. Bots that fill it get a normal success
+  // so they have nothing to adapt to; the drop is logged, never silent.
+  const trap = formData.get(TRAP_FIELD);
+  if (typeof trap === "string" && trap !== "") {
+    console.warn("Contact form: spam trap field was filled; message dropped.");
+    return { status: "success" };
+  }
 
-  // Validation comes before the timer, so a person who submits an empty form
-  // quickly sees their errors rather than a false success.
   const values = readContactValues(formData);
   const errors = validateContact(values);
   if (Object.keys(errors).length > 0) return { status: "invalid", errors, values };
 
-  // 2. A complete message sent faster than anyone could type it.
-  const startedAt = Number(formData.get("startedAt"));
-  if (startedAt > 0 && Date.now() - startedAt < MIN_FILL_MS) return { status: "success" };
-
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
-    console.error("Contact form: RESEND_API_KEY is not set.");
+    console.error("Contact form: RESEND_API_KEY is not set, so the message was not sent.");
     return { status: "error", values };
   }
 
@@ -54,12 +50,12 @@ export async function sendContactMessage(_previous: ContactState, formData: Form
         from: process.env.CONTACT_FROM ?? "Portfolio <onboarding@resend.dev>",
         to: [process.env.CONTACT_TO ?? profile.email],
         reply_to: values.email,
-        subject: oneLine(`Portfolio · ${values.subject || `Message from ${values.name}`}`),
+        subject: oneLine(`Portfolio · ${values.subject}`),
         // Plain text only, so nothing the sender types can be rendered as HTML.
         text: [
           `Name: ${values.name}`,
           `Email: ${values.email}`,
-          `Subject: ${values.subject || "-"}`,
+          `Subject: ${values.subject}`,
           `Page language: ${language}`,
           "",
           values.message,
@@ -69,7 +65,9 @@ export async function sendContactMessage(_previous: ContactState, formData: Form
     });
 
     if (!response.ok) {
-      console.error(`Contact form: Resend answered ${response.status}.`, await response.text());
+      // Resend explains refusals in the body, e.g. a test sender used with a
+      // recipient other than the account owner, or an unverified domain.
+      console.error(`Contact form: Resend refused the message (${response.status}).`, await response.text());
       return { status: "error", values };
     }
   } catch (error) {

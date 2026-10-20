@@ -383,7 +383,6 @@
       "name": "Name",
       "email": "Email",
       "subject": "Subject",
-      "optional": "optional",
       "message": "Message",
       "submit": "Send message",
       "sending": "Sending…",
@@ -394,10 +393,13 @@
       "errors": {
         "nameRequired": "Please enter your name.",
         "emailRequired": "Please enter your email address.",
-        "emailInvalid": "Please enter a valid email address, like name@example.com.",
+        "subjectRequired": "Please add a subject.",
         "messageRequired": "Please write a message.",
+        "emailInvalid": "Please enter a valid email address, like name@example.com.",
+        "tooShort": "Please write at least {min} characters.",
         "tooLong": "This is too long: {max} characters at most."
-      }
+      },
+      "messageHint": "At least {min} characters."
     }
   },
   "Footer": {

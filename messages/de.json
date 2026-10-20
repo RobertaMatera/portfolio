@@ -383,7 +383,6 @@
       "name": "Name",
       "email": "E-Mail",
       "subject": "Betreff",
-      "optional": "optional",
       "message": "Nachricht",
       "submit": "Nachricht senden",
       "sending": "Wird gesendet…",
@@ -394,10 +393,13 @@
       "errors": {
         "nameRequired": "Bitte gib deinen Namen ein.",
         "emailRequired": "Bitte gib deine E-Mail-Adresse ein.",
-        "emailInvalid": "Bitte gib eine gültige E-Mail-Adresse ein, zum Beispiel name@beispiel.ch.",
+        "subjectRequired": "Bitte gib einen Betreff ein.",
         "messageRequired": "Bitte schreib eine Nachricht.",
+        "emailInvalid": "Bitte gib eine gültige E-Mail-Adresse ein, zum Beispiel name@beispiel.ch.",
+        "tooShort": "Bitte schreib mindestens {min} Zeichen.",
         "tooLong": "Das ist zu lang: höchstens {max} Zeichen."
-      }
+      },
+      "messageHint": "Mindestens {min} Zeichen."
     }
   },
   "Footer": {

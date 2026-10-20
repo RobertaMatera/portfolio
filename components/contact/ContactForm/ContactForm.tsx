@@ -1,14 +1,23 @@
 "use client";
 
-import { useActionState, useEffect, useRef, type ReactNode } from "react";
+import { useActionState, useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
 
 import { sendContactMessage, type ContactState } from "@/lib/contact/actions";
-import { contactLimits, type ContactField, type ContactFieldError } from "@/lib/contact/validation";
+import {
+  contactFields,
+  contactRules,
+  readContactValues,
+  TRAP_FIELD,
+  validateContact,
+  validateField,
+  type ContactErrors,
+  type ContactField,
+  type ContactFieldError,
+} from "@/lib/contact/validation";
 
 export interface ContactFormCopy {
   formLabel: string;
   labels: Record<ContactField, string>;
-  optional: string;
   submit: string;
   sending: string;
   trap: string;
@@ -17,7 +26,8 @@ export interface ContactFormCopy {
   /** Includes a link to Roberta's email address. */
   error: ReactNode;
   /** Error text per field and error type, already translated. */
-  errors: Record<ContactField, Partial<Record<ContactFieldError, string>>>;
+  errors: Record<ContactField, Record<ContactFieldError, string>>;
+  messageHint: string;
 }
 
 interface ContactFormProps {
@@ -26,33 +36,84 @@ interface ContactFormProps {
 }
 
 const initialState: ContactState = { status: "idle" };
-const fields: readonly ContactField[] = ["name", "email", "subject", "message"];
+
+/** How long the success message stays before fading out. */
+const SUCCESS_VISIBLE_MS = 8000;
+/** Length of the fade-out, matching .contact-form__status in the stylesheet. */
+const FADE_MS = 400;
 
 /**
- * Contact form posting to a server action. It works without JavaScript; with
- * it, errors appear inline, focus moves to the first problem, and the result
- * is announced to screen readers.
+ * Contact form posting to a server action. Fields are checked when you leave
+ * them and again before sending, with the same rules the server applies; it
+ * still works without JavaScript, with the server's messages instead.
  */
 export default function ContactForm({ locale, copy }: ContactFormProps) {
   const [state, formAction, pending] = useActionState(sendContactMessage, initialState);
   const formRef = useRef<HTMLFormElement>(null);
   const statusRef = useRef<HTMLParagraphElement>(null);
-  const startedAtRef = useRef<HTMLInputElement>(null);
 
+  // Errors found in the browser. `null` means "checked and fine", which hides
+  // an older server error for that field once it has been corrected.
+  const [clientErrors, setClientErrors] = useState<Partial<Record<ContactField, ContactFieldError | null>>>({});
+  const [messageLength, setMessageLength] = useState(0);
+  // The success message fades out, then hides; both are tracked per result.
+  const [fading, setFading] = useState<ContactState | null>(null);
+  const [dismissed, setDismissed] = useState<ContactState | null>(null);
+  const [hovered, setHovered] = useState(false);
+
+  const errors: ContactErrors = { ...state.errors };
+  for (const field of contactFields) {
+    const clientError = clientErrors[field];
+    if (clientError === null) delete errors[field];
+    else if (clientError) errors[field] = clientError;
+  }
+
+  // Move focus to whatever needs attention after the server answers.
   useEffect(() => {
     if (state.status === "invalid") {
       formRef.current?.querySelector<HTMLElement>("[aria-invalid='true']")?.focus();
-    } else if (state.status === "success" || state.status === "error") {
+    } else if (state.status === "error") {
       statusRef.current?.focus();
     }
   }, [state]);
 
-  const errorFor = (field: ContactField) => {
-    const code = state.errors?.[field];
-    return code ? copy.errors[field][code] : undefined;
+  // Success fades out after a while, but waits while the pointer rests on it.
+  useEffect(() => {
+    if (state.status !== "success" || dismissed === state || hovered) return;
+    const fade = window.setTimeout(() => setFading(state), SUCCESS_VISIBLE_MS);
+    const hide = window.setTimeout(() => setDismissed(state), SUCCESS_VISIBLE_MS + FADE_MS);
+    return () => {
+      window.clearTimeout(fade);
+      window.clearTimeout(hide);
+    };
+  }, [state, dismissed, hovered]);
+
+  const checkField = (field: ContactField, value: string) =>
+    setClientErrors((previous) => ({ ...previous, [field]: validateField(field, value) ?? null }));
+
+  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
+    if (pending) {
+      event.preventDefault();
+      return;
+    }
+    // Same rules as the server: stop here and point at the first problem.
+    const found = validateContact(readContactValues(new FormData(event.currentTarget)));
+    const next = Object.fromEntries(contactFields.map((field) => [field, found[field] ?? null]));
+    setClientErrors(next);
+    const firstInvalid = contactFields.find((field) => found[field]);
+    if (firstInvalid) {
+      event.preventDefault();
+      event.currentTarget.querySelector<HTMLElement>(`[name="${firstInvalid}"]`)?.focus();
+      return;
+    }
+    // Valid: let the server's answer decide what is shown next.
+    setClientErrors({});
+    setMessageLength(0);
   };
 
+  const showStatus = state.status !== "idle" && dismissed !== state;
   const statusText = { idle: "", invalid: copy.invalid, success: copy.success, error: copy.error }[state.status];
+  const hintId = "contact-message-hint";
 
   return (
     <form
@@ -60,54 +121,83 @@ export default function ContactForm({ locale, copy }: ContactFormProps) {
       className="contact-form"
       action={formAction}
       aria-label={copy.formLabel}
-      // Server-side messages are translated; the browser's built-in ones are not.
+      // Messages are shown in the page's language; the browser's built-in
+      // ones would follow the browser's language instead.
       noValidate
-      onSubmit={(event) => {
-        if (pending) event.preventDefault();
-      }}
-      // Starts the clock for the too-fast spam check when someone begins typing.
-      onFocus={() => {
-        const input = startedAtRef.current;
-        if (input && !input.value) input.value = String(Date.now());
-      }}
+      onSubmit={onSubmit}
     >
       <input type="hidden" name="locale" value={locale} />
-      <input ref={startedAtRef} type="hidden" name="startedAt" />
 
-      {/* Honeypot: hidden from people and assistive tech, tempting to bots. */}
+      {/* Spam trap: hidden from people and assistive tech, ignored by password
+          managers, tempting to bots. */}
       <div className="contact-form__trap" aria-hidden="true">
         <label>
           {copy.trap}
-          <input type="text" name="website" tabIndex={-1} autoComplete="off" />
+          <input
+            type="text"
+            name={TRAP_FIELD}
+            tabIndex={-1}
+            autoComplete="off"
+            data-1p-ignore=""
+            data-lpignore="true"
+            data-bwignore=""
+            data-form-type="other"
+          />
         </label>
       </div>
 
-      {fields.map((field) => {
+      {contactFields.map((field) => {
         const id = `contact-${field}`;
-        const error = errorFor(field);
+        const code = errors[field];
+        const error = code ? copy.errors[field][code] : undefined;
+        const describedBy = [field === "message" && hintId, error && `${id}-error`].filter(Boolean).join(" ");
         const Control = field === "message" ? "textarea" : "input";
         return (
           <div key={field} className="contact-form__field">
-            <label htmlFor={id}>
-              {copy.labels[field]}
-              {field === "subject" && <span className="contact-form__optional"> ({copy.optional})</span>}
-            </label>
+            <label htmlFor={id}>{copy.labels[field]}</label>
             <Control
               id={id}
               name={field}
               // Keeps what was typed when the server sends the form back.
               defaultValue={state.values?.[field]}
-              maxLength={contactLimits[field]}
-              required={field !== "subject"}
+              maxLength={contactRules[field].max}
+              required
               aria-invalid={error ? true : undefined}
-              aria-describedby={error ? `${id}-error` : undefined}
+              aria-describedby={describedBy || undefined}
+              onBlur={(event) => {
+                // Only judge a field once something has been typed in it, or
+                // once it already shows an error.
+                if (event.currentTarget.value.trim() || clientErrors[field] !== undefined || code) {
+                  checkField(field, event.currentTarget.value);
+                }
+              }}
+              onChange={(event) => {
+                if (field === "message") setMessageLength(event.currentTarget.value.trim().length);
+                // Clear an error as soon as the text is fixed.
+                if (code) checkField(field, event.currentTarget.value);
+              }}
               {...(field === "message"
-                ? { rows: 4 }
+                ? { rows: 5 }
                 : {
                     type: field === "email" ? "email" : "text",
                     autoComplete: { name: "name", email: "email", subject: "off" }[field],
                   })}
             />
+            {field === "message" && (
+              <p className="contact-form__hint">
+                <span id={hintId}>{copy.messageHint}</span>
+                <span
+                  className={
+                    messageLength > 0 && messageLength < contactRules.message.min
+                      ? "contact-form__counter is-short"
+                      : "contact-form__counter"
+                  }
+                  aria-hidden="true"
+                >
+                  {messageLength} / {contactRules.message.max}
+                </span>
+              </p>
+            )}
             {error && (
               <p id={`${id}-error`} className="contact-form__error">
                 {error}
@@ -122,15 +212,26 @@ export default function ContactForm({ locale, copy }: ContactFormProps) {
         {!pending && <span aria-hidden="true">↗</span>}
       </button>
 
-      <p
-        ref={statusRef}
-        className={`contact-form__status contact-form__status--${state.status}`}
-        role={state.status === "error" || state.status === "invalid" ? "alert" : "status"}
-        tabIndex={-1}
-        hidden={state.status === "idle"}
-      >
-        {statusText}
-      </p>
+      {/* Always in the page so screen readers announce changes to it. */}
+      <div role={state.status === "error" || state.status === "invalid" ? "alert" : "status"}>
+        {showStatus && (
+          <p
+            ref={statusRef}
+            className={[
+              "contact-form__status",
+              `contact-form__status--${state.status}`,
+              fading === state && "is-fading",
+            ]
+              .filter(Boolean)
+              .join(" ")}
+            tabIndex={-1}
+            onPointerEnter={() => setHovered(true)}
+            onPointerLeave={() => setHovered(false)}
+          >
+            {statusText}
+          </p>
+        )}
+      </div>
     </form>
   );
 }
