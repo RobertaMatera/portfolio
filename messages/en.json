@@ -147,6 +147,195 @@
       }
     }
   },
+  "Work": {
+    "eyebrow": "Selected work",
+    "title": "Projects I’m proud of.",
+    "carousel": {
+      "roleDescription": "carousel",
+      "slideRoleDescription": "slide",
+      "label": "Projects",
+      "previous": "Previous project",
+      "next": "Next project",
+      "goTo": "Show project {number}: {title}",
+      "slide": "{number} of {total}"
+    },
+    "openProject": "Read the project & see drawings",
+    "viewCode": "View code on GitHub",
+    "liveSoon": "Live site · soon",
+    "close": "Close",
+    "enlarge": "Enlarge image",
+    "tagsLabel": "Topics",
+    "toolsLabel": "Tools and skills",
+    "tools": {
+      "autocad": "AutoCAD",
+      "revit": "Revit",
+      "totalStation": "Total station survey",
+      "photography": "Photography",
+      "rendering": "Rendering",
+      "photoshop": "Photoshop",
+      "indesign": "InDesign (layout)",
+      "logoDesign": "Logo design",
+      "brandIdentity": "Brand identity",
+      "designSystem": "Design system",
+      "signage": "Signage design",
+      "productDesign": "Product design",
+      "concept": "Concept development",
+      "technicalDrawing": "Technical drawing",
+      "materials": "Material choice"
+    },
+    "projects": {
+      "healthBridge": {
+        "title": "Health Bridge Clinic",
+        "description": "Full-stack healthcare platform with role-based access control, DTOs and a layered architecture, documented with UML diagrams. University project, 2026.",
+        "art": {
+          "alt": "Minimal illustration: a three-arch bridge under a golden sun, with a coral health cross above it",
+          "line1": "care meets code",
+          "line2": "JAVA · SPRING BOOT · ANGULAR"
+        }
+      },
+      "secli": {
+        "title": "Adaptive reuse of a Franciscan convent, Seclì",
+        "description": "Conservation-led restoration and adaptive reuse of a Franciscan convent in Puglia: building survey, step-free access and a new cooking school (2013).",
+        "tags": [
+          "Restoration",
+          "Building survey",
+          "Accessibility"
+        ],
+        "art": {
+          "alt": "Minimal illustration of a convent facade with a bell gable and a portal under a golden sun, with kitchen garden plants on both sides",
+          "line1": "restore · reuse",
+          "line2": "SURVEY · RESTORATION · ACCESSIBILITY"
+        },
+        "detail": {
+          "meta": "Architectural Restoration Studio · 2013",
+          "heading": "Adaptive reuse and conservation of the former Franciscan convent in Seclì",
+          "body": [
+            "Conservation-led restoration and adaptive reuse of the former convent of the Frati Minori Osservanti (S. Antonio da Padova) in Seclì, Puglia.",
+            "As a team we carried out the building survey and agreed the design strategy: a minimal-intervention, conservative restoration.",
+            "My own scope was the service areas. I turned a collapsed vault into the shaft of a new lift, giving the whole complex step-free access, and converted the convent into a cooking school, bringing back the monks’ historic kitchen garden (the “orto”)."
+          ],
+          "callout": {
+            "title": "Technical constraints",
+            "body": "The design had to comply with Italian building regulations and construction standards, developed with the support of a structural engineer. The challenge was to resolve real technical constraints without compromising the historic fabric."
+          },
+          "images": {
+            "plan": "Colour plan of the reuse project for the convent of S. Antonio da Padova, Seclì",
+            "ruin": "Black-and-white photograph of the convent ruin before restoration"
+          }
+        }
+      },
+      "uggiano": {
+        "title": "Thesis: Uggiano Castle and Masseria Lisanti",
+        "description": "Master’s thesis in architecture: historical research, masonry analysis and conservation-led reuse of Masseria Lisanti, Ferrandina.",
+        "tags": [
+          "Thesis",
+          "Masonry analysis",
+          "Heritage"
+        ],
+        "art": {
+          "alt": "Minimal illustration: a castle with a tower on a green hill under a golden sun",
+          "line1": "study · conserve",
+          "line2": "HISTORY · MASONRY · HERITAGE"
+        },
+        "detail": {
+          "meta": "Master’s thesis in Architecture · Polytechnic of Bari",
+          "heading": "Uggiano Castle and Masseria Lisanti: research, analysis and conservation-led reuse",
+          "body": [
+            "Documentation on the castle was scarce, so I carried out extensive archival research to recover historical photographs. The whole team shared the survey and the bibliographic research.",
+            "I then took charge of the masonry study for both the castle and Masseria Lisanti: sampling, descriptive record sheets, mapping and stratigraphic analysis. Combined with the historical sources, it supported a hypothesis on the castle’s building phases and the surface conservation works I proposed.",
+            "In the design phase I worked on the recovery and public use of Masseria Lisanti, at the foot of the castle. The project builds on its architectural merit as cultural heritage and on its socio-economic context, as both its name and its fabric are tied to farming and dairy production. The conservative scheme removes incongruous and unsafe elements, integrates or replaces them with materials matching the originals, and introduces features that make the visit accessible to people with disabilities."
+          ],
+          "callout": {
+            "title": "Collaboration",
+            "body": "The thesis meant working in a group and alongside many specialists: a geologist, an archaeologist, a photographer and the public administration, among others. I learned to listen to different expertise, translate between disciplines and keep a shared direction. Throughout my studies I worked in small and large teams, which is how I now work with designers, developers and stakeholders."
+          },
+          "images": {
+            "sitePlan": "Site plan of the Uggiano castle area, Ferrandina",
+            "masonry": "Masonry sampling sheet and degradation analysis of the castle",
+            "masseria": "Section and floor plan of Masseria Lisanti"
+          }
+        }
+      },
+      "genoa": {
+        "title": "Logo for the Historic Shops of Genoa",
+        "description": "Entry to the City of Genoa’s public call for a logo identifying historic shops, traditional venues and places of cultural interest (2020).",
+        "tags": [
+          "Logo design",
+          "Brand identity",
+          "Heritage"
+        ],
+        "art": {
+          "alt": "Minimal illustration of an arched doorway with alternating bands and a fanlight, under a golden sun",
+          "line1": "historic shops",
+          "line2": "LOGO DESIGN · HERITAGE · IDENTITY"
+        },
+        "detail": {
+          "meta": "Logo competition · City of Genoa · 2020",
+          "heading": "A logo for the historic shops of Genoa: the doorway as a sign",
+          "body": [
+            "The City of Genoa, with the Chamber of Commerce and the Ministry of Cultural Heritage, launched a public call for a logo identifying its “Botteghe storiche”, traditional venues and places of cultural interest: businesses trading for at least 70 years that keep their original architecture, furnishings and equipment. The call received 307 entries from Italy and abroad.",
+            "My proposal recognises a historic shop by its threshold. The mark is the arched doorway of the carruggi, the entrance into the city’s history. Alternating bands of slate and marble echo the two-tone stonework of Genoese architecture, from the façade of San Lorenzo to the palaces of the old town. The fanlight above the door recalls the iron fanlights of old shop windows, a craft detail that stays legible even at small sizes.",
+            "One mark serves three categories, Bottega storica, Locale di tradizione and Locale di interesse culturale, in a clear, repeatable system with positive and reversed versions. The palette is slate, marble and brass (plaque only); Cormorant Garamond sets the name, like inscriptions on old portals, and Manrope sets the city and the text. Below 15 mm in height the bands and fanlight simplify to the solid silhouette of the doorway.",
+            "The plaque is engraved in Ligurian slate from the Val Fontanabuona, 20 mm thick, 200 × 280 mm. Mark and text are V-engraved 1.5 mm deep and filled with white pigment; four Ø 8 mm brass screws fix it beside the entrance, with the lower edge 140 cm above the ground. Slate is the stone of Genoa’s portals, thresholds and roofs, so the plaque does not sit on the façade: it becomes part of it."
+          ],
+          "callout": {
+            "title": "A small design system",
+            "body": "Logo, category variants, colour and type rules, minimum size and a physical plaque: the same thinking I apply to interface design systems, from one mark to many consistent uses."
+          },
+          "images": {
+            "logo": "The logo: an arched doorway with alternating bands and a fanlight, above the name “Botteghe Storiche, Genova”",
+            "categories": "The three categories: Bottega storica, Locale di tradizione and Locale di interesse culturale",
+            "versions": "The logo in positive and reversed versions, with the name",
+            "plaque": "The slate plaque with the mark and the name, 200 × 280 mm, fixed with four brass screws"
+          }
+        }
+      },
+      "copper": {
+        "title": "Bespoke BeCreative: a copper skyline",
+        "description": "Entry to Samsung’s Bespoke BeCreative contest (2021): five landmarks cut from a single copper blade for the BESPOKE RB38A refrigerator.",
+        "tags": [
+          "Product design",
+          "Copper",
+          "BESPOKE RB38A"
+        ],
+        "art": {
+          "alt": "Minimal illustration of a bottom-mount refrigerator with flat doors and a copper skyline blade showing the Sydney Opera House, the Eiffel Tower and the Statue of Liberty",
+          "line1": "bespoke skyline",
+          "line2": "PRODUCT DESIGN · COPPER · BESPOKE RB38A"
+        },
+        "detail": {
+          "meta": "Design contest · Samsung BESPOKE BeCreative · 2021",
+          "heading": "Copper Skyline: five landmarks, one continuous blade",
+          "body": [
+            "For Samsung’s BESPOKE BeCreative contest I proposed “Copper Skyline”: five icons cut from a single copper blade. The upper door of the BESPOKE RB38A becomes a horizon, with the Sydney Opera House, the Colosseum, the Eiffel Tower, the Leaning Tower of Pisa and the Statue of Liberty in one continuous profile.",
+            "The blade is a 1.5 mm copper sheet, 520 × 208 mm, laser cut and hand finished. It is fixed to the glass with spacers 4 mm off the surface, so it casts a shadow that moves with the daylight. On the lower door the skyline returns as a faint reflection, like water in a harbour.",
+            "The idea has an Italian signature: the Colosseum and Pisa bring Italy into the skyline, and copper links hand-made tradition, from kitchen copper pots to the coppersmiths’ workshops, with precision cutting. Copper also ages, so the refrigerator matures with the people who live with it: polished, burnished and, over time, a hint of verdigris.",
+            "The concept is designed around the BESPOKE RB38A (390 L, bottom-mount, flat doors with recessed handles, 595 × 2030 × 658 mm), whose interchangeable door panels leave a clean, flat surface for the blade."
+          ],
+          "callout": {
+            "title": "Technical drawing",
+            "body": "The refrigerator and the blade are shown with their real dimensions: refrigerator 595 × 2030 mm, blade 520 × 208 mm. Section of the panel: glass, 8 mm spacers, copper sheet."
+          },
+          "images": {
+            "refrigerator": "The refrigerator with the copper skyline of five landmarks and its reflection, with dimensions",
+            "blade": "Detail of the copper blade: Sydney Opera House, Colosseum, Eiffel Tower, Leaning Tower of Pisa and Statue of Liberty, 520 mm wide"
+          }
+        }
+      },
+      "upcoming": {
+        "title": "Next case study",
+        "description": "A UX case study in progress: from research and wireframes to a design system and a working interface.",
+        "tags": [
+          "Upcoming"
+        ],
+        "art": {
+          "alt": "Minimal illustration of an interface wireframe in a browser window with a small sprout, for the upcoming UX case study",
+          "line1": "next chapter",
+          "line2": "UX CASE STUDY · COMING SOON"
+        }
+      }
+    }
+  },
   "Footer": {
     "linksLabel": "Contact and profiles",
     "email": "Email",

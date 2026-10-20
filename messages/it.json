@@ -147,6 +147,195 @@
       }
     }
   },
+  "Work": {
+    "eyebrow": "Lavori selezionati",
+    "title": "Progetti di cui vado fiera.",
+    "carousel": {
+      "roleDescription": "carosello",
+      "slideRoleDescription": "slide",
+      "label": "Progetti",
+      "previous": "Progetto precedente",
+      "next": "Progetto successivo",
+      "goTo": "Mostra il progetto {number}: {title}",
+      "slide": "{number} di {total}"
+    },
+    "openProject": "Leggi il progetto e i disegni",
+    "viewCode": "Vedi il codice su GitHub",
+    "liveSoon": "Sito live · a breve",
+    "close": "Chiudi",
+    "enlarge": "Ingrandisci l’immagine",
+    "tagsLabel": "Temi",
+    "toolsLabel": "Strumenti e competenze",
+    "tools": {
+      "autocad": "AutoCAD",
+      "revit": "Revit",
+      "totalStation": "Rilievo con stazione totale",
+      "photography": "Fotografia",
+      "rendering": "Rendering",
+      "photoshop": "Photoshop",
+      "indesign": "InDesign (impaginazione)",
+      "logoDesign": "Logo design",
+      "brandIdentity": "Identità visiva",
+      "designSystem": "Design system",
+      "signage": "Progettazione di segnaletica",
+      "productDesign": "Product design",
+      "concept": "Sviluppo del concept",
+      "technicalDrawing": "Disegno tecnico",
+      "materials": "Scelta dei materiali"
+    },
+    "projects": {
+      "healthBridge": {
+        "title": "Health Bridge Clinic",
+        "description": "Piattaforma sanitaria full-stack con controllo degli accessi basato sui ruoli, DTO e architettura a livelli, documentata con diagrammi UML. Progetto universitario, 2026.",
+        "art": {
+          "alt": "Illustrazione minimale: un ponte a tre arcate sotto un sole dorato, con sopra una croce sanitaria color corallo",
+          "line1": "cura e codice",
+          "line2": "JAVA · SPRING BOOT · ANGULAR"
+        }
+      },
+      "secli": {
+        "title": "Riuso adattivo di un ex convento francescano, Seclì",
+        "description": "Restauro conservativo e riuso dell’ex convento dei Frati Minori Osservanti a Seclì (Puglia): rilievo, accessibilità e una nuova scuola di cucina (2013).",
+        "tags": [
+          "Restauro",
+          "Rilievo",
+          "Accessibilità"
+        ],
+        "art": {
+          "alt": "Illustrazione minimale della facciata di un convento con campanile a vela e portale sotto un sole dorato, con piante dell’orto ai lati",
+          "line1": "restaurare · riusare",
+          "line2": "RILIEVO · RESTAURO · ACCESSIBILITÀ"
+        },
+        "detail": {
+          "meta": "Laboratorio di Restauro Architettonico · 2013",
+          "heading": "Progetto di riuso e restauro dell’ex convento dei Frati Minori Osservanti, Seclì",
+          "body": [
+            "Progetto di restauro conservativo e riuso funzionale dell’ex convento di S. Antonio da Padova a Seclì (Lecce, Puglia).",
+            "Il rilievo e le linee guida del progetto sono stati sviluppati in gruppo, con la scelta di un intervento di restauro conservativo.",
+            "Mi sono occupata in particolare dei locali di servizio: una volta crollata è stata recuperata per ospitare un ascensore, rendendo accessibile l’intero complesso. Il monastero è stato destinato a scuola di cucina, con la reintroduzione dell’antico orto dei monaci."
+          ],
+          "callout": {
+            "title": "Vincoli tecnici e normativi",
+            "body": "Il progetto ha richiesto un approccio tecnico: ogni scelta è stata sviluppata nel rispetto della normativa italiana e delle norme costruttive, con il supporto di un ingegnere strutturista. La sfida è stata risolvere i vincoli reali senza compromettere la materia storica."
+          },
+          "images": {
+            "plan": "Planimetria a colori del progetto di riuso dell’ex convento di S. Antonio da Padova, Seclì",
+            "ruin": "Fotografia in bianco e nero del rudere del convento prima del restauro"
+          }
+        }
+      },
+      "uggiano": {
+        "title": "Tesi: castello di Uggiano e masseria Lisanti",
+        "description": "Tesi magistrale in Architettura: ricerca storica, analisi stratigrafica delle murature e riuso conservativo della masseria Lisanti, Ferrandina.",
+        "tags": [
+          "Tesi",
+          "Analisi murarie",
+          "Patrimonio"
+        ],
+        "art": {
+          "alt": "Illustrazione minimale: un castello con torre su una collina verde sotto un sole dorato",
+          "line1": "studiare · conservare",
+          "line2": "STORIA · MURATURE · PATRIMONIO"
+        },
+        "detail": {
+          "meta": "Tesi di laurea magistrale in Architettura · Politecnico di Bari",
+          "heading": "Castello di Uggiano e masseria Lisanti: ricerca, analisi e riuso conservativo",
+          "body": [
+            "Le informazioni sul castello erano molto scarse: ho condotto un’ampia ricerca d’archivio per reperire fotografie storiche. Il rilievo e la ricerca bibliografica hanno coinvolto l’intero gruppo di lavoro.",
+            "Mi sono poi occupata in prima persona dello studio delle murature, sia del castello sia della masseria Lisanti: campionamento, redazione delle schede descrittive, mappatura e analisi stratigrafica. Insieme alle fonti storiche, questo lavoro ha permesso di formulare un’ipotesi sulle fasi costruttive del castello e di definire gli interventi di restauro superficiale proposti.",
+            "Nella parte progettuale mi sono dedicata al recupero e alla fruizione degli ambienti della masseria Lisanti, alle pendici del castello. Il progetto nasce dal riconoscimento del suo pregio architettonico come bene culturale e dal contesto socio-economico: sia il nome sia l’edificio sono legati all’attività agricolo-casearia. L’intervento, di tipo conservativo, prevede la rimozione degli elementi incongrui e pericolanti, l’integrazione o sostituzione con materiali di fattura analoga agli originali e l’inserimento di soluzioni che rendano la visita accessibile anche alle persone con disabilità."
+          ],
+          "callout": {
+            "title": "Lavoro di squadra interdisciplinare",
+            "body": "Il lavoro di tesi si è svolto in gruppo e a stretto contatto con diversi professionisti: un geologo, un’archeologa, un fotografo, la pubblica amministrazione e altri ancora. Ho imparato ad ascoltare competenze diverse, a fare da ponte tra le discipline e a mantenere una direzione condivisa. Durante tutto il percorso di studi ho lavorato in gruppi piccoli e grandi: è lo stesso approccio che oggi porto con designer, sviluppatori e stakeholder."
+          },
+          "images": {
+            "sitePlan": "Planimetria generale dell’area del castello di Uggiano, Ferrandina",
+            "masonry": "Scheda di campionamento murario e analisi del degrado del castello",
+            "masseria": "Sezione e pianta della masseria Lisanti"
+          }
+        }
+      },
+      "genoa": {
+        "title": "Logo per le Botteghe storiche di Genova",
+        "description": "Proposta per la call for ideas del Comune di Genova: un logo che identifichi botteghe storiche, locali di tradizione e di interesse culturale (2020).",
+        "tags": [
+          "Logo design",
+          "Identità visiva",
+          "Patrimonio"
+        ],
+        "art": {
+          "alt": "Illustrazione minimale di un portale ad arco a fasce alternate con sopraluce, sotto un sole dorato",
+          "line1": "botteghe storiche",
+          "line2": "LOGO · PATRIMONIO · IDENTITÀ"
+        },
+        "detail": {
+          "meta": "Concorso per un logo · Comune di Genova · 2020",
+          "heading": "Un logo per le Botteghe storiche di Genova: il portale come segno",
+          "body": [
+            "Il Comune di Genova, con la Camera di Commercio e il Ministero dei Beni Culturali, ha bandito una call for ideas per un logo che identificasse le “Botteghe storiche”, i Locali di tradizione e di interesse culturale: attività aperte da almeno 70 anni che conservano architetture, arredi e attrezzature originali. La call ha raccolto 307 elaborati da tutta Italia e dall’estero.",
+            "La mia proposta riconosce una bottega storica dalla soglia. Il segno è il portale ad arco dei carruggi, la porta da cui si entra nella storia della città. Le fasce alternate di ardesia e marmo citano la bicromia dell’architettura genovese, dalla facciata di San Lorenzo ai palazzi del centro storico. Il sopraluce a ventaglio richiama quelli in ferro delle antiche vetrine: un dettaglio artigiano che resta leggibile anche in piccolo.",
+            "Un unico segno per tre categorie, Bottega storica, Locale di tradizione e Locale di interesse culturale, in un sistema chiaro e replicabile, con versioni in positivo e in negativo. La tavolozza è ardesia, marmo e ottone (solo per la targa); il nome è composto in Cormorant Garamond, come le iscrizioni incise sui portali, mentre per la città e i testi si usa Manrope. Sotto i 15 mm di altezza, le fasce e il ventaglio si semplificano nella sagoma piena del portale.",
+            "La targa è incisa in ardesia ligure della Val Fontanabuona, spessore 20 mm, formato 200 × 280 mm. Marchio e testi sono incisi a V, profondi 1,5 mm, e riempiti di pigmento bianco; quattro viti in ottone Ø 8 mm la fissano a lato dell’ingresso, con il bordo inferiore a 140 cm da terra. L’ardesia è la pietra dei portali, delle soglie e dei tetti di Genova: la targa non si appoggia sulla facciata, ne diventa parte."
+          ],
+          "callout": {
+            "title": "Un piccolo design system",
+            "body": "Logo, varianti per categoria, regole di colore e carattere, dimensione minima e una targa fisica: lo stesso modo di pensare che applico ai design system delle interfacce, da un solo segno a molti usi coerenti."
+          },
+          "images": {
+            "logo": "Il logo: un portale ad arco con fasce alternate e sopraluce, sopra il nome “Botteghe Storiche, Genova”",
+            "categories": "Le tre categorie: Bottega storica, Locale di tradizione e Locale di interesse culturale",
+            "versions": "Il logo in versione positiva e in negativo, con il nome",
+            "plaque": "La targa in ardesia con marchio e nome, formato 200 × 280 mm, fissata con quattro viti in ottone"
+          }
+        }
+      },
+      "copper": {
+        "title": "Bespoke BeCreative: una skyline in rame",
+        "description": "Proposta per il contest BESPOKE BeCreative di Samsung (2021): cinque monumenti ritagliati in un’unica lama di rame per il frigorifero BESPOKE RB38A.",
+        "tags": [
+          "Product design",
+          "Rame",
+          "BESPOKE RB38A"
+        ],
+        "art": {
+          "alt": "Illustrazione minimale di un frigorifero combinato ad ante piatte con una lama di rame a forma di skyline: Opera House di Sydney, Torre Eiffel e Statua della Libertà",
+          "line1": "skyline su misura",
+          "line2": "PRODUCT DESIGN · RAME · BESPOKE RB38A"
+        },
+        "detail": {
+          "meta": "Contest di design · Samsung BESPOKE BeCreative · 2021",
+          "heading": "Skyline di Rame: cinque monumenti, un’unica lama",
+          "body": [
+            "Per il contest BESPOKE BeCreative di Samsung ho proposto “Skyline di Rame”: cinque icone ritagliate in un’unica lama di rame. Il pannello superiore del BESPOKE RB38A diventa un orizzonte, con l’Opera House di Sydney, il Colosseo, la Tour Eiffel, la Torre di Pisa e la Statua della Libertà in un solo profilo continuo.",
+            "La lama è una lamina di rame da 1,5 mm, di 520 × 208 mm, tagliata al laser e rifinita a mano. È fissata al vetro con distanziali, staccata di 4 mm dalla superficie, così da proiettare un’ombra che cambia con la luce del giorno. Sul pannello inferiore lo skyline ritorna come un lieve riflesso, come sull’acqua di un porto.",
+            "L’idea ha una firma italiana: il Colosseo e Pisa portano l’Italia dentro lo skyline, e il rame unisce la tradizione artigianale, dai paioli di casa alle botteghe dei ramai, alla precisione del taglio. Il rame inoltre invecchia: il frigorifero matura con chi lo vive, prima lucido, poi brunito e, col tempo, con un velo di verderame.",
+            "Il concept è pensato per il BESPOKE RB38A (390 L, combinato con congelatore inferiore, ante piatte con maniglie incassate, 595 × 2030 × 658 mm), le cui ante personalizzabili offrono una superficie pulita e piana per la lama."
+          ],
+          "callout": {
+            "title": "Disegno tecnico",
+            "body": "Il frigorifero e la lama sono presentati con le dimensioni reali: frigorifero 595 × 2030 mm, lama 520 × 208 mm. Sezione del pannello: vetro, distanziali Ø 8 mm, lamina di rame."
+          },
+          "images": {
+            "refrigerator": "Il frigorifero con la skyline in rame di cinque monumenti e il suo riflesso, con le quote",
+            "blade": "Dettaglio della lama in rame: Opera House di Sydney, Colosseo, Tour Eiffel, Torre di Pisa e Statua della Libertà, larga 520 mm"
+          }
+        }
+      },
+      "upcoming": {
+        "title": "Prossimo caso studio",
+        "description": "Un caso studio UX in preparazione: dalla ricerca ai wireframe, fino al design system e a un’interfaccia funzionante.",
+        "tags": [
+          "Prossimamente"
+        ],
+        "art": {
+          "alt": "Illustrazione minimale di un wireframe in una finestra del browser con un piccolo germoglio, per il prossimo caso studio UX",
+          "line1": "prossimo capitolo",
+          "line2": "CASO STUDIO UX · PROSSIMAMENTE"
+        }
+      }
+    }
+  },
   "Footer": {
     "linksLabel": "Contatti e profili",
     "email": "Email",

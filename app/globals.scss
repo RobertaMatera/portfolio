@@ -9,6 +9,8 @@
 @use "../components/ui/Eyebrow/eyebrow";
 @use "../components/ui/ExternalLink/external-link";
 @use "../components/ui/Section/section";
+@use "../components/ui/Dialog/dialog";
+@use "../components/ui/Carousel/carousel";
 
 // Page chrome
 @use "../components/chrome/TopBar/top-bar";
@@ -21,6 +23,10 @@
 @use "../components/sections/About/about";
 @use "../components/sections/Services/services";
 @use "../components/sections/Experience/experience";
+@use "../components/work/ProjectArt/project-art";
+@use "../components/work/ProjectCard/project-card";
+@use "../components/work/ProjectDialog/project-dialog";
+@use "../components/work/ZoomImage/zoom-image";
 
 // Pages
 @use "../components/pages/NotFound/not-found";

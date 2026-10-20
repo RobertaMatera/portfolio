@@ -71,3 +71,41 @@ export function buildSiteGraph(locale: Locale, copy: PersonCopy): JsonLdDocument
 
   return { "@context": "https://schema.org", "@graph": [person, website] };
 }
+
+export interface WorkCopy {
+  /** Fragment id, unique on the page. */
+  id: string;
+  name: string;
+  description: string;
+  keywords: string[];
+  year?: number;
+  /** Site-relative path of a representative image. */
+  image?: string;
+  /** Present for software projects with public code. */
+  code?: { repository: string; languages: readonly string[] };
+}
+
+/** One CreativeWork (or SoftwareSourceCode) node per project, credited to the person. */
+export function buildWorksGraph(locale: Locale, works: WorkCopy[]): JsonLdDocument {
+  const url = localeUrl(locale);
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": works.map((work) => ({
+      "@type": work.code ? "SoftwareSourceCode" : "CreativeWork",
+      "@id": `${url}#work-${work.id}`,
+      name: work.name,
+      description: work.description,
+      keywords: work.keywords.join(", "),
+      inLanguage: locale,
+      url: work.code?.repository ?? `${url}#work`,
+      creator: { "@type": "Person", "@id": personId },
+      ...(work.year && { dateCreated: String(work.year) }),
+      ...(work.image && { image: `${siteUrl}${work.image}` }),
+      ...(work.code && {
+        codeRepository: work.code.repository,
+        programmingLanguage: [...work.code.languages],
+      }),
+    })),
+  };
+}

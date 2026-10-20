@@ -1,0 +1,99 @@
+@use "breakpoints" as bp;
+
+.project-dialog {
+  padding: 28px 24px;
+
+  @include bp.down("lightbox") {
+    padding: 64px 12px 28px;
+  }
+}
+
+.project-dialog__panel {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  max-width: 1040px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: var(--r-2xl);
+  background: var(--bg);
+
+  @include bp.down("lightbox") {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+// Text comes first in the source (and first on phones); drawings sit on the
+// left from tablet width up, as in the mockup.
+.project-dialog__gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  background: var(--gallery-bg);
+
+  @include bp.up("lightbox") {
+    order: -1;
+  }
+}
+
+.project-dialog__text {
+  padding: 32px 28px;
+
+  @include bp.down("lightbox") {
+    padding: 22px 20px;
+  }
+
+  h3 {
+    margin: 6px 0 14px;
+    font-family: var(--font-serif);
+    font-size: 1.625rem; // 26px
+    font-weight: 800;
+  }
+
+  p {
+    margin-bottom: 12px;
+    color: var(--t2);
+  }
+
+  .project-dialog__meta {
+    margin: 0;
+    color: var(--g5);
+    font-size: 0.75rem; // 12px
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+}
+
+.project-dialog__callout {
+  margin: 18px 0;
+  padding: 18px 18px 6px;
+  border-radius: var(--r-lg);
+  background: var(--sl);
+
+  h4 {
+    margin: 0 0 8px;
+    color: var(--g7);
+    font-family: var(--font-serif);
+    font-size: 1.125rem; // 18px
+    font-weight: 800;
+  }
+}
+
+.project-dialog__tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: 5px 11px;
+    border-radius: var(--r-pill);
+    background: var(--pl);
+    color: var(--g7);
+    font-size: 0.75rem; // 12px
+    font-weight: 600;
+  }
+}

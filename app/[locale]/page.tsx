@@ -6,6 +6,7 @@ import About from "@/components/sections/About/About";
 import Experience from "@/components/sections/Experience/Experience";
 import Hero from "@/components/sections/Hero/Hero";
 import Services from "@/components/sections/Services/Services";
+import Work from "@/components/sections/Work/Work";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import type { Locale } from "@/i18n/routing";
 import { buildSiteGraph } from "@/lib/structured-data";
@@ -39,6 +40,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         <About locale={locale} />
         <Services locale={locale} />
         <Experience locale={locale} />
+        <Work locale={locale} />
       </main>
       <Footer locale={locale} />
     </>

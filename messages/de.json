@@ -147,6 +147,195 @@
       }
     }
   },
+  "Work": {
+    "eyebrow": "Ausgewählte Projekte",
+    "title": "Projekte, auf die ich stolz bin.",
+    "carousel": {
+      "roleDescription": "Karussell",
+      "slideRoleDescription": "Folie",
+      "label": "Projekte",
+      "previous": "Vorheriges Projekt",
+      "next": "Nächstes Projekt",
+      "goTo": "Projekt {number} zeigen: {title}",
+      "slide": "{number} von {total}"
+    },
+    "openProject": "Projekt und Zeichnungen ansehen",
+    "viewCode": "Code auf GitHub ansehen",
+    "liveSoon": "Live-Version folgt bald",
+    "close": "Schliessen",
+    "enlarge": "Bild vergrössern",
+    "tagsLabel": "Themen",
+    "toolsLabel": "Werkzeuge und Kompetenzen",
+    "tools": {
+      "autocad": "AutoCAD",
+      "revit": "Revit",
+      "totalStation": "Vermessung mit Tachymeter",
+      "photography": "Fotografie",
+      "rendering": "Rendering",
+      "photoshop": "Photoshop",
+      "indesign": "InDesign (Layout)",
+      "logoDesign": "Logodesign",
+      "brandIdentity": "Corporate Identity",
+      "designSystem": "Designsystem",
+      "signage": "Beschilderungsdesign",
+      "productDesign": "Produktdesign",
+      "concept": "Konzeptentwicklung",
+      "technicalDrawing": "Technisches Zeichnen",
+      "materials": "Materialwahl"
+    },
+    "projects": {
+      "healthBridge": {
+        "title": "Health Bridge Clinic",
+        "description": "Full-Stack-Plattform für das Gesundheitswesen mit rollenbasierter Zugriffskontrolle, DTOs und Schichtenarchitektur, dokumentiert mit UML-Diagrammen. Hochschulprojekt, 2026.",
+        "art": {
+          "alt": "Minimalistische Illustration: eine Brücke mit drei Bögen unter einer goldenen Sonne, darüber ein korallenrotes Gesundheitskreuz",
+          "line1": "Pflege trifft Code",
+          "line2": "JAVA · SPRING BOOT · ANGULAR"
+        }
+      },
+      "secli": {
+        "title": "Umnutzung eines Franziskanerklosters, Seclì",
+        "description": "Denkmalgerechte Restaurierung und Umnutzung des ehemaligen Franziskanerklosters in Seclì (Apulien): Bauaufnahme, Barrierefreiheit und eine neue Kochschule (2013).",
+        "tags": [
+          "Restaurierung",
+          "Bauaufnahme",
+          "Barrierefreiheit"
+        ],
+        "art": {
+          "alt": "Minimalistische Illustration einer Klosterfassade mit Glockengiebel und Portal unter einer goldenen Sonne, beidseits Pflanzen aus dem Klostergarten",
+          "line1": "bewahren · neu nutzen",
+          "line2": "BAUAUFNAHME · RESTAURIERUNG · BARRIEREFREIHEIT"
+        },
+        "detail": {
+          "meta": "Labor für Architekturrestaurierung · 2013",
+          "heading": "Restaurierung und Umnutzung des ehemaligen Franziskanerklosters in Seclì",
+          "body": [
+            "Denkmalgerechte Restaurierung und Umnutzung des ehemaligen Klosters der Frati Minori Osservanti (S. Antonio da Padova) in Seclì, Apulien.",
+            "Die Bauaufnahme führten wir im Team durch und legten gemeinsam die Entwurfsstrategie fest: eine konservative Restaurierung mit möglichst geringen Eingriffen.",
+            "Mein Schwerpunkt waren die Nebenräume. Ein eingestürztes Gewölbe baute ich zum Schacht eines Aufzugs um und machte so die gesamte Anlage barrierefrei. Das Kloster wird zur Kochschule, mit dem wiederbelebten historischen Klostergarten („orto“) der Mönche."
+          ],
+          "callout": {
+            "title": "Technische Vorgaben",
+            "body": "Der Entwurf musste die italienischen Bauvorschriften und Baunormen erfüllen und entstand mit Unterstützung eines Tragwerksplaners. Die Aufgabe bestand darin, reale technische Zwänge zu lösen, ohne die historische Substanz zu beeinträchtigen."
+          },
+          "images": {
+            "plan": "Farbiger Plan des Umnutzungsprojekts für das Kloster S. Antonio da Padova in Seclì",
+            "ruin": "Schwarz-weiss-Fotografie der Klosterruine vor der Restaurierung"
+          }
+        }
+      },
+      "uggiano": {
+        "title": "Masterarbeit: Schloss Uggiano und Masseria Lisanti",
+        "description": "Masterarbeit in Architektur: historische Recherche, Mauerwerksanalyse und denkmalgerechte Umnutzung der Masseria Lisanti in Ferrandina.",
+        "tags": [
+          "Masterarbeit",
+          "Mauerwerksanalyse",
+          "Kulturerbe"
+        ],
+        "art": {
+          "alt": "Minimalistische Illustration: eine Burg mit Turm auf einem grünen Hügel unter einer goldenen Sonne",
+          "line1": "erforschen · bewahren",
+          "line2": "GESCHICHTE · MAUERWERK · KULTURERBE"
+        },
+        "detail": {
+          "meta": "Masterarbeit in Architektur · Polytechnikum Bari",
+          "heading": "Schloss Uggiano und Masseria Lisanti: Recherche, Analyse und denkmalgerechte Umnutzung",
+          "body": [
+            "Über das Schloss lagen kaum Unterlagen vor, deshalb habe ich umfangreich in Archiven nach historischen Fotografien recherchiert. Bauaufnahme und Literaturrecherche erfolgten gemeinsam im ganzen Team.",
+            "Anschliessend habe ich eigenständig das Mauerwerk von Schloss und Masseria Lisanti untersucht: Probenahme, Beschreibungsblätter, Kartierung und stratigraphische Analyse. Zusammen mit den historischen Quellen ergab sich daraus eine Hypothese zu den Bauphasen des Schlosses sowie die von mir vorgeschlagenen Massnahmen zur Oberflächenrestaurierung.",
+            "Im Entwurf habe ich mich der Instandsetzung und Nutzung der Masseria Lisanti am Fuss des Schlosses gewidmet. Das Projekt geht von ihrem architektonischen Wert als Kulturgut und von ihrem sozioökonomischen Umfeld aus, denn Name und Gebäude sind mit Landwirtschaft und Käseherstellung verbunden. Der konservative Eingriff entfernt störende und einsturzgefährdete Elemente, ergänzt oder ersetzt sie durch Materialien gleicher Machart wie das Original und sieht Lösungen vor, die den Besuch auch für Menschen mit Behinderung ermöglichen."
+          ],
+          "callout": {
+            "title": "Interdisziplinäre Zusammenarbeit",
+            "body": "Die Arbeit entstand im Team und in engem Austausch mit Fachleuten: einem Geologen, einer Archäologin, einem Fotografen, der öffentlichen Verwaltung und weiteren. Ich habe gelernt, unterschiedliche Fachperspektiven zu hören, zwischen den Disziplinen zu vermitteln und eine gemeinsame Richtung zu halten. Im gesamten Studium habe ich in kleinen und grossen Gruppen gearbeitet; so arbeite ich heute mit Designern, Entwicklern und Stakeholdern."
+          },
+          "images": {
+            "sitePlan": "Lageplan des Areals um das Schloss Uggiano, Ferrandina",
+            "masonry": "Probenahmeblatt und Schadensanalyse des Mauerwerks des Schlosses",
+            "masseria": "Schnitt und Grundriss der Masseria Lisanti"
+          }
+        }
+      },
+      "genoa": {
+        "title": "Logo für die historischen Geschäfte Genuas",
+        "description": "Beitrag zum Ideenwettbewerb der Stadt Genua: ein Logo zur Kennzeichnung historischer Geschäfte, Traditionslokale und Orte von kulturellem Interesse (2020).",
+        "tags": [
+          "Logodesign",
+          "Corporate Identity",
+          "Kulturerbe"
+        ],
+        "art": {
+          "alt": "Minimalistische Illustration eines Rundbogenportals mit wechselnden Streifen und Oberlicht unter einer goldenen Sonne",
+          "line1": "historische Geschäfte",
+          "line2": "LOGO · KULTURERBE · IDENTITÄT"
+        },
+        "detail": {
+          "meta": "Logo-Wettbewerb · Stadt Genua · 2020",
+          "heading": "Ein Logo für die historischen Geschäfte Genuas: das Portal als Zeichen",
+          "body": [
+            "Die Stadt Genua hat gemeinsam mit der Handelskammer und dem Kulturministerium einen offenen Ideenwettbewerb für ein Logo ausgeschrieben, das die „Botteghe storiche“, Traditionslokale und Orte von kulturellem Interesse kennzeichnet: Betriebe, die seit mindestens 70 Jahren bestehen und ihre originale Architektur, Einrichtung und Ausstattung bewahrt haben. Es gingen 307 Beiträge aus Italien und dem Ausland ein.",
+            "Mein Entwurf erkennt ein historisches Geschäft an seiner Schwelle. Das Zeichen ist das Rundbogenportal der Carruggi, der Eingang in die Geschichte der Stadt. Die wechselnden Streifen aus Schiefer und Marmor greifen die Zweifarbigkeit der genuesischen Architektur auf, von der Fassade von San Lorenzo bis zu den Palazzi der Altstadt. Das Oberlicht über der Tür erinnert an die eisernen Oberlichter alter Schaufenster, ein handwerkliches Detail, das auch in kleiner Grösse lesbar bleibt.",
+            "Ein Zeichen für drei Kategorien, Bottega storica, Locale di tradizione und Locale di interesse culturale, in einem klaren, wiederholbaren System mit Positiv- und Negativversion. Die Palette besteht aus Schiefer, Marmor und Messing (nur für das Schild); der Name ist in der Cormorant Garamond gesetzt, wie Inschriften an alten Portalen, die Stadt und die Texte in der Manrope. Unter 15 mm Höhe vereinfachen sich Streifen und Oberlicht zur vollen Silhouette des Portals.",
+            "Das Schild ist aus ligurischem Schiefer aus dem Val Fontanabuona graviert, 20 mm stark, 200 × 280 mm gross. Zeichen und Text sind 1,5 mm tief V-förmig eingraviert und mit weissem Pigment gefüllt; vier Messingschrauben Ø 8 mm befestigen es neben dem Eingang, die Unterkante liegt 140 cm über dem Boden. Schiefer ist der Stein der Portale, Schwellen und Dächer Genuas: Das Schild liegt nicht auf der Fassade auf, es wird ein Teil von ihr."
+          ],
+          "callout": {
+            "title": "Ein kleines Designsystem",
+            "body": "Logo, Varianten je Kategorie, Farb- und Schriftregeln, Mindestgrösse und ein physisches Schild: dieselbe Denkweise, die ich bei Designsystemen für Interfaces anwende, von einem Zeichen zu vielen konsistenten Anwendungen."
+          },
+          "images": {
+            "logo": "Das Logo: ein Rundbogenportal mit wechselnden Streifen und Oberlicht, darüber der Name „Botteghe Storiche, Genova“",
+            "categories": "Die drei Kategorien: Bottega storica, Locale di tradizione und Locale di interesse culturale",
+            "versions": "Das Logo in Positiv- und Negativversion, mit Name",
+            "plaque": "Das Schieferschild mit Zeichen und Name, 200 × 280 mm, mit vier Messingschrauben befestigt"
+          }
+        }
+      },
+      "copper": {
+        "title": "Bespoke BeCreative: eine Skyline aus Kupfer",
+        "description": "Beitrag zum Samsung-Wettbewerb BESPOKE BeCreative (2021): fünf Wahrzeichen aus einer einzigen Kupferklinge für den Kühlschrank BESPOKE RB38A.",
+        "tags": [
+          "Produktdesign",
+          "Kupfer",
+          "BESPOKE RB38A"
+        ],
+        "art": {
+          "alt": "Minimalistische Illustration eines Kühlschranks mit Gefrierfach unten und flachen Türen, darauf eine Skyline aus Kupfer mit Opernhaus Sydney, Eiffelturm und Freiheitsstatue",
+          "line1": "Skyline nach Mass",
+          "line2": "PRODUKTDESIGN · KUPFER · BESPOKE RB38A"
+        },
+        "detail": {
+          "meta": "Designwettbewerb · Samsung BESPOKE BeCreative · 2021",
+          "heading": "Copper Skyline: fünf Wahrzeichen, eine durchgehende Klinge",
+          "body": [
+            "Für den Samsung-Wettbewerb BESPOKE BeCreative habe ich „Copper Skyline“ vorgeschlagen: fünf Ikonen, aus einer einzigen Kupferklinge geschnitten. Die obere Tür des BESPOKE RB38A wird zum Horizont, mit dem Opernhaus von Sydney, dem Kolosseum, dem Eiffelturm, dem Schiefen Turm von Pisa und der Freiheitsstatue in einem durchgehenden Profil.",
+            "Die Klinge ist ein 1,5 mm starkes Kupferblech von 520 × 208 mm, lasergeschnitten und von Hand veredelt. Sie wird mit Abstandshaltern 4 mm vor dem Glas montiert und wirft so einen Schatten, der mit dem Tageslicht wandert. Auf der unteren Tür kehrt die Skyline als zarte Spiegelung wieder, wie Wasser in einem Hafen.",
+            "Die Idee trägt eine italienische Handschrift: Kolosseum und Pisa bringen Italien in die Skyline, und Kupfer verbindet die handwerkliche Tradition, von Kupfertöpfen bis zu den Kupferschmieden, mit präzisem Schnitt. Kupfer altert zudem: Der Kühlschrank reift mit den Menschen, die ihn nutzen, erst poliert, dann brüniert und mit der Zeit mit einem Hauch Patina.",
+            "Das Konzept ist auf den BESPOKE RB38A ausgelegt (390 L, Kühl-Gefrier-Kombination mit unten liegendem Gefrierteil, flache Türen mit versenkten Griffen, 595 × 2030 × 658 mm). Seine austauschbaren Türpaneele bieten eine ebene, ruhige Fläche für die Klinge."
+          ],
+          "callout": {
+            "title": "Technische Zeichnung",
+            "body": "Kühlschrank und Klinge sind mit ihren realen Massen dargestellt: Kühlschrank 595 × 2030 mm, Klinge 520 × 208 mm. Paneelaufbau: Glas, Abstandshalter Ø 8 mm, Kupferblech."
+          },
+          "images": {
+            "refrigerator": "Der Kühlschrank mit der Kupfer-Skyline aus fünf Wahrzeichen und ihrer Spiegelung, mit Massen",
+            "blade": "Detail der Kupferklinge: Opernhaus von Sydney, Kolosseum, Eiffelturm, Schiefer Turm von Pisa und Freiheitsstatue, 520 mm breit"
+          }
+        }
+      },
+      "upcoming": {
+        "title": "Nächste Fallstudie",
+        "description": "Eine UX-Fallstudie in Arbeit: von der Recherche über Wireframes bis zum Design-System und zur funktionierenden Oberfläche.",
+        "tags": [
+          "Demnächst"
+        ],
+        "art": {
+          "alt": "Minimalistische Illustration eines Wireframes in einem Browserfenster mit einem kleinen Spross, für die kommende UX-Fallstudie",
+          "line1": "nächstes Kapitel",
+          "line2": "UX-FALLSTUDIE · DEMNÄCHST"
+        }
+      }
+    }
+  },
   "Footer": {
     "linksLabel": "Kontakt und Profile",
     "email": "E-Mail",

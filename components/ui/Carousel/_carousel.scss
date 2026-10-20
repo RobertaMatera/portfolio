@@ -1,0 +1,131 @@
+@use "breakpoints" as bp;
+
+$slide-width: min(430px, 78vw);
+
+.carousel {
+  position: relative;
+}
+
+.carousel__track {
+  position: relative; // offsetParent for the slides' offsetLeft
+  display: flex;
+  gap: 22px;
+  // Side padding lets the first and last slides reach the centre.
+  padding: 34px calc(50% - #{$slide-width} / 2) 20px;
+  margin-inline: -24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.carousel__slide {
+  flex: 0 0 $slide-width;
+  scroll-snap-align: center;
+  opacity: 0.5;
+  scale: 0.86;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition:
+      scale 0.4s var(--ease-out),
+      opacity 0.4s var(--ease-out);
+  }
+
+  &:hover {
+    scale: 0.88;
+  }
+
+  // Keyboard users see the card they are on at full strength.
+  &.is-active,
+  &:focus-within {
+    opacity: 1;
+    scale: 1;
+  }
+
+  &.is-active:hover {
+    scale: 1.01;
+  }
+}
+
+.carousel__arrow {
+  position: absolute;
+  top: 42%;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 64px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--g6);
+  // The mockup's 40% fails the 3:1 contrast needed by controls (WCAG 1.4.11).
+  opacity: 0.7;
+  cursor: pointer;
+  translate: 0 -50%;
+  transition: opacity var(--dur-fast);
+
+  .icon {
+    width: 34px;
+    height: 34px;
+    stroke-width: 1.4;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &[aria-disabled="true"] {
+    opacity: 0.25;
+    cursor: default;
+  }
+
+  &--previous {
+    left: 2px;
+  }
+
+  &--next {
+    right: 2px;
+  }
+}
+
+.carousel__dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+// 24px hit areas (WCAG 2.5.8) around the small dots of the mockup.
+.carousel__dot {
+  display: grid;
+  place-items: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 8px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: var(--r-pill);
+    // Darker than the mockup's border grey so the dots stay visible (3:1).
+    background: color-mix(in srgb, var(--g6) 55%, var(--bd));
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition:
+        width 0.3s var(--ease-out),
+        background-color 0.3s;
+    }
+  }
+
+  &[aria-current="true"]::before {
+    width: 26px;
+    background: var(--g6);
+  }
+}

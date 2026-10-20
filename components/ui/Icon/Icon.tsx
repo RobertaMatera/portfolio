@@ -81,6 +81,8 @@ const paths = {
   chevronDown: <path d="M6 9l6 6 6-6" />,
   chevronLeft: <path d="M15 5l-7 7 7 7" />,
   chevronRight: <path d="M9 5l7 7-7 7" />,
+  close: <path d="M6 6l12 12M18 6L6 18" />,
+  expand: <path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7" />,
 } satisfies Record<string, ReactNode>;
 
 export type IconName = keyof typeof paths;
