@@ -136,3 +136,11 @@ $mobile-axis: 14px; // distance of the line from the left edge on phones
   font-size: 0.875rem; // 14px
   font-weight: 700;
 }
+
+// Links stacked in the title and organisation lines need 24px targets that
+// don't overlap (WCAG 2.5.8); a little vertical padding gets them there.
+.timeline__card h3 .text-link,
+.timeline__org .text-link {
+  display: inline-block;
+  padding-block: 2px;
+}

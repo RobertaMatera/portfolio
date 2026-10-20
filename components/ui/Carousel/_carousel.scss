@@ -83,6 +83,12 @@ $slide-width: min(430px, 78vw);
     cursor: default;
   }
 
+  // On phones 42% lands on the card text; centre the arrows on the
+  // illustration instead (track padding + half the 8:5 art height).
+  @include bp.down("sm") {
+    top: calc(34px + #{$slide-width} * 5 / 16);
+  }
+
   &--previous {
     left: 2px;
   }
