@@ -16,6 +16,7 @@ export const projectDialogId = (id: string) => `project-${id}`;
 /** Full case study: drawings beside the story, constraints and tools. */
 export default async function ProjectDialog({ locale, project }: ProjectDialogProps) {
   const t = await getTranslations({ locale, namespace: "Work" });
+  const tCommon = await getTranslations({ locale, namespace: "Common" });
   const dialogId = projectDialogId(project.id);
   const headingId = `${dialogId}-heading`;
   const detail = `projects.${project.id}.detail` as const;
@@ -28,7 +29,7 @@ export default async function ProjectDialog({ locale, project }: ProjectDialogPr
   };
 
   return (
-    <Dialog id={dialogId} labelledBy={headingId} closeLabel={t("close")} className="project-dialog">
+    <Dialog id={dialogId} labelledBy={headingId} closeLabel={tCommon("close")} className="project-dialog">
       <div className="project-dialog__panel">
         <div className="project-dialog__text">
           <p className="project-dialog__meta">{t(`${detail}.meta`)}</p>
@@ -55,7 +56,7 @@ export default async function ProjectDialog({ locale, project }: ProjectDialogPr
               image={image}
               alt={altFor(image.key)}
               enlargeLabel={t("enlarge")}
-              closeLabel={t("close")}
+              closeLabel={tCommon("close")}
             />
           ))}
         </div>

@@ -1,0 +1,86 @@
+// A centred card rather than a full-screen viewer. The close button and the
+// panel share one grid cell, so the button sits in the panel's corner.
+.reference-dialog[open] {
+  display: grid;
+  grid-template-columns: min(560px, 100%);
+  align-content: center;
+  justify-content: center;
+  padding: 20px;
+
+  &::backdrop {
+    background: rgb(26 28 26 / 35%);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+  }
+
+  > * {
+    grid-area: 1 / 1;
+  }
+
+  .dialog__close {
+    position: relative;
+    top: auto;
+    right: auto;
+    align-self: start;
+    justify-self: end;
+    margin: 10px;
+    background: none;
+    color: var(--t1);
+
+    // On the white panel the default green ring is the visible one.
+    &:focus-visible {
+      outline-color: var(--g6);
+    }
+  }
+}
+
+.reference-dialog__panel {
+  max-height: 86vh;
+  margin: 0;
+  padding: 34px;
+  overflow: auto;
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: 0 30px 80px rgb(0 0 0 / 25%);
+
+  blockquote {
+    margin: 0;
+  }
+
+  blockquote p {
+    margin: 0 0 18px;
+    font-family: var(--font-serif);
+    font-size: 1.125rem; // 18px
+    font-weight: 600;
+    line-height: 1.55;
+  }
+
+  figcaption {
+    font-weight: 700;
+  }
+
+  small {
+    display: block;
+    color: var(--tm);
+    font-size: 0.8125rem; // 13px
+    font-weight: 400;
+  }
+
+  .btn {
+    margin-top: 16px;
+  }
+}
+
+.reference-dialog__note {
+  margin: -8px 0 18px;
+  color: var(--tm);
+  font-size: 0.8125rem; // 13px
+  font-style: italic;
+}
+
+.reference-dialog__letter {
+  margin-top: 14px;
+  color: var(--tm);
+  font-size: 0.8125rem; // 13px
+  font-style: italic;
+}

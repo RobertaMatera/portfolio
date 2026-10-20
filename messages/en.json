@@ -16,7 +16,8 @@
   "Common": {
     "skipToContent": "Skip to content",
     "role": "Full-stack · Frontend · UX/UI",
-    "newTab": "opens in a new tab"
+    "newTab": "opens in a new tab",
+    "close": "Close"
   },
   "Nav": {
     "label": "Sections",
@@ -162,7 +163,6 @@
     "openProject": "Read the project & see drawings",
     "viewCode": "View code on GitHub",
     "liveSoon": "Live site · soon",
-    "close": "Close",
     "enlarge": "Enlarge image",
     "tagsLabel": "Topics",
     "toolsLabel": "Tools and skills",
@@ -333,6 +333,42 @@
           "line1": "next chapter",
           "line2": "UX CASE STUDY · COMING SOON"
         }
+      }
+    }
+  },
+  "References": {
+    "eyebrow": "What they told me",
+    "title": "Words from people I’ve worked with.",
+    "readMore": "Read more",
+    "linkedInBadge": "recommendation on LinkedIn",
+    "viewOnLinkedIn": "View on LinkedIn",
+    "letterOnRequest": "Full signed letter available on request.",
+    "dialogLabel": "Reference from {name}",
+    "translatedFrom": "Translated from {language, select, it {Italian} en {English} other {the original}}",
+    "items": {
+      "solotti": {
+        "short": "“Highly competent and reliable, with strong technical skills and an excellent eye for detail. A natural talent for engaging with business stakeholders.”",
+        "full": "“Roberta is a highly competent and reliable frontend developer with strong technical skills and an excellent eye for detail. She has a natural talent for engaging with business stakeholders. She is skilled at gathering requirements directly from clients and translating them into effective technical solutions, often working independently. She also manages her time and priorities well, consistently meeting deadlines without compromising quality.”",
+        "role": "Business Unit Manager, Data Reply",
+        "detail": "Business Unit Manager, Data Reply · July 2026"
+      },
+      "f1": {
+        "short": "“Strong technical skills, operational autonomy and a clear focus on high-quality results. She stood out for her reliability, precision and collaboration.”",
+        "full": "“Roberta has demonstrated strong technical skills, operational autonomy, and a clear focus on delivering high-quality results. She is the sole front-end reference across several projects for one of our key clients, gathering requirements, creating Figma prototypes, building Angular PWAs and reusable components. She has consistently approached her tasks with professionalism, initiative, and great attention to the quality of the final product.”",
+        "role": "Milan · Reference letter, Aug 2026",
+        "detail": "Milan · August 2026"
+      },
+      "casasola": {
+        "short": "“She stood out for her desire for professional growth and her determination in tackling every new topic.”",
+        "full": "“Roberta stood out for her desire for professional growth, showing remarkable determination in tackling every new topic. Day after day she developed a methodical and precise approach, absorbing the whole programme. Her teamwork in group projects was marked by great professionalism and reliability. Her ability to learn web programming from scratch shows not only her talent, but also her remarkable dedication to study.”",
+        "role": "Founder, Nucleode SRL · her teacher at Strive School",
+        "detail": "Founder & Software Developer, Nucleode SRL · her teacher at Strive School (EPICODE) · Nov 2024"
+      },
+      "perfido": {
+        "short": "“A high capacity for teamwork and for sharing knowledge with colleagues, and above all her human qualities.”",
+        "full": "“Her research thesis earned an excellent final result for both its historical analysis and its design, and stood out for an accurate critical survey using direct, indirect and photogrammetric methods. She was always fully involved in a working group of five other graduates, showing a high capacity for teamwork and for sharing her knowledge with colleagues and, above all, her human qualities.”",
+        "role": "<poliba>Polytechnic of Bari</poliba> · Thesis supervisor",
+        "detail": "Polytechnic of Bari · thesis supervisor · October 2018"
       }
     }
   },

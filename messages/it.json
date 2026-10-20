@@ -16,7 +16,8 @@
   "Common": {
     "skipToContent": "Vai al contenuto",
     "role": "Full-stack · Frontend · UX/UI",
-    "newTab": "si apre in una nuova scheda"
+    "newTab": "si apre in una nuova scheda",
+    "close": "Chiudi"
   },
   "Nav": {
     "label": "Sezioni",
@@ -162,7 +163,6 @@
     "openProject": "Leggi il progetto e i disegni",
     "viewCode": "Vedi il codice su GitHub",
     "liveSoon": "Sito live · a breve",
-    "close": "Chiudi",
     "enlarge": "Ingrandisci l’immagine",
     "tagsLabel": "Temi",
     "toolsLabel": "Strumenti e competenze",
@@ -333,6 +333,42 @@
           "line1": "prossimo capitolo",
           "line2": "CASO STUDIO UX · PROSSIMAMENTE"
         }
+      }
+    }
+  },
+  "References": {
+    "eyebrow": "Cosa dicono di me",
+    "title": "Le parole di chi ha lavorato con me.",
+    "readMore": "Leggi tutto",
+    "linkedInBadge": "referenza su LinkedIn",
+    "viewOnLinkedIn": "Vedi su LinkedIn",
+    "letterOnRequest": "Lettera firmata completa disponibile su richiesta.",
+    "dialogLabel": "Referenza di {name}",
+    "translatedFrom": "Tradotto {language, select, it {dall’italiano} en {dall’inglese} other {dall’originale}}",
+    "items": {
+      "solotti": {
+        "short": "«Altamente competente e affidabile, con solide capacità tecniche e un’ottima attenzione ai dettagli. Un talento naturale nel confronto con gli stakeholder di business.»",
+        "full": "«Roberta è una frontend developer molto competente e affidabile, con solide capacità tecniche e un’ottima attenzione ai dettagli. Ha un talento naturale nel confronto con gli stakeholder di business: raccoglie i requisiti direttamente dai clienti e li traduce in soluzioni tecniche efficaci, spesso in autonomia. Gestisce bene tempi e priorità e rispetta sempre le scadenze senza compromettere la qualità.»",
+        "role": "Business Unit Manager, Data Reply",
+        "detail": "Business Unit Manager, Data Reply · luglio 2026"
+      },
+      "f1": {
+        "short": "«Solide competenze tecniche, autonomia operativa e una chiara attenzione a risultati di alta qualità. Si è distinta per affidabilità, precisione e spirito di collaborazione.»",
+        "full": "«Roberta ha dimostrato solide competenze tecniche, autonomia operativa e una chiara attenzione a risultati di alta qualità. È l’unico riferimento frontend su diversi progetti per uno dei nostri clienti principali: raccoglie i requisiti, crea prototipi in Figma, sviluppa PWA in Angular e componenti riutilizzabili. Ha sempre affrontato i suoi compiti con professionalità, spirito d’iniziativa e grande attenzione alla qualità del prodotto finale.»",
+        "role": "Milano · Lettera di referenze, ago 2026",
+        "detail": "Milano · agosto 2026"
+      },
+      "casasola": {
+        "short": "«Si è distinta per il desiderio di crescita professionale e per la determinazione con cui ha affrontato ogni nuovo argomento.»",
+        "full": "«Roberta si è distinta per il desiderio di crescita professionale, mostrando una notevole determinazione nell’affrontare ogni nuovo argomento. Giorno dopo giorno ha sviluppato un approccio metodico e preciso, assimilando l’intero programma. Nei progetti di gruppo ha lavorato con grande professionalità e affidabilità. La sua capacità di imparare la programmazione web da zero dimostra non solo il suo talento, ma anche una notevole dedizione allo studio.»",
+        "role": "Founder, Nucleode SRL · suo docente alla Strive School",
+        "detail": "Founder & Software Developer, Nucleode SRL · suo docente alla Strive School (EPICODE) · nov 2024"
+      },
+      "perfido": {
+        "short": "«Una spiccata capacità di lavorare in gruppo e di condividere le conoscenze con i colleghi e, soprattutto, le sue qualità umane.»",
+        "full": "«La sua tesi di ricerca ha ottenuto un ottimo risultato finale sia per l’analisi storica sia per il progetto, e si è distinta per un accurato rilievo critico con metodi diretti, indiretti e fotogrammetrici. È stata sempre pienamente coinvolta in un gruppo di lavoro con altri cinque laureandi, dimostrando una spiccata capacità di lavorare in squadra e di condividere le proprie conoscenze con i colleghi e, soprattutto, le sue qualità umane.»",
+        "role": "<poliba>Politecnico di Bari</poliba> · Relatore della tesi",
+        "detail": "Politecnico di Bari · relatore della tesi · ottobre 2018"
       }
     }
   },

@@ -27,6 +27,8 @@
 @use "../components/work/ProjectCard/project-card";
 @use "../components/work/ProjectDialog/project-dialog";
 @use "../components/work/ZoomImage/zoom-image";
+@use "../components/references/ReferenceCard/reference-card";
+@use "../components/references/ReferenceDialog/reference-dialog";
 
 // Pages
 @use "../components/pages/NotFound/not-found";
