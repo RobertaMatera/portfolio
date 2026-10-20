@@ -67,5 +67,6 @@ export const references = [
     url: "https://www.linkedin.com/in/paolo-perfido-b3247036/",
     accent: "green",
     originalLanguage: "it",
+    verbatim: true,
   },
 ] as const satisfies readonly Reference[];
