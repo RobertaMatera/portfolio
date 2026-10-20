@@ -44,13 +44,13 @@ export const profile = {
       href: "/files/roberta-matera-cv-en.pdf",
       fileName: "Roberta_Matera_CV_EN.pdf",
       language: "en",
-      sizeKb: 355,
+      sizeKb: 356,
     },
     de: {
       href: "/files/roberta-matera-cv-de.pdf",
       fileName: "Roberta_Matera_CV_DE.pdf",
       language: "de",
-      sizeKb: 373,
+      sizeKb: 374,
     },
   } satisfies Record<string, CvFile>,
   alumniOf: [
