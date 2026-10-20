@@ -20,7 +20,7 @@ export const profile = {
   name: "Roberta Matera",
   givenName: "Roberta",
   familyName: "Matera",
-  email: "robertamatera.ch@gmail.com",
+  email: "materaroberta.ch@gmail.com",
   phone: "+41 77 477 39 24",
   location: { city: "Bern", countryCode: "CH" },
   /** ISO 639-1 codes of the languages Roberta speaks. */

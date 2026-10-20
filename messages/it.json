@@ -94,7 +94,7 @@
       },
       "collaboration": {
         "title": "Collaborazione tra discipline",
-        "body": "Gli architetti coordinano ingegneri, clienti e imprese. Porto la stessa abitudine con stakeholder, designer e sviluppatori: raccolgo requisiti, prototipo in Figma e valido presto."
+        "body": "Gli architetti coordinano ingegneri, clienti e imprese. Porto la stessa abitudine con stakeholder, designer e sviluppatori: raccolgo requisiti, prototipo in Figma e valido in tempi brevi."
       }
     }
   },
@@ -383,7 +383,6 @@
       "name": "Nome",
       "email": "Email",
       "subject": "Oggetto",
-      "optional": "facoltativo",
       "message": "Messaggio",
       "submit": "Invia messaggio",
       "sending": "Invio in corso…",
@@ -394,10 +393,13 @@
       "errors": {
         "nameRequired": "Inserisci il tuo nome.",
         "emailRequired": "Inserisci il tuo indirizzo email.",
-        "emailInvalid": "Inserisci un indirizzo email valido, ad esempio nome@esempio.it.",
+        "subjectRequired": "Aggiungi un oggetto.",
         "messageRequired": "Scrivi un messaggio.",
+        "emailInvalid": "Inserisci un indirizzo email valido, ad esempio nome@esempio.it.",
+        "tooShort": "Scrivi almeno {min} caratteri.",
         "tooLong": "Il testo è troppo lungo: al massimo {max} caratteri."
-      }
+      },
+      "messageHint": "Almeno {min} caratteri."
     }
   },
   "Footer": {
