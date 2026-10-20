@@ -37,7 +37,7 @@ interface ContactFormProps {
 const initialState: ContactState = { status: "idle" };
 
 /** How long the success message stays before fading out. */
-const SUCCESS_VISIBLE_MS = 8000;
+const SUCCESS_VISIBLE_MS = 5000;
 /** Length of the fade-out, matching .contact-form__status in the stylesheet. */
 const FADE_MS = 400;
 
