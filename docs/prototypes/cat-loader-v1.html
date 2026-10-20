@@ -1,0 +1,217 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cat Loader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Fraunces:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f9fbf9;--g7:#22471d;--g6:#2d5a27;--lime:#a8e063;--card:#ffffff;--bd:#dfe8da;--t2:#4a5a47;--font-body:Manrope,system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12200f;--g7:#e8f3de;--g6:#a8e063;--card:#1b2d17;--bd:#2a3f25;--t2:#b8c9ae}}
+:root[data-theme="dark"]{--bg:#12200f;--g7:#e8f3de;--g6:#a8e063;--card:#1b2d17;--bd:#2a3f25;--t2:#b8c9ae}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--g7);font-family:var(--font-body)}
+main{max-width:760px;margin:0 auto;padding:40px 16px 56px}
+h1{font-family:Fraunces,serif;font-size:clamp(28px,5vw,38px);margin:0 0 6px}p.lead{color:var(--t2);line-height:1.6;margin:0 0 22px}
+.stage{background:var(--card);border:1px solid var(--bd);border-radius:24px;padding:8px}
+.bar{display:flex;gap:8px;justify-content:center;margin:18px 0 0}
+.bar button{font:700 13px var(--font-body);padding:9px 16px;min-height:44px;border-radius:99px;border:1px solid var(--bd);background:var(--card);color:var(--g7);cursor:pointer}
+.bar button[aria-pressed=true]{background:var(--g6);color:#fff;border-color:var(--g6)}
+@media (prefers-color-scheme:dark){.bar button[aria-pressed=true]{color:#12200f}}
+ul{color:var(--t2);line-height:1.7;padding-left:20px;margin:24px 0 0}
+.cat-loader {
+  --w: min(320px, 72vw);
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 28px;
+  min-height: 60vh;
+  padding: 24px;
+  color: var(--g7, #22471d);
+}
+.cat-loader__track {
+  position: relative;
+  width: var(--w);
+  height: 64px;
+}
+.cat-loader__line {
+  position: absolute;
+  inset: auto 0 6px;
+  height: 2px;
+  border-radius: 2px;
+  background: rgba(45, 90, 39, 0.16);
+}
+.cat-loader__runner {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  animation: cat-run 3.2s cubic-bezier(0.45, 0, 0.35, 1) infinite;
+}
+.cat-loader__fish {
+  position: absolute;
+  left: 72px;
+  bottom: 12px;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  animation: fish-run 3.2s cubic-bezier(0.45, 0, 0.35, 1) infinite;
+}
+.cat-loader__cat, .cat-loader__fish svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.cat-loader__cat {
+  transform-origin: 50% 100%;
+  animation: cat-hop 0.4s ease-in-out infinite alternate;
+}
+.cat-loader__fish svg {
+  transform-origin: 20% 50%;
+  animation: fish-wiggle 0.35s ease-in-out infinite alternate;
+}
+.cat-loader__messages {
+  position: relative;
+  width: min(360px, 86vw);
+  height: 1.6em;
+  text-align: center;
+  font: 700 15px/1.6 var(--font-body, Manrope, system-ui, sans-serif);
+  letter-spacing: 0.01em;
+}
+.cat-loader__message {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: loader-message calc(2.4s * 5) ease infinite;
+}
+.cat-loader__message:nth-child(1) {
+  animation-delay: calc(2.4s * 0);
+}
+.cat-loader__message:nth-child(2) {
+  animation-delay: calc(2.4s * 1);
+}
+.cat-loader__message:nth-child(3) {
+  animation-delay: calc(2.4s * 2);
+}
+.cat-loader__message:nth-child(4) {
+  animation-delay: calc(2.4s * 3);
+}
+.cat-loader__message:nth-child(5) {
+  animation-delay: calc(2.4s * 4);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@keyframes cat-run {
+  0% {
+    translate: 0 0;
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  88% {
+    translate: calc(var(--w) - 100px) 0;
+    opacity: 1;
+  }
+  100% {
+    translate: calc(var(--w) - 100px) 0;
+    opacity: 0;
+  }
+}
+@keyframes fish-run {
+  0% {
+    translate: 0 0;
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  88% {
+    translate: calc(var(--w) - 100px) 0;
+    opacity: 1;
+  }
+  100% {
+    translate: calc(var(--w) - 100px) 0;
+    opacity: 0;
+  }
+}
+@keyframes cat-hop {
+  from {
+    transform: translateY(0) rotate(-3deg);
+  }
+  to {
+    transform: translateY(-7px) rotate(3deg);
+  }
+}
+@keyframes fish-wiggle {
+  from {
+    transform: rotate(-9deg);
+  }
+  to {
+    transform: rotate(9deg);
+  }
+}
+@keyframes loader-message {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  3%, 17% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  20%, 100% {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cat-loader__runner, .cat-loader__fish {
+    animation: none;
+    opacity: 1;
+    translate: 0 0;
+  }
+  .cat-loader__fish {
+    left: calc(var(--w) - 36px);
+  }
+  .cat-loader__runner {
+    left: calc(var(--w) - 112px);
+  }
+  .cat-loader__cat, .cat-loader__fish svg {
+    animation: none;
+  }
+  .cat-loader__message {
+    animation: none;
+    opacity: 0;
+  }
+  .cat-loader__message:first-child {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=out.css.map */
+</style></head><body><main>
+<h1>Cat Loader</h1>
+<p class="lead">The cat chases the fish and never catches it. Pure CSS, no client JavaScript, five rotating messages per language, and a calm static version for reduced motion.</p>
+<div class="stage"><div class="cat-loader" role="status" aria-live="polite"><span class="visually-hidden">Loading</span>
+<div class="cat-loader__track" aria-hidden="true"><span class="cat-loader__line"></span>
+<span class="cat-loader__runner"><svg class="cat-loader__cat" viewBox="0 0 24 24" fill="#fff" stroke="#2d5a27" stroke-width="1.6" stroke-linejoin="round"><path d="M5 10L4 3.5l5 3a8 8 0 0 1 6 0l5-3L19 10a7 7 0 0 1 1 3.5c0 4-3.8 6.5-8 6.5s-8-2.5-8-6.5A7 7 0 0 1 5 10z"/><circle cx="9" cy="13" r=".9" fill="#2d5a27"/><circle cx="15" cy="13" r=".9" fill="#2d5a27"/><path d="M11 15.5h2l-1 1z" fill="#2d5a27"/></svg></span>
+<span class="cat-loader__fish"><svg viewBox="0 0 24 24" fill="#a8e063" stroke="#2d5a27" stroke-width="1.5" stroke-linejoin="round"><path d="M2 12c3-5 9-6 13-2l5-3v10l-5-3c-4 4-10 3-13-2z"/><circle cx="7.5" cy="11" r=".9" fill="#2d5a27"/></svg></span></div>
+<p class="cat-loader__messages" id="msgs" aria-hidden="true"></p></div></div>
+<div class="bar" role="group" aria-label="Language"><button type="button" data-l="en" aria-pressed="true">EN</button><button type="button" data-l="it" aria-pressed="false">IT</button><button type="button" data-l="de" aria-pressed="false">DE</button></div>
+<ul><li>Server Component, zero client JavaScript.</li><li>Screen readers hear one calm “Loading” message, not the jokes.</li><li>With reduced motion enabled, the scene stays still and shows one message.</li></ul>
+</main>
+<script>
+var M={"en": ["Chasing the fish…", "Untangling the yarn…", "Teaching pixels to behave…", "Almost there, the fish is fast…", "Knocking one last bug off the table…"], "it": ["Inseguo il pesce…", "Sbroglio il gomitolo…", "Insegno ai pixel a comportarsi…", "Ci siamo quasi, il pesce è veloce…", "Faccio cadere dal tavolo l’ultimo bug…"], "de": ["Ich jage den Fisch …", "Ich entwirre das Wollknäuel …", "Ich bringe den Pixeln Manieren bei …", "Gleich geschafft, der Fisch ist schnell …", "Ich werfe den letzten Bug vom Tisch …"]};
+var box=document.getElementById("msgs");
+function show(l){box.innerHTML="";M[l].forEach(function(m){var s=document.createElement("span");s.className="cat-loader__message";s.textContent=m;box.appendChild(s)});
+document.documentElement.lang=l;document.querySelectorAll(".bar button").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.l===l))});
+document.querySelector(".visually-hidden").textContent={en:"Loading",it:"Caricamento",de:"Wird geladen"}[l]}
+document.querySelectorAll(".bar button").forEach(function(b){b.onclick=function(){show(b.dataset.l)}});show("en");
+</script></body></html>
+</body></html>

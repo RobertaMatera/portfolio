@@ -411,5 +411,22 @@
     "title": "Page not found",
     "body": "The page you are looking for doesn’t exist or has moved.",
     "backHome": "Back to the homepage"
+  },
+  "Loader": {
+    "label": "Loading",
+    "chase": [
+      "Chasing the fish…",
+      "Untangling the yarn…",
+      "Teaching pixels to behave…",
+      "Almost there, the fish is fast…",
+      "Knocking one last bug off the table…"
+    ],
+    "slow": [
+      "Pushing the last bug off the table…",
+      "Pretending it was an accident…",
+      "Judging your internet speed…",
+      "Staring at nothing, loading something…",
+      "Almost done, then a nap…"
+    ]
   }
 }

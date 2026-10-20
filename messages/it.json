@@ -411,5 +411,22 @@
     "title": "Pagina non trovata",
     "body": "La pagina che cerchi non esiste o è stata spostata.",
     "backHome": "Torna alla home"
+  },
+  "Loader": {
+    "label": "Caricamento",
+    "chase": [
+      "Inseguo il pesce…",
+      "Sbroglio il gomitolo…",
+      "Insegno ai pixel a comportarsi…",
+      "Ci siamo quasi, il pesce è veloce…",
+      "Faccio cadere dal tavolo l’ultimo bug…"
+    ],
+    "slow": [
+      "Spingo l’ultimo bug giù dal tavolo…",
+      "Faccio finta che sia stato un incidente…",
+      "Giudico la tua connessione…",
+      "Fisso il vuoto, intanto carico…",
+      "Quasi fatto, poi un pisolino…"
+    ]
   }
 }
