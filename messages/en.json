@@ -394,12 +394,11 @@
         "nameRequired": "Please enter your name.",
         "emailRequired": "Please enter your email address.",
         "subjectRequired": "Please add a subject.",
-        "messageRequired": "Please write a message.",
+        "messageRequired": "Please write a message of at least {min} characters.",
         "emailInvalid": "Please enter a valid email address, like name@example.com.",
         "tooShort": "Please write at least {min} characters.",
         "tooLong": "This is too long: {max} characters at most."
-      },
-      "messageHint": "At least {min} characters."
+      }
     }
   },
   "Footer": {
@@ -411,5 +410,22 @@
     "title": "Page not found",
     "body": "The page you are looking for doesn’t exist or has moved.",
     "backHome": "Back to the homepage"
+  },
+  "Loader": {
+    "label": "Loading",
+    "chase": [
+      "Chasing the fish…",
+      "Untangling the yarn…",
+      "Teaching pixels to behave…",
+      "Almost there, the fish is fast…",
+      "Knocking one last bug off the table…"
+    ],
+    "slow": [
+      "Pushing the last bug off the table…",
+      "Pretending it was an accident…",
+      "Judging your internet speed…",
+      "Staring at nothing, loading something…",
+      "Almost done, then a nap…"
+    ]
   }
 }

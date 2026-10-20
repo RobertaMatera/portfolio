@@ -1,6 +1,8 @@
 // Facts about Roberta that do not change between languages.
 // Translated wording (job title, topics, …) lives in messages/*.json.
 
+import type { Locale } from "@/i18n/routing";
+
 export type SocialNetwork = "github" | "linkedin" | "whatsapp" | "email";
 
 export interface SocialLink {
@@ -9,6 +11,15 @@ export interface SocialLink {
   label: string;
   href: string;
   external: boolean;
+}
+
+export interface CvFile {
+  href: string;
+  /** Name the browser saves the file as. */
+  fileName: string;
+  /** ISO 639-1 code of the language the CV is written in. */
+  language: string;
+  sizeKb: number;
 }
 
 export interface School {
@@ -27,18 +38,33 @@ export const profile = {
   languages: ["it", "en", "de"],
   portrait: { src: "/images/hero/portrait.webp", width: 560, height: 693 },
   logo: { src: "/images/brand/logo.webp", width: 220, height: 216 },
-  /** One CV for now, written in Italian; add per-locale files here later. */
+  /** CVs in English and German. Italian visitors get the English one. */
   cv: {
-    href: "/files/roberta-matera-cv.pdf",
-    fileName: "Roberta-Matera-CV.pdf",
-    language: "it",
-    sizeKb: 105,
-  },
+    en: {
+      href: "/files/roberta-matera-cv-en.pdf",
+      fileName: "Roberta_Matera_CV_EN.pdf",
+      language: "en",
+      sizeKb: 356,
+    },
+    de: {
+      href: "/files/roberta-matera-cv-de.pdf",
+      fileName: "Roberta_Matera_CV_DE.pdf",
+      language: "de",
+      sizeKb: 374,
+    },
+  } satisfies Record<string, CvFile>,
   alumniOf: [
     { name: "Politecnico di Bari", url: "https://www.poliba.it/en/" },
     { name: "Università Telematica Pegaso", url: "https://www.unipegaso.it/" },
   ] satisfies School[],
 } as const;
+
+/** The CV offered on each language's pages. */
+export const cvForLocale = {
+  en: profile.cv.en,
+  it: profile.cv.en,
+  de: profile.cv.de,
+} satisfies Record<Locale, CvFile>;
 
 export const socialLinks: SocialLink[] = [
   { network: "github", label: "GitHub", href: "https://github.com/RobertaMatera", external: true },

@@ -1,9 +1,8 @@
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
 import Button from "@/components/ui/Button/Button";
+import CatTable from "@/components/ui/CatTable/CatTable";
 import Eyebrow from "@/components/ui/Eyebrow/Eyebrow";
-import { profile } from "@/content/profile";
 
 export default async function NotFound() {
   const t = await getTranslations("NotFound");
@@ -11,7 +10,8 @@ export default async function NotFound() {
   return (
     <main id="content" tabIndex={-1} className="not-found">
       <div className="wrap not-found__inner">
-        <Image className="not-found__logo" src={profile.logo.src} width={88} height={86} alt="" />
+        {/* The cat has pushed this page off the table. */}
+        <CatTable />
         <Eyebrow>404</Eyebrow>
         <h1>{t("title")}</h1>
         <p className="not-found__body">{t("body")}</p>

@@ -84,20 +84,15 @@
   }
 }
 
-.contact-form__hint {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
+.contact-form__counter {
   margin-top: 6px;
   padding-inline: 4px;
   color: var(--coral-text);
   font-size: 0.8125rem; // 13px
-}
-
-.contact-form__counter {
   font-variant-numeric: tabular-nums;
+  text-align: end;
 
-  &.is-short {
+  &.is-invalid {
     color: var(--coral-strong);
     font-weight: 700;
   }

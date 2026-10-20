@@ -394,12 +394,11 @@
         "nameRequired": "Bitte gib deinen Namen ein.",
         "emailRequired": "Bitte gib deine E-Mail-Adresse ein.",
         "subjectRequired": "Bitte gib einen Betreff ein.",
-        "messageRequired": "Bitte schreib eine Nachricht.",
+        "messageRequired": "Bitte schreib eine Nachricht mit mindestens {min} Zeichen.",
         "emailInvalid": "Bitte gib eine gültige E-Mail-Adresse ein, zum Beispiel name@beispiel.ch.",
         "tooShort": "Bitte schreib mindestens {min} Zeichen.",
         "tooLong": "Das ist zu lang: höchstens {max} Zeichen."
-      },
-      "messageHint": "Mindestens {min} Zeichen."
+      }
     }
   },
   "Footer": {
@@ -411,5 +410,22 @@
     "title": "Seite nicht gefunden",
     "body": "Diese Seite gibt es nicht oder sie wurde verschoben.",
     "backHome": "Zur Startseite"
+  },
+  "Loader": {
+    "label": "Wird geladen",
+    "chase": [
+      "Ich jage den Fisch …",
+      "Ich entwirre das Wollknäuel …",
+      "Ich bringe den Pixeln Manieren bei …",
+      "Gleich geschafft, der Fisch ist schnell …",
+      "Ich werfe den letzten Bug vom Tisch …"
+    ],
+    "slow": [
+      "Ich schubse den letzten Bug vom Tisch …",
+      "Ich tue so, als wäre es ein Versehen …",
+      "Ich bewerte dein Internettempo …",
+      "Ich starre ins Leere und lade …",
+      "Gleich fertig, dann ein Nickerchen …"
+    ]
   }
 }

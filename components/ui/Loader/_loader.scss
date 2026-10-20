@@ -1,0 +1,119 @@
+// When the slow scene (v2) replaces the default one (v1).
+$slow-after: 3s;
+$swap: 0.4s;
+
+// Rotating jokes under either scene: five lines, $message-time each.
+$messages: 5;
+$message-time: 2.4s;
+
+.loader {
+  display: grid;
+  place-items: center;
+  min-height: 60vh;
+  padding: 24px;
+  color: var(--g7);
+}
+
+// Both scenes sit in the same cell, so the swap doesn't move the page.
+.loader__stage {
+  display: grid;
+  place-items: end center;
+}
+
+.loader__scene {
+  grid-area: 1 / 1;
+}
+
+.loader__scene--default {
+  animation: loader-out $swap ease $slow-after forwards;
+}
+
+.loader__scene--slow {
+  // Its jokes start when it appears, from the first one.
+  --messages-start: #{$slow-after};
+
+  opacity: 0;
+  animation: loader-in $swap ease $slow-after forwards;
+}
+
+.loader-messages {
+  position: relative;
+  width: min(380px, 88vw);
+  height: 1.6em;
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+.loader-messages__item {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: loader-message ($message-time * $messages) ease infinite;
+
+  @for $i from 1 through $messages {
+    &:nth-child(#{$i}) {
+      animation-delay: calc(var(--messages-start, 0s) + #{$message-time * ($i - 1)});
+    }
+  }
+}
+
+@keyframes loader-out {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes loader-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes loader-message {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  3%,
+  17% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  20%,
+  100% {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+// Reduced motion: still scenes and one line each. The swap stays, as an
+// instant change rather than a fade.
+@media (prefers-reduced-motion: reduce) {
+  .loader__scene--default,
+  .loader__scene--slow {
+    animation-duration: 1ms;
+  }
+
+  .loader-messages__item {
+    animation: none;
+
+    &:first-child {
+      opacity: 1;
+    }
+  }
+}
+
+// The route-level loading page (app/[locale]/loading.tsx).
+.page-loading {
+  display: grid;
+  min-height: 100dvh;
+  place-items: center;
+  outline: none;
+}

@@ -1,0 +1,131 @@
+// Loader v1. One lap takes $lap; the cat and the fish share the same curve,
+// so the gap between them never closes.
+$lap: 3.2s;
+$lap-ease: cubic-bezier(0.45, 0, 0.35, 1);
+
+.cat-chase {
+  --w: min(320px, 72vw);
+
+  display: grid;
+  justify-items: center;
+  gap: 28px;
+}
+
+.cat-chase__track {
+  position: relative;
+  width: var(--w);
+  height: 64px;
+}
+
+.cat-chase__line {
+  position: absolute;
+  inset: auto 0 6px;
+  height: 2px;
+  border-radius: 2px;
+  background: rgb(45 90 39 / 16%);
+}
+
+.cat-chase__runner,
+.cat-chase__fish {
+  position: absolute;
+  opacity: 0;
+  animation: cat-chase-lap $lap $lap-ease infinite;
+}
+
+.cat-chase__runner {
+  left: 0;
+  bottom: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.cat-chase__fish {
+  left: 72px;
+  bottom: 12px;
+  width: 30px;
+  height: 30px;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform-origin: 20% 50%;
+    animation: cat-chase-wiggle 0.35s ease-in-out infinite alternate;
+  }
+}
+
+.cat-chase__cat {
+  transform-origin: 50% 100%;
+  animation: cat-chase-hop 0.4s ease-in-out infinite alternate;
+}
+
+.cat-chase__fish-body {
+  fill: var(--lime);
+  stroke: var(--g6);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
+
+.cat-chase__fish-eye {
+  fill: var(--g6);
+}
+
+@keyframes cat-chase-lap {
+  0% {
+    translate: 0 0;
+    opacity: 0;
+  }
+
+  8% {
+    opacity: 1;
+  }
+
+  88% {
+    translate: calc(var(--w) - 100px) 0;
+    opacity: 1;
+  }
+
+  100% {
+    translate: calc(var(--w) - 100px) 0;
+    opacity: 0;
+  }
+}
+
+@keyframes cat-chase-hop {
+  from {
+    transform: translateY(0) rotate(-3deg);
+  }
+
+  to {
+    transform: translateY(-7px) rotate(3deg);
+  }
+}
+
+@keyframes cat-chase-wiggle {
+  from {
+    transform: rotate(-9deg);
+  }
+
+  to {
+    transform: rotate(9deg);
+  }
+}
+
+// Reduced motion: a still scene, the cat a step behind the fish.
+@media (prefers-reduced-motion: reduce) {
+  .cat-chase__runner,
+  .cat-chase__fish,
+  .cat-chase__cat,
+  .cat-chase__fish svg {
+    animation: none;
+    opacity: 1;
+  }
+
+  .cat-chase__runner {
+    left: calc(var(--w) - 112px);
+  }
+
+  .cat-chase__fish {
+    left: calc(var(--w) - 36px);
+  }
+}

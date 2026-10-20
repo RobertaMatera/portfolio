@@ -12,6 +12,10 @@
 @use "../components/ui/Section/section";
 @use "../components/ui/Dialog/dialog";
 @use "../components/ui/Carousel/carousel";
+@use "../components/ui/Cat/cat";
+@use "../components/ui/CatChase/cat-chase";
+@use "../components/ui/CatTable/cat-table";
+@use "../components/ui/Loader/loader";
 
 // Page chrome
 @use "../components/chrome/TopBar/top-bar";

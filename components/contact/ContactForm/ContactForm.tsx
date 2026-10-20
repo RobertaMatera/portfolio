@@ -27,7 +27,6 @@ export interface ContactFormCopy {
   error: ReactNode;
   /** Error text per field and error type, already translated. */
   errors: Record<ContactField, Record<ContactFieldError, string>>;
-  messageHint: string;
 }
 
 interface ContactFormProps {
@@ -38,7 +37,7 @@ interface ContactFormProps {
 const initialState: ContactState = { status: "idle" };
 
 /** How long the success message stays before fading out. */
-const SUCCESS_VISIBLE_MS = 8000;
+const SUCCESS_VISIBLE_MS = 5000;
 /** Length of the fade-out, matching .contact-form__status in the stylesheet. */
 const FADE_MS = 400;
 
@@ -113,7 +112,6 @@ export default function ContactForm({ locale, copy }: ContactFormProps) {
 
   const showStatus = state.status !== "idle" && dismissed !== state;
   const statusText = { idle: "", invalid: copy.invalid, success: copy.success, error: copy.error }[state.status];
-  const hintId = "contact-message-hint";
 
   return (
     <form
@@ -150,7 +148,6 @@ export default function ContactForm({ locale, copy }: ContactFormProps) {
         const id = `contact-${field}`;
         const code = errors[field];
         const error = code ? copy.errors[field][code] : undefined;
-        const describedBy = [field === "message" && hintId, error && `${id}-error`].filter(Boolean).join(" ");
         const Control = field === "message" ? "textarea" : "input";
         return (
           <div key={field} className="contact-form__field">
@@ -163,11 +160,13 @@ export default function ContactForm({ locale, copy }: ContactFormProps) {
               maxLength={contactRules[field].max}
               required
               aria-invalid={error ? true : undefined}
-              aria-describedby={describedBy || undefined}
+              aria-describedby={error ? `${id}-error` : undefined}
               onBlur={(event) => {
                 // Only judge a field once something has been typed in it, or
-                // once it already shows an error.
-                if (event.currentTarget.value.trim() || clientErrors[field] !== undefined || code) {
+                // once it already shows an error. The message waits for
+                // "Send", so a half-written one isn't flagged as too short.
+                const typed = field !== "message" && event.currentTarget.value.trim();
+                if (typed || clientErrors[field] !== undefined || code) {
                   checkField(field, event.currentTarget.value);
                 }
               }}
@@ -184,18 +183,8 @@ export default function ContactForm({ locale, copy }: ContactFormProps) {
                   })}
             />
             {field === "message" && (
-              <p className="contact-form__hint">
-                <span id={hintId}>{copy.messageHint}</span>
-                <span
-                  className={
-                    messageLength > 0 && messageLength < contactRules.message.min
-                      ? "contact-form__counter is-short"
-                      : "contact-form__counter"
-                  }
-                  aria-hidden="true"
-                >
-                  {messageLength} / {contactRules.message.max}
-                </span>
+              <p className={code ? "contact-form__counter is-invalid" : "contact-form__counter"} aria-hidden="true">
+                {messageLength} / {contactRules.message.max}
               </p>
             )}
             {error && (

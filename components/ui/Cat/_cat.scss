@@ -1,0 +1,16 @@
+.cat {
+  display: block;
+  width: 100%;
+  height: 100%;
+  stroke-linejoin: round;
+}
+
+.cat__face {
+  fill: var(--sf);
+  stroke: var(--g6);
+  stroke-width: 1.6;
+}
+
+.cat__ink {
+  fill: var(--g6);
+}
