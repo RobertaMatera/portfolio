@@ -5,7 +5,7 @@ import Button from "@/components/ui/Button/Button";
 import Eyebrow from "@/components/ui/Eyebrow/Eyebrow";
 import Icon from "@/components/ui/Icon/Icon";
 import NextSectionLink from "@/components/ui/NextSectionLink/NextSectionLink";
-import { profile } from "@/content/profile";
+import { cvForLocale, profile } from "@/content/profile";
 import { technologies } from "@/content/technologies";
 import type { Locale } from "@/i18n/routing";
 
@@ -15,7 +15,8 @@ interface HeroProps {
 
 export default async function Hero({ locale }: HeroProps) {
   const t = await getTranslations({ locale, namespace: "Hero" });
-  const cvLanguage = new Intl.DisplayNames([locale], { type: "language" }).of(profile.cv.language) ?? "";
+  const cv = cvForLocale[locale];
+  const cvLanguage = new Intl.DisplayNames([locale], { type: "language" }).of(cv.language) ?? "";
 
   return (
     // id="top": the dock's Home link and the logo pill scroll here.
@@ -33,17 +34,17 @@ export default async function Hero({ locale }: HeroProps) {
               {t("viewProjects")}
             </Button>
             <Button
-              href={profile.cv.href}
+              href={cv.href}
               variant="secondary"
               glyph="download"
-              download={profile.cv.fileName}
-              hrefLang={profile.cv.language}
+              download={cv.fileName}
+              hrefLang={cv.language}
               type="application/pdf"
             >
               {t("downloadCv")}
               {/* Says what the link delivers before it downloads (WCAG 2.4.4). */}
               <span className="visually-hidden">
-                {` (${t("cvFileInfo", { language: cvLanguage, size: profile.cv.sizeKb })})`}
+                {` (${t("cvFileInfo", { language: cvLanguage, size: cv.sizeKb })})`}
               </span>
             </Button>
           </div>
