@@ -394,12 +394,11 @@
         "nameRequired": "Inserisci il tuo nome.",
         "emailRequired": "Inserisci il tuo indirizzo email.",
         "subjectRequired": "Aggiungi un oggetto.",
-        "messageRequired": "Scrivi un messaggio.",
+        "messageRequired": "Scrivi un messaggio di almeno {min} caratteri.",
         "emailInvalid": "Inserisci un indirizzo email valido, ad esempio nome@esempio.it.",
         "tooShort": "Scrivi almeno {min} caratteri.",
         "tooLong": "Il testo è troppo lungo: al massimo {max} caratteri."
-      },
-      "messageHint": "Almeno {min} caratteri."
+      }
     }
   },
   "Footer": {

@@ -45,9 +45,8 @@ export default async function Contact({ locale }: ContactProps) {
       name: fieldErrors("name", t("form.errors.nameRequired")),
       email: fieldErrors("email", t("form.errors.emailRequired")),
       subject: fieldErrors("subject", t("form.errors.subjectRequired")),
-      message: fieldErrors("message", t("form.errors.messageRequired")),
+      message: fieldErrors("message", t("form.errors.messageRequired", { min: contactRules.message.min })),
     },
-    messageHint: t("form.messageHint", { min: contactRules.message.min }),
   };
 
   return (
