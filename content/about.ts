@@ -16,9 +16,13 @@ export const aboutFacts = ["years", "errors", "languages", "profile"] as const;
 
 export const architecturePrinciples = ["systems", "movement", "constraints", "collaboration"] as const;
 
-/** Links inside the About paragraphs; the university site has an English version. */
+/** Politecnico di Bari's page for the architecture degree (Italian only). */
+export const POLIBA_ARCHITECTURE_URL =
+  "https://orientami.poliba.it/architettura-corso-di-laurea-magistrale-a-ciclo-unico-poliba/";
+
+/** Links inside the About paragraphs, per language. */
 export const aboutLinks = {
-  poliba: { en: "https://www.poliba.it/en/", it: "https://www.poliba.it/", de: "https://www.poliba.it/en/" },
+  poliba: { en: POLIBA_ARCHITECTURE_URL, it: POLIBA_ARCHITECTURE_URL, de: POLIBA_ARCHITECTURE_URL },
   pegaso: {
     en: "https://www.unipegaso.it/lauree-triennali/informatica-per-le-aziende-digitali",
     it: "https://www.unipegaso.it/lauree-triennali/informatica-per-le-aziende-digitali",

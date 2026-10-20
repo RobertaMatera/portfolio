@@ -1,3 +1,4 @@
+import { POLIBA_ARCHITECTURE_URL } from "@/content/about";
 import type { Locale } from "@/i18n/routing";
 
 /** A value that is the same in every language, or differs per locale. */
@@ -30,7 +31,7 @@ export interface ExperienceEntry {
 
 const poliba: Organisation = {
   name: { en: "Polytechnic of Bari", it: "Politecnico di Bari", de: "Polytechnikum Bari" },
-  url: { en: "https://www.poliba.it/en/", it: "https://www.poliba.it/", de: "https://www.poliba.it/en/" },
+  url: POLIBA_ARCHITECTURE_URL,
 };
 
 /** Most recent first. `as const` keeps ids literal, so message keys are type-checked. */
