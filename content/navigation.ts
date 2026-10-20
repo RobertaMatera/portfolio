@@ -12,3 +12,12 @@ export const sections = [
 ] as const satisfies readonly { id: string; icon: IconName }[];
 
 export type SectionId = (typeof sections)[number]["id"];
+
+/** Every section on the home page in order, including ones not in the dock. */
+const pageOrder = ["top", "about", "what", "experience", "work", "references", "contact"] as const;
+
+/** The section after `id`, for the next-section arrows; undefined for the last one. */
+export function nextSectionId(id: string): string | undefined {
+  const index = pageOrder.findIndex((section) => section === id);
+  return index >= 0 ? pageOrder[index + 1] : undefined;
+}

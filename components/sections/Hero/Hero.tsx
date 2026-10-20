@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import Button from "@/components/ui/Button/Button";
 import Eyebrow from "@/components/ui/Eyebrow/Eyebrow";
 import Icon from "@/components/ui/Icon/Icon";
+import NextSectionLink from "@/components/ui/NextSectionLink/NextSectionLink";
 import { profile } from "@/content/profile";
 import { technologies } from "@/content/technologies";
 import type { Locale } from "@/i18n/routing";
@@ -69,6 +70,7 @@ export default async function Hero({ locale }: HeroProps) {
           />
         </div>
       </div>
+      <NextSectionLink target="about" />
     </section>
   );
 }

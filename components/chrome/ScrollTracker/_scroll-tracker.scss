@@ -1,0 +1,157 @@
+@use "breakpoints" as bp;
+
+// --scroll-progress (0–1) is set on <html> by ScrollTracker.
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--g6), var(--lime));
+  transform: scaleX(var(--scroll-progress, 0));
+  transform-origin: left;
+  pointer-events: none;
+}
+
+.scroll-tracker {
+  position: fixed;
+  top: 20vh;
+  right: 24px;
+  z-index: 15;
+  width: 34px;
+  height: 58vh;
+
+  @include bp.down("sm") {
+    display: none;
+  }
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.scroll-tracker__line,
+.scroll-tracker__fill {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  margin-left: -1px;
+  border-radius: 2px;
+}
+
+.scroll-tracker__line {
+  bottom: 0;
+  background: rgb(45 90 39 / 16%);
+}
+
+.scroll-tracker__fill {
+  height: 100%;
+  background: linear-gradient(var(--lime), var(--g6));
+  transform: scaleY(var(--scroll-progress, 0));
+  transform-origin: top;
+}
+
+.scroll-tracker__stop {
+  position: absolute;
+  left: 50%;
+  width: 11px;
+  height: 11px;
+  margin: -5.5px 0 0 -5.5px;
+  border: 1.5px solid var(--g6);
+  border-radius: 50%;
+  background: var(--bg);
+  transition: background-color 0.3s;
+
+  &.is-passed {
+    background: var(--g6);
+  }
+
+  // Section name on hover, to the left of the stop.
+  &::after {
+    content: attr(data-label);
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    padding: 3px 10px;
+    border-radius: var(--r-pill);
+    background: #fff;
+    box-shadow: var(--sh);
+    color: var(--g7);
+    font: 700 0.6875rem / 1.4 var(--font-sans); // 11px
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    translate: 0 -50%;
+    transition: opacity var(--dur-fast);
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+.scroll-tracker__cat {
+  position: absolute;
+  top: calc(var(--scroll-progress, 0) * 100%);
+  left: 50%;
+  width: 34px;
+  height: 34px;
+  margin: -17px 0 0 -17px;
+  pointer-events: none;
+  transition: scale 0.3s, rotate 0.3s;
+
+  svg {
+    fill: #fff;
+    stroke: var(--g6);
+    stroke-width: 1.6;
+    stroke-linejoin: round;
+  }
+
+  .is-eating & {
+    scale: 1.25;
+    rotate: -8deg;
+  }
+}
+
+.scroll-tracker__fish {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 10px 0 0 -15px;
+  transform-origin: 50% 0;
+  transition: opacity 0.4s, scale 0.4s;
+
+  svg {
+    fill: var(--lime);
+    stroke: var(--g6);
+    stroke-width: 1.5;
+    stroke-linejoin: round;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: scroll-tracker-wiggle 2.4s ease-in-out infinite;
+  }
+
+  .is-eating & {
+    opacity: 0;
+    scale: 0.2;
+  }
+}
+
+.scroll-tracker__ink {
+  fill: var(--g6);
+  stroke: none;
+}
+
+@keyframes scroll-tracker-wiggle {
+  50% {
+    rotate: 10deg;
+  }
+}

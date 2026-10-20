@@ -1,5 +1,6 @@
 @use "breakpoints" as bp;
 @use "mixins";
+@use "motion";
 
 .hero {
   position: relative;
@@ -172,5 +173,25 @@
 @keyframes hero-float {
   50% {
     translate: 0 -8px;
+  }
+}
+
+// Entrance on load: pure CSS, so it plays from the first paint with no
+// flash of hidden content, and is skipped entirely with reduced motion.
+@media (prefers-reduced-motion: no-preference) {
+  .hero__text > *,
+  .hero__portrait {
+    @include motion.reveal-animation;
+  }
+
+  @for $i from 2 through 5 {
+    .hero__text > :nth-child(#{$i}) {
+      --reveal-delay: #{($i - 1) * 0.09}s;
+    }
+  }
+
+  .hero__portrait {
+    --reveal-y: 36px;
+    --reveal-delay: 0.25s;
   }
 }

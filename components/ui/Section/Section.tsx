@@ -1,5 +1,8 @@
 import type { ReactNode } from "react";
 
+import NextSectionLink from "@/components/ui/NextSectionLink/NextSectionLink";
+import { nextSectionId } from "@/content/navigation";
+
 interface SectionProps {
   id: string;
   /** Id of the section's heading, used as its accessible name. */
@@ -13,10 +16,12 @@ interface SectionProps {
 /** A home page section: shared spacing, background and content width. */
 export default function Section({ id, labelledBy, alt = false, className, children }: SectionProps) {
   const classes = ["section", alt && "section--alt", className].filter(Boolean).join(" ");
+  const next = nextSectionId(id);
 
   return (
     <section id={id} className={classes} aria-labelledby={labelledBy}>
       <div className="wrap">{children}</div>
+      {next && <NextSectionLink target={next} />}
     </section>
   );
 }

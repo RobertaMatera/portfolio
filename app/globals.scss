@@ -2,6 +2,7 @@
 @use "../styles/tokens";
 @use "../styles/base";
 @use "../styles/typography";
+@use "../styles/motion";
 
 // UI primitives
 @use "../components/ui/Icon/icon";
@@ -17,6 +18,10 @@
 @use "../components/chrome/Dock/dock";
 @use "../components/chrome/LanguageMenu/language-menu";
 @use "../components/chrome/Footer/footer";
+@use "../components/chrome/SocialRail/social-rail";
+@use "../components/chrome/ScrollTracker/scroll-tracker";
+@use "../components/chrome/Veils/veils";
+@use "../components/ui/NextSectionLink/next-section-link";
 
 // Home sections, in page order
 @use "../components/sections/Hero/hero";

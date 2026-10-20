@@ -1,0 +1,49 @@
+@use "breakpoints" as bp;
+
+// Rise-and-fade entrance shared by the hero (on load) and RevealOnScroll.
+// --reveal-x / --reveal-y set the starting offset, --reveal-delay the stagger.
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    translate: var(--reveal-x, 0) var(--reveal-y, 30px);
+    scale: 0.975;
+  }
+}
+
+@mixin reveal-animation {
+  animation: reveal-in 1s var(--ease-out) var(--reveal-delay, 0s) backwards;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    translate: var(--reveal-x, 0) var(--reveal-y, 30px);
+    scale: 0.975;
+
+    &.is-revealed {
+      opacity: 1;
+      translate: none;
+      scale: none;
+      @include reveal-animation;
+    }
+  }
+
+  // Timeline cards slide in from their own side on wider screens.
+  @include bp.up("sm") {
+    .timeline__item:nth-child(odd) {
+      --reveal-x: -28px;
+      --reveal-y: 18px;
+    }
+
+    .timeline__item:nth-child(even) {
+      --reveal-x: 28px;
+      --reveal-y: 18px;
+    }
+  }
+
+  @include bp.down("sm") {
+    .timeline__item {
+      --reveal-y: 24px;
+    }
+  }
+}
