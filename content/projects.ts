@@ -81,7 +81,7 @@ export const projects = [
     id: "healthBridge",
     kind: "code",
     year: 2026,
-    repository: "https://github.com/RobertaMatera/rm-project-work-16",
+    repository: "https://github.com/RobertaMatera/health-bridge-clinic",
     stack: ["Java 21", "Spring Boot", "Angular 21"],
     programmingLanguages: ["Java", "TypeScript"],
   },
