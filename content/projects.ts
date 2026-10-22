@@ -39,6 +39,7 @@ interface ProjectBase {
 export interface CodeProject extends ProjectBase {
   kind: "code";
   repository: string;
+  demoUrl?: string;
   /** Technologies, shown as-is in every language. */
   stack: readonly string[];
   programmingLanguages: readonly string[];
@@ -82,6 +83,7 @@ export const projects = [
     kind: "code",
     year: 2026,
     repository: "https://github.com/RobertaMatera/health-bridge-clinic",
+    demoUrl: "https://health-bridge-clinic.vercel.app/login",
     stack: ["Java 21", "Spring Boot", "Angular 21"],
     programmingLanguages: ["Java", "TypeScript"],
   },

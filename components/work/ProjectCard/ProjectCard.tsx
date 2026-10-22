@@ -57,7 +57,15 @@ export default async function ProjectCard({ locale, project }: ProjectCardProps)
               <span aria-hidden="true"> ↗</span>
               <span className="visually-hidden"> ({tCommon("newTab")})</span>
             </a>
-            <span className="project-card__soon">{t("liveSoon")}</span>
+            {project.demoUrl ? (
+              <a className="project-card__action" href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                {t("liveDemo")}
+                <span aria-hidden="true"> ↗</span>
+                <span className="visually-hidden"> ({tCommon("newTab")})</span>
+              </a>
+            ) : (
+              <span className="project-card__soon">{t("liveSoon")}</span>
+            )}
           </div>
         )}
         {project.kind === "caseStudy" && (
