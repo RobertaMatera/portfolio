@@ -52,12 +52,30 @@ export default async function ProjectCard({ locale, project }: ProjectCardProps)
 
         {project.kind === "code" && (
           <div className="project-card__actions">
-            <a className="project-card__action" href={project.repository} target="_blank" rel="noopener noreferrer">
+            <a
+              className="project-card__action project-card__action--inline"
+              href={project.repository}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {t("viewCode")}
               <span aria-hidden="true"> ↗</span>
               <span className="visually-hidden"> ({tCommon("newTab")})</span>
             </a>
-            <span className="project-card__soon">{t("liveSoon")}</span>
+            {project.demoUrl ? (
+              <a
+                className="project-card__action project-card__action--inline"
+                href={project.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("liveDemo")}
+                <span aria-hidden="true"> ↗</span>
+                <span className="visually-hidden"> ({tCommon("newTab")})</span>
+              </a>
+            ) : (
+              <span className="project-card__soon">{t("liveSoon")}</span>
+            )}
           </div>
         )}
         {project.kind === "caseStudy" && (

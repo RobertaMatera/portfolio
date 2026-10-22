@@ -5,13 +5,14 @@
   border: 1px solid var(--bd);
   border-radius: var(--r-xl);
   background: var(--sf);
+  cursor: auto;
 
   .is-active > & {
     box-shadow: var(--sh);
   }
 
   &--case-study {
-    cursor: zoom-in;
+    cursor: auto;
   }
 
   &--upcoming {
@@ -108,7 +109,7 @@
   background: var(--g6);
   color: #fff;
   font-family: inherit;
-  cursor: inherit;
+  cursor: pointer;
 
   .icon {
     width: 14px;
@@ -120,6 +121,13 @@
     content: "";
     position: absolute;
     inset: 0;
+    cursor: pointer;
+  }
+
+  // Code cards can have two actions (repo + demo): keep each link clickable
+  // on its own and do not stretch one action over the whole card.
+  &--inline::after {
+    display: none;
   }
 }
 
