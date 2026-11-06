@@ -38,16 +38,22 @@ export const profile = {
   languages: ["it", "en", "de"],
   portrait: { src: "/images/hero/portrait.webp", width: 560, height: 693 },
   logo: { src: "/images/brand/logo.webp", width: 220, height: 216 },
-  /** CVs in English and German. Italian visitors get the English one. */
+  /** CVs in English, Italian and German, one per site language. */
   cv: {
     en: {
-      href: "/files/roberta-matera-cv-en.pdf",
+      href: "/files/Roberta_Matera_CV_EN.pdf",
       fileName: "Roberta_Matera_CV_EN.pdf",
       language: "en",
-      sizeKb: 356,
+      sizeKb: 357,
+    },
+    it: {
+      href: "/files/Roberta_Matera_CV_IT.pdf",
+      fileName: "Roberta_Matera_CV_IT.pdf",
+      language: "it",
+      sizeKb: 359,
     },
     de: {
-      href: "/files/roberta-matera-cv-de.pdf",
+      href: "/files/Roberta_Matera_CV_DE.pdf",
       fileName: "Roberta_Matera_CV_DE.pdf",
       language: "de",
       sizeKb: 374,
@@ -62,7 +68,7 @@ export const profile = {
 /** The CV offered on each language's pages. */
 export const cvForLocale = {
   en: profile.cv.en,
-  it: profile.cv.en,
+  it: profile.cv.it,
   de: profile.cv.de,
 } satisfies Record<Locale, CvFile>;
 
